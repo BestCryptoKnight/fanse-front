@@ -47,6 +47,13 @@ body {
     color :#242529;
     font-weight: 600!important;
 }
+.username-white {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color :#ffffff;
+  font-weight: 600!important;
+}
 
 .nowrap {
     white-space: nowrap;

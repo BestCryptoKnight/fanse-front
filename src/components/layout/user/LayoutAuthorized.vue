@@ -175,6 +175,9 @@ a.nav-link {
 .nav-link.router-link-active {
     color: #000!important;
 }
+a.nav-link {
+  color :#000000;
+}
 
 .nav-item{font-size: 19px;
     line-height: 24px;
