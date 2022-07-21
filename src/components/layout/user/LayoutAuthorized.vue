@@ -175,7 +175,7 @@ a.nav-link {
 .nav-link.router-link-active {
     color: #000!important;
 }
-a.nav-link {
+a.nav-link:hover {
   color :#000000;
 }
 

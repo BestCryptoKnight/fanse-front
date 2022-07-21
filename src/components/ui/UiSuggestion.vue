@@ -21,7 +21,7 @@
       </b-dropdown>
     </div>
     <div class="overflow-hidden w-100 subprofile py-2 pr-2">
-      <ui-username :user="user" :asLink="false" class="text-white" />
+      <ui-username :user="user" :asLink="false" class="text-white " style="color:white;"  />
       <div class="text-white small username-white d-block ">
         {{ "@" + user.username }}
       </div>
