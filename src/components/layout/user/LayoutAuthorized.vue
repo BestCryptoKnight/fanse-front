@@ -170,7 +170,10 @@ a.nav-link {
   line-height: 1.4rem;
   padding: 0.75rem 1rem;
   vertical-align: middle;
-  color :#8a96a3!important;
+  color :#8a96a3;
+}
+.nav-link.router-link-active {
+    color: #000!important;
 }
 
 .nav-item{font-size: 19px;
