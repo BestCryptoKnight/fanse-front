@@ -17,6 +17,12 @@
                 $t("general.home")
               }}</span>
             </b-nav-item>
+            <b-nav-item :to="currentUser.url" exact>
+              <div class="icon d-inline-block"><i class="bi-person" /></div>
+              <span class="d-none d-lg-inline ml-3">{{
+                $t("general.my-profile")
+              }}</span>
+            </b-nav-item>
             <b-nav-item to="/notifications">
               <div class="icon d-inline-block">
                 <i class="bi-bell" />
@@ -51,12 +57,6 @@
               <div class="icon d-inline-block"><i class="bi-heart" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.subscriptions")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item :to="currentUser.url" exact>
-              <div class="icon d-inline-block"><i class="bi-person" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.my-profile")
               }}</span>
             </b-nav-item>
             <b-nav-item v-b-toggle.sidebar>
