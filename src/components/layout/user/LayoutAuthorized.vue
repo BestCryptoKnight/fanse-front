@@ -170,11 +170,21 @@ a.nav-link {
   line-height: 1.4rem;
   padding: 0.75rem 1rem;
   vertical-align: middle;
+  color :#8a96a3!important;
 }
+
+.nav-item{font-size: 19px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-left: 21px;    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
 .icon {
   position: relative;
   font-size: 1.4rem;
   line-height: 1.4rem;
+  color: #8a96a3!important;
   .bi-dot {
     position: absolute;
     bottom: 0;
@@ -182,6 +192,7 @@ a.nav-link {
     font-size: 3.5rem;
     line-height: 1;
     margin: -1.8rem;
+    color: #8a96a3!important;
   }
 }
 .footer {
