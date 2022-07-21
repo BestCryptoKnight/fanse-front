@@ -40,15 +40,18 @@
               size="100px"
             />
           </div>
-          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
+          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%" v-if="!isOwner">
             <b-link :to="'/messages/' + user.id" class="mx-2">
               <i class="bi-chat" />
             </b-link>
-            <b-link class="mx-2" @click.prevent="addToList(user)">
+            <b-link class="mx-2" @click.prevent="addToList(user)" v-if="!isOwner">
               <i class="bi-star" />
             </b-link>
             <b-link class="mx-2" @click.prevent="copyLink">
               <i class="bi-box-arrow-up-right" />
+            </b-link>
+            <b-link :to="'/settings' + user.id" class="mx-2">
+              <i class="bi-gear" />
             </b-link>
             <b-link @click.prevent="tip" class="mx-2" v-if="!isOwner">
               <i class="bi-coin" />
