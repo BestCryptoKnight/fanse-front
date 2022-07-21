@@ -50,7 +50,7 @@
             <b-link class="mx-2" @click.prevent="copyLink">
               <i class="bi-box-arrow-up-right" />
             </b-link>
-            <b-link :to="'/settings' + user.id" class="mx-2">
+            <b-link :to="'/settings'" class="mx-2">
               <i class="bi-gear" />
             </b-link>
             <b-link @click.prevent="tip" class="mx-2" v-if="!isOwner">
