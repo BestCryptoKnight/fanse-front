@@ -12,7 +12,7 @@
         <ui-username :user="post.user" />
         <b-link
           :to="'/' + post.user.username"
-          class="small text-secondary username d-block"
+          class="small text-secondary username d-block small-username" 
           >@{{ post.user.username }}
         </b-link>
       </div>
