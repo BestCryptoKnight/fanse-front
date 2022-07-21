@@ -181,8 +181,7 @@ a.nav-link:hover {
 
 .nav-item{font-size: 19px;
     line-height: 24px;
-    font-weight: 500;
-    margin-left: 21px;    
+    font-weight: 500;  
     padding-top: 5px;
     padding-bottom: 5px;
     }
