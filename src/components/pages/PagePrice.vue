@@ -93,6 +93,7 @@ export default {
         },
         months: {
           null: this.$t("general.months"),
+          1: this.$tc("general.x-months", 1),
           3: this.$tc("general.x-months", 3),
           6: this.$tc("general.x-months", 6),
           12: this.$tc("general.x-months", 12),
