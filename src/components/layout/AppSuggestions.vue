@@ -20,7 +20,7 @@
             :key="key"
           >
             <ui-suggestion
-              :user="user.isCreator"
+              :user="user" :v-if="user.isCreator"
               v-for="(user, k) in item"
               :key="k"
               class="mb-2"
