@@ -149,7 +149,7 @@
           >
            <b-button variant="primary" block @click.prevent="subscribe">{{
               post.isFree
-                ? $t("general.subscribe-to-see")
+                ? $t("general.free")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
           </div>
