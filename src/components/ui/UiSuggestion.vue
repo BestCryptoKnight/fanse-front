@@ -52,7 +52,7 @@
     right: 0;
     z-index: 0;
     padding-left: calc(100px + 1rem);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.39);
     border-bottom-left-radius: 0.25rem !important;
     border-bottom-right-radius: 0.25rem !important;
   }
