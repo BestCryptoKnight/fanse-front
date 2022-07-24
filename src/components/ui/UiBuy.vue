@@ -20,7 +20,7 @@
           />
           <div class="d-flex flex-column ml-2 overflow-hidden">
             <ui-username :user="item.user" :asLink="false" />
-            <span class="text-muted small username">
+            <span class="text-muted small small-username">
               {{ "@" + item.user.username }}
             </span>
           </div>

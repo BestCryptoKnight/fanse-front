@@ -33,7 +33,7 @@
       </div>
       <div class="ml-2 mr-3 mt-1 overflow-hidden w-100">
         <ui-username :user="user" />
-        <b-link :to="user.url" class="text-muted small username d-block">{{
+        <b-link :to="user.url" class="text-muted small small-username d-block">{{
           "@" + user.username
         }}</b-link>
       </div>

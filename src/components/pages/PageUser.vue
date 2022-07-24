@@ -61,7 +61,7 @@
       </b-row>
       <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
         <ui-username :user="user" :asLink="false" />
-        <div class="text-muted small username">
+        <div class="text-muted small small-username">
           {{ "@" + user.username }}
         </div>
         <div class="bio mt-3 nl2br" v-if="user.bio">{{ user.bio }}</div>
