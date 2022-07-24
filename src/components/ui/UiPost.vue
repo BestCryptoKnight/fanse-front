@@ -147,13 +147,7 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
-          <b-button v-if="post.user.isFree" variant="primary" block @click.prevent="subscribe">
-          {{
-            $t("general.subscribe-for-x", [
-              user.isFree ? $t("general.free") : user.priceFormatted,
-            ])
-          }}
-        </b-button>
+          
             <b-button variant="primary" block @click.prevent="unlock">{{
               post.isFree
                 ? $t("general.subscribe-to-see")
