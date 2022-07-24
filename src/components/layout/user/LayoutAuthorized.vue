@@ -131,7 +131,7 @@
           </div>
         </div>
       </b-nav-item>
-      <b-nav-item to="/posts/create">
+      <b-nav-item to="/posts/create" style="width: 80% !important;">
         <div class="icon d-inline-block"><i class="bi-plus-circle" /></div>
       </b-nav-item>
       <b-nav-item to="/messages">
@@ -189,7 +189,7 @@ a.nav-link:hover {
   position: relative;
   font-size: 1.4rem;
   line-height: 1.4rem;
-  color: #8a96a3!important;
+  color: #8a96a3;
   .bi-dot {
     position: absolute;
     bottom: 0;
@@ -197,7 +197,7 @@ a.nav-link:hover {
     font-size: 3.5rem;
     line-height: 1;
     margin: -1.8rem;
-    color: #8a96a3!important;
+    color: #8a96a3;
   }
 }
 .footer {

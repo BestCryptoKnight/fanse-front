@@ -18,6 +18,10 @@ $primary: #00AFF0;
 .text-secondary {
     color: #a7a7a7!important;
 }
+
+.badge-secondary{
+    background-color: #2b2b2b !important;
+}
 @media (min-width: 1200px) {
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1340px;
