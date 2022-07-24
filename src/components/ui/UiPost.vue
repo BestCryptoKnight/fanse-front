@@ -143,17 +143,14 @@
               </div>
             </div>
           </div>
-          <div v-if="post.user.price<1"
+         
+          <div
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0" 
           >
-           <b-button variant="primary" block @click.prevent="subscribe">{{
-              post.isFree
-                ? $t("general.free")
-                : $t("general.unlock-post-for-x", [post.priceFormatted])
-            }}</b-button>
+           <b-button variant="primary" block :to="currentUser.url"></b-button>
           </div>
-          <div v-if="post.user.price>1"
+          <!-- <div v-if="post.user.price>1"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
@@ -162,7 +159,7 @@
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
-          </div>
+          </div> -->
           
         </div>
       </b-aspect>
@@ -432,27 +429,6 @@ export default {
           console.log(errors);
         }
       );
-    },
-    subscribe(bundle) {
-      if (this.post.user.isFree) {
-        this.$post(
-          "/subscribe/" + this.post.user.id,
-          {},
-          () => {
-            this.reset();
-            this.loadUser();
-          },
-          (errors) => {
-            console.log(errors);
-          }
-        );
-      } else {
-        this.$buyItem({
-          type: Payment.TYPE_SUBSCRIPTION_NEW,
-          user: this.post.user,
-          bundle: bundle,
-        });
-      }
     },
     unlock() {
       if (this.post.isFree) {
