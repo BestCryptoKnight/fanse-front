@@ -181,18 +181,14 @@ export default [
             {
                 path: '/:username',
                 components: {
-                    default: PageSearch,
+                    default: PageUser,
                     side: AppSide
                 },
-                name: 'search'
-            },
-            {
-                path: '/:username',
-                component: PageUser,
             },
             {
                 path: '/:id/:username',
                 component: PagePost,
+                
             },
             {
                 path: '/',
