@@ -66,7 +66,7 @@ export default {
         (data) => {
           let users = [];
           for (let obj of data.users) {
-            if (data.users.role == 1){
+            if (obj.role == 1){
               users.push(new User(obj));
             }
           }
