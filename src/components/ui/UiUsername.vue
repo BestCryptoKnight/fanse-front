@@ -1,6 +1,6 @@
 <template>
   <b-link v-if="asLink" :to="user.url" class="d-flex align-items-center">
-    <span :class="bold ? 'font-weight-bold' : ''" class="username">{{
+    <span :class="bold ? 'font-weight-bold' : ''" class="">{{
       user.name
     }}</span>
     <i class="bi-patch-check ml-1" v-if="user.isCreator"></i>
@@ -9,7 +9,7 @@
     }}</span>
   </b-link>
   <div v-else class="d-flex align-items-center">
-    <span :class="bold ? 'font-weight-bold' : ''" class="username">{{
+    <span :class="bold ? 'font-weight-bold' : ''" class="">{{
       user.name
     }}</span>
     <i class="bi-patch-check ml-1" v-if="user.isCreator"></i>
