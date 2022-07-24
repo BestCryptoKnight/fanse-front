@@ -148,7 +148,11 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0" 
           >
-           <b-button variant="primary" block :to="this.$store.state.currentUser.url"></b-button>
+           <b-button variant="primary" block :to="currentUser.url">{{
+              post.isFree
+                ? $t("general.subscribe-to-see")
+                : $t("general.unlock-post-for-x", [post.priceFormatted])
+            }}</b-button>
           </div>
           <!-- <div v-if="post.user.price>1"
             class="position-absolute p-3"
@@ -313,6 +317,9 @@ export default {
         this.$store.state.currentUser.isAdmin ||
         (this.value && this.value.user.id == this.$store.state.currentUser.id)
       );
+    },
+    currentUser() {
+      return this.$store.state.currentUser;
     },
     hasAccess: function () {
       return this.$store.state.currentUser.isAdmin || this.post.hasAccess;
