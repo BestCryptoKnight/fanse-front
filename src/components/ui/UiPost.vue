@@ -433,6 +433,27 @@ export default {
         }
       );
     },
+    subscribe(bundle) {
+      if (this.post.user.isFree) {
+        this.$post(
+          "/subscribe/" + this.post.user.id,
+          {},
+          () => {
+            this.reset();
+            this.loadUser();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      } else {
+        this.$buyItem({
+          type: Payment.TYPE_SUBSCRIPTION_NEW,
+          user: this.post.user,
+          bundle: bundle,
+        });
+      }
+    },
     unlock() {
       if (this.post.isFree) {
         this.$buyItem({
