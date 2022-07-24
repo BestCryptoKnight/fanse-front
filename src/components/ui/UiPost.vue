@@ -148,7 +148,7 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0" 
           >
-           <b-button variant="primary" block :to="currentUser.url">{{
+           <b-button variant="primary" block :to="post.user.url">{{
               post.isFree
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
