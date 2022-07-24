@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-row
+    <div
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="!user.isSubscribed && !isOwner"
       >
@@ -12,8 +12,8 @@
             ])
           }}
         </b-button>
-      </b-row>
-      <b-row
+    </div>
+      <div
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="
           !isOwner &&
@@ -32,7 +32,7 @@
         >
           {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
         </b-button>
-      </b-row>
+      </div>
   </div>
 </template>
 <script>
