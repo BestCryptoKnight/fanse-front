@@ -20,7 +20,7 @@
             :key="key"
           >
             <ui-suggestion
-              :user="isCreator"
+              :user="user"
               v-for="(user, k) in item"
               :key="k"
               class="mb-2"
@@ -66,10 +66,10 @@ export default {
         (data) => {
           let users = [];
           for (let obj of data.users) {
-            if (obj.isCreator){
+            if (data.users.role == 1){
               users.push(new User(obj));
             }
-            }
+          }
           this.users = users;
           this.$nextTick(function () {
             this.swiper.update();

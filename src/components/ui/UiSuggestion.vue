@@ -1,5 +1,5 @@
 <template>
-  <b-link :to="user.url"  class="rounded suggestion w-100 bg-light d-block">
+  <b-link :to="user.url" class="rounded suggestion w-100 bg-light d-block">
     <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" />
     <b-avatar
       :src="user.avatar"
