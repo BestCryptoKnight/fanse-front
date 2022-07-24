@@ -9,7 +9,7 @@
     }}</span>
   </b-link>
   <div v-else class="d-flex align-items-center">
-    <span :class="bold ? 'font-weight-bold' : ''" class="">{{
+    <span :class="bold ? 'font-weight-bold' : ''" class="username">{{
       user.name
     }}</span>
     <i class="bi-patch-check ml-1" v-if="user.isCreator"></i>
