@@ -180,6 +180,14 @@ export default [
             },
             {
                 path: '/:username',
+                components: {
+                    default: PageSearch,
+                    side: AppSide
+                },
+                name: 'search'
+            },
+            {
+                path: '/:username',
                 component: PageUser,
             },
             {
