@@ -199,11 +199,8 @@
 <script>
 import Post from "../models/Post";
 import User from "../models/User";
-import UiPosts from "../ui/UiPosts.vue";
 import Payment from "../models/Payment";
-import UiUsername from "../ui/UiUsername.vue";
 export default {
-  components: { UiPosts, UiUsername },
   data: function () {
     return {
       user: null,
