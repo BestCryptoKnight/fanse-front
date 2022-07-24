@@ -148,7 +148,7 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0" 
           >
-           <b-button variant="primary" block :to="currentUser.url"></b-button>
+           <b-button variant="primary" block :to="this.$store.state.currentUser.url"></b-button>
           </div>
           <!-- <div v-if="post.user.price>1"
             class="position-absolute p-3"
