@@ -3,7 +3,7 @@
     <span :class="bold ? 'font-weight-bold' : ''" class="username">{{
       user.name
     }}</span>
-    <i class="bi-patch-check-fill ml-1" v-if="user.isCreator"></i>
+    <i class="bi-patch-check-fill ml-1" style="color: #00aff0;" v-if="user.isCreator"></i>
     <span class="text-muted small-username ml-1" v-if="full">{{
       "@" + user.username
     }}</span>
@@ -12,7 +12,7 @@
     <span :class="bold ? 'font-weight-bold' : ''" class="">{{
       user.name
     }}</span>
-    <i class="bi-patch-check-fill ml-1" v-if="user.isCreator"></i>
+    <i class="bi-patch-check-fill ml-1" style="color: #00aff0;" v-if="user.isCreator"></i>
     <span class="text-muted small-username ml-1" v-if="full">{{
       "@" + user.username
     }}</span>
