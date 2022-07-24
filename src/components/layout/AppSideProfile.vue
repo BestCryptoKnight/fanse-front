@@ -1,13 +1,13 @@
 <template>
   <b-row class="profile" v-if="user != null">
     <b-col>
-      <b-row
+      <!-- <b-row
         :class="
           'page-header sticky-top' +
           (isScrolled ? ' scrolled bg-white border-bottom ' : '')
         "
-      >
-        <div class="d-flex align-items-center w-100 px-3">
+      > -->
+        <!-- <div class="d-flex align-items-center w-100 px-3">
           <b-link to="/">
             <i class="bi-arrow-left" />
           </b-link>
@@ -26,8 +26,8 @@
             }}</b-dropdown-item>
           </b-dropdown>
         </div>
-      </b-row>
-      <b-row>
+      </b-row> -->
+      <!-- <b-row>
         <div class="bg-light cover w-100 position-relative">
           <b-img :src="user.cover" v-if="user.cover != null" />
         </div>
@@ -58,8 +58,8 @@
             </b-link>
           </div>
         </div>
-      </b-row>
-      <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
+      </b-row> -->
+      <!-- <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
         <ui-username :user="user" :asLink="false" />
         <div class="text-muted small small-username">
           {{ "@" + user.username }}
@@ -73,7 +73,7 @@
             user.website
           }}</b-link>
         </div>
-      </b-row>
+      </b-row> -->
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="!user.isSubscribed && !isOwner"
@@ -87,7 +87,7 @@
           }}
         </b-button>
       </b-row>
-      <b-row
+      <!-- <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="
           !isOwner &&
@@ -106,8 +106,8 @@
         >
           {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
         </b-button>
-      </b-row>
-      <b-row class="d-block" v-if="isOwner">
+      </b-row> -->
+      <!-- <b-row class="d-block" v-if="isOwner">
         <b-nav tabs justified>
           <b-nav-item
             :active="postsType == types.active"
@@ -126,7 +126,7 @@
           >
         </b-nav>
       </b-row>
-      <ui-posts v-model="posts" />
+      <ui-posts v-model="posts" /> -->
     </b-col>
   </b-row>
 </template>
