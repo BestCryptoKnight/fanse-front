@@ -446,8 +446,7 @@ export default {
           this.post.user.id +
           "?page=" +
           this.page +
-          "&type=" +
-          this.postsType,
+          "&type=0",
         (data) => {
           let posts = [...this.posts];
           for (let obj of data.data) {
