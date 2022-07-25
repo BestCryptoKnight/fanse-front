@@ -149,7 +149,7 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
-            <b-button variant="primary" block @click.prevent="unlock">{{
+            <b-button variant="primary" block @click.prevent="subscribe">{{
               post.isFree
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
@@ -159,7 +159,7 @@
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
-            <b-button variant="primary" block @click.prevent="subscribe">{{
+            <b-button variant="primary" block @click.prevent="unlock">{{
               post.isFree
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
