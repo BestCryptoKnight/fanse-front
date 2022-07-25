@@ -289,6 +289,7 @@
 import { Swiper } from "swiper";
 import "swiper/swiper-bundle.css";
 import videojs from "video.js";
+import User from "../models/User";
 import "video.js/dist/video-js.css";
 import Post from "../models/Post";
 import Payment from "../models/Payment";
