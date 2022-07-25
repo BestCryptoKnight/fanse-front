@@ -55,7 +55,6 @@ export default {
             if (obj.user.is_subscribed !=false){
               posts.push(new Post(obj));
             }
-            posts.push(new Post(obj));
           }
           this.posts = posts;
           this.hasMore = data.next_page_url != null;
