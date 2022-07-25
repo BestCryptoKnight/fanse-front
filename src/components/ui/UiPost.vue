@@ -464,7 +464,7 @@ export default {
     },
     loadUser() {
       this.$get(
-        "/users/" + this.post.videojsusername,
+        "/users/" + this.post.user.username,
         (data) => {
           this.post.user = new User(data);
           this.loadPosts();
