@@ -314,6 +314,9 @@ export default {
         this.$emit("input", val);
       },
     },
+    username: function () {
+      return this.$route.params.username;
+    },
     isOwner: function () {
       return (
         this.$store.state.currentUser.isAdmin ||
@@ -336,6 +339,14 @@ export default {
   },
   mounted() {
     this.init();
+  },
+  watch: {
+    username: function (oldV, newV) {
+      if (oldV && newV && oldV != newV) {
+        this.reset();
+        this.loadUser();
+      }
+    },
   },
   methods: {
     init() {
