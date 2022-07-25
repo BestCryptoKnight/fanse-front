@@ -52,6 +52,9 @@ export default {
         (data) => {
           let posts = [...this.posts];
           for (let obj of data.data) {
+            if (obj.user.is_subscribed !=false){
+              sts.push(new Post(obj));
+            }
             posts.push(new Post(obj));
           }
           this.posts = posts;
