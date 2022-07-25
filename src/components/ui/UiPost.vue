@@ -144,17 +144,8 @@
             </div>
           </div>
          
-          <div
-            class="position-absolute p-3"
-            style="bottom: 0; left: 0; right: 0" 
-          >
-           <b-button variant="primary" block :to="post.user.url">{{
-              post.isFree
-                ? $t("general.subscribe-to-see")
-                : $t("general.unlock-post-for-x", [post.priceFormatted])
-            }}</b-button>
-          </div>
-          <!-- <div v-if="post.user.price>1"
+          
+       <div v-if="post.user.price<1"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
@@ -163,7 +154,17 @@
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
-          </div> -->
+          </div> 
+           <div v-if="post.user.price>1"
+            class="position-absolute p-3"
+            style="bottom: 0; left: 0; right: 0"
+          >
+            <b-button variant="primary" block @click.prevent="subscribe">{{
+              post.isFree
+                ? $t("general.subscribe-to-see")
+                : $t("general.unlock-post-for-x", [post.priceFormatted])
+            }}</b-button>
+          </div> 
           
         </div>
       </b-aspect>
@@ -436,6 +437,68 @@ export default {
           console.log(errors);
         }
       );
+    },
+    loadPosts() {
+      this.isLoading = true;
+      this.$get(
+        "/posts/user/" +
+          this.post.user.id +
+          "?page=" +
+          this.page +
+          "&type=" +
+          this.postsType,
+        (data) => {
+          let posts = [...this.posts];
+          for (let obj of data.data) {
+            posts.push(new Post(obj));
+          }
+          this.posts = posts;
+          this.hasMore = data.next_page_url != null;
+          this.isLoading = true;
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+    loadUser() {
+      this.$get(
+        "/users/" + this.post.videojsusername,
+        (data) => {
+          this.post.user = new User(data);
+          this.loadPosts();
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+    subscribe(bundle) {
+      if (this.post.user.isFree) {
+        this.$post(
+          "/subscribe/" + this.post.user.id,
+          {},
+          () => {
+            this.reset();
+            this.loadUser();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      } else {
+        this.$buyItem({
+          type: Payment.TYPE_SUBSCRIPTION_NEW,
+          user: this.post.user,
+          bundle: bundle,
+        });
+      }
+    },
+    reset() {
+      this.isLoading = false;
+      this.hasMore = false;
+      this.page = 1;
+      this.posts = [];
     },
     unlock() {
       if (this.post.isFree) {
