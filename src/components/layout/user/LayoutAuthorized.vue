@@ -11,19 +11,19 @@
                 class="bg-secondary text-white"
               />
             </b-nav-item>
-            <b-nav-item to="/" exact>
+            <b-nav-item class ="nav-hover" to="/" exact>
               <div class="icon d-inline-block"><i class="bi-house" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.home")
               }}</span>
             </b-nav-item>
-            <b-nav-item :to="currentUser.url" exact>
+            <b-nav-item class ="nav-hover" :to="currentUser.url" exact>
               <div class="icon d-inline-block"><i class="bi-person" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.my-profile")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/notifications">
+            <b-nav-item class ="nav-hover" to="/notifications">
               <div class="icon d-inline-block">
                 <i class="bi-bell" />
                 <i class="bi-dot" v-if="updates.notifications > 0" />
@@ -32,7 +32,7 @@
                 $t("general.notifications")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/messages">
+            <b-nav-item class ="nav-hover" to="/messages">
               <div class="icon d-inline-block">
                 <i class="bi-chat" />
                 <i class="bi-dot" v-if="updates.messages > 0" />
@@ -41,13 +41,13 @@
                 $t("general.messages")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/bookmarks" exact>
+            <b-nav-item class ="nav-hover" to="/bookmarks" exact>
               <div class="icon d-inline-block"><i class="bi-bookmark" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.bookmarks")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/lists">
+            <b-nav-item class ="nav-hover" to="/lists">
               <div class="icon d-inline-block"><i class="bi-list" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.lists")
@@ -59,7 +59,7 @@
                 $t("general.subscriptions")
               }}</span>
             </b-nav-item>
-            <b-nav-item v-b-toggle.sidebar>
+            <b-nav-item class ="nav-hover" v-b-toggle.sidebar>
               <div class="icon d-inline-block"><i class="bi-three-dots" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.more")
@@ -176,7 +176,7 @@ a.nav-link {
 .nav-link.router-link-active {
     color: #000!important;
 }
-a.nav-hover:hover {
+li.nav-hover:hover {
   color :#000000;
   background-color: #00aff01a;
   border-radius: 30px;
