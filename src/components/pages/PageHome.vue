@@ -52,9 +52,9 @@ export default {
         (data) => {
           let posts = [...this.posts];
           for (let obj of data.data) {
-            if (obj.user.is_subscribed !=false){
+            if (obj.has_access !=false || obj.user.username == 'fanse' || obj.user.username == this.$store.state.currentUser.username){
               posts.push(new Post(obj));
-            }
+            }            
           }
           this.posts = posts;
           this.hasMore = data.next_page_url != null;
