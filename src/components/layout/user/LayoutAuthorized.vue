@@ -11,19 +11,19 @@
                 class="bg-secondary text-white"
               />
             </b-nav-item>
-            <b-nav-item to="/" exact>
+            <b-nav-item to="/"  class ="nav-hover" exact>
               <div class="icon d-inline-block"><i class="bi-house" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.home")
               }}</span>
             </b-nav-item>
-            <b-nav-item :to="currentUser.url" exact>
+            <b-nav-item :to="currentUser.url" class ="nav-hover" exact>
               <div class="icon d-inline-block"><i class="bi-person" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.my-profile")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/notifications">
+            <b-nav-item to="/notifications" class ="nav-hover">
               <div class="icon d-inline-block">
                 <i class="bi-bell" />
                 <i class="bi-dot" v-if="updates.notifications > 0" />
@@ -32,7 +32,7 @@
                 $t("general.notifications")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/messages">
+            <b-nav-item to="/messages" class ="nav-hover" >
               <div class="icon d-inline-block">
                 <i class="bi-chat" />
                 <i class="bi-dot" v-if="updates.messages > 0" />
@@ -41,19 +41,19 @@
                 $t("general.messages")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/bookmarks" exact>
+            <b-nav-item to="/bookmarks" class ="nav-hover" exact>
               <div class="icon d-inline-block"><i class="bi-bookmark" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.bookmarks")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/lists">
+            <b-nav-item to="/lists" class ="nav-hover">
               <div class="icon d-inline-block"><i class="bi-list" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.lists")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/subscriptions">
+            <b-nav-item to="/subscriptions" class ="nav-hover">
               <div class="icon d-inline-block"><i class="bi-heart" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.subscriptions")
@@ -165,6 +165,7 @@
     text-align: left;
   }
 }
+
 a.nav-link {
   font-size: 1.2rem;
   line-height: 1.4rem;
@@ -175,9 +176,12 @@ a.nav-link {
 .nav-link.router-link-active {
     color: #000!important;
 }
-a.nav-link:hover {
+a.nav-hover:hover {
   color :#000000;
+  background-color: #00aff01a;
+  border-radius: 30px;
 }
+
 
 .nav-item{font-size: 19px;
     line-height: 24px;
