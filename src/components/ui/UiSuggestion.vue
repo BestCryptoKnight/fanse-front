@@ -1,6 +1,6 @@
 <template>
   <b-link :to="user.url" class="rounded suggestion w-100 bg-light d-block">
-    <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" />
+    <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  />
     <b-avatar
       :src="user.avatar"
       :text="user.initials"

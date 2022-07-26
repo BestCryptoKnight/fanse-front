@@ -73,10 +73,11 @@
             v-for="(item, key) in post.media"
             :key="key"
           >
-            <img
+            <img 
               v-if="item.type == 0"
               :src="item.url"
               @click.prevent="$showPhotoSwipe(post.media, item.id)"
+              onContextMenu="return false;" 
             />
             <div v-else-if="item.type == 1" class="video w-100">
               <video
@@ -100,6 +101,7 @@
           v-if="post.media[0].type == 0"
           :src="post.media[0].url"
           @click.prevent="$showPhotoSwipe(post.media, 0)"
+          onContextMenu="return false;" 
         />
         <div v-else-if="post.media[0].type == 1" class="video w-100">
           <video

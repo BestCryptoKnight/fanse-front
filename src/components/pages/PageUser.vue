@@ -29,7 +29,7 @@
       </b-row>
       <b-row>
         <div class="bg-light cover w-100 position-relative">
-          <b-img :src="user.cover" v-if="user.cover != null" />
+          <b-img :src="user.cover + '?rnd=' + rnd" v-if="user.cover != null" />
         </div>
         <div class="subprofile w-100 d-flex">
           <div class="avatar position-relative ml-3 rounded-circle">

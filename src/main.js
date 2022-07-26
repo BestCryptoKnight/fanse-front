@@ -21,12 +21,6 @@ Vue.use(Vuex)
 import stores from './components/helpers/Store';
 import './registerServiceWorker'
 
-(function($){
-  $(document).on('contextmenu', 'img', function() {
-      return false;
-  })
-})(jQuery);
-
 const store = new Vuex.Store(stores);
 var rnd = Math.random();
 console.log(rnd);
