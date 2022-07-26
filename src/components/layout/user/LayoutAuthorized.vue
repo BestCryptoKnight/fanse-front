@@ -53,7 +53,7 @@
                 $t("general.lists")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/subscriptions">
+            <b-nav-item to="/subscriptions" class ="nav-hover">
               <div class="icon d-inline-block"><i class="bi-heart" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.subscriptions")
@@ -176,7 +176,7 @@ a.nav-link {
 .nav-link.router-link-active {
     color: #000!important;
 }
-a.nav-link:hover {
+a.nav-hover:hover {
   color :#000000;
   background-color: #00aff01a;
   border-radius: 30px;
