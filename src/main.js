@@ -16,9 +16,17 @@ const router = new VueRouter({
   mode: 'history'
 });
 
+
 Vue.use(Vuex)
 import stores from './components/helpers/Store';
 import './registerServiceWorker'
+
+(function($){
+  $(document).on('contextmenu', 'img', function() {
+      return false;
+  })
+})(jQuery);
+
 const store = new Vuex.Store(stores);
 var rnd = Math.random();
 console.log(rnd);
@@ -28,6 +36,9 @@ Vue.use(BootstrapVue)
 Vue.use(VueClipboard)
 Vue.use(Misc);
 Vue.use(VueMask);
+
+
+
 
 new Vue({
   router,
