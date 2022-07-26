@@ -53,7 +53,7 @@
                 $t("general.lists")
               }}</span>
             </b-nav-item>
-            <b-nav-item to="/subscriptions" class ="nav-hover">
+            <b-nav-item  class ="nav-hover" to="/subscriptions">
               <div class="icon d-inline-block"><i class="bi-heart" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.subscriptions")

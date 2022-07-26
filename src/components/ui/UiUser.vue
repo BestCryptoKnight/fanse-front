@@ -6,7 +6,6 @@
           :src="user.cover"
           v-if="user.cover != null"
           class="rounded-top"
-          onContextMenu="return false;" 
         />
         <div class="buttons m-2">
           <b-dropdown no-caret right variant="link">

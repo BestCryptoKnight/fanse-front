@@ -97,11 +97,11 @@
         </div>
       </div>
       <div v-else class="w-100">
-        <img
+        <img onContextMenu="return false;" 
           v-if="post.media[0].type == 0"
           :src="post.media[0].url"
           @click.prevent="$showPhotoSwipe(post.media, 0)"
-          onContextMenu="return false;" 
+         
         />
         <div v-else-if="post.media[0].type == 1" class="video w-100">
           <video
