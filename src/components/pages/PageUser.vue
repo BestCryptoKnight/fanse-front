@@ -13,6 +13,7 @@
           </b-link>
           <h5 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
             <ui-username :user="user" :asLink="false" :bold="false" />
+            <div><span style="font-size: 0.8rem !important;"> 7 Posts | 1.3k Likes </span></div>
           </h5>
           <b-dropdown no-caret right variant="link">
             <template slot="button-content"
