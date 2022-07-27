@@ -6,6 +6,7 @@
           <h5 class="text-uppercase my-3">{{ $t("general.home") }}</h5>
         </b-col>
       </b-row>
+      <app-suggestions />
       <ui-posts v-model="posts" />
     </b-col>
   </b-row>
