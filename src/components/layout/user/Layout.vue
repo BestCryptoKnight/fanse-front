@@ -1,5 +1,5 @@
 <template>
-  <layout-authorized v-if="isLoggedIn || !isLoggedIn" />
+  <layout-authorized v-if="isLoggedIn" />
   <layout-landing v-else />
 </template>
 <script>
@@ -21,28 +21,6 @@ export default {
         },
         () => {}
       );
-    }
-    else{
-      var jsonObj = {
-  "id": 2,
-  "name": "Yainv",
-  "username": "user6666345",
-  "email": "yaniv@ybhltd.com",
-  "role": 1,
-  "bio": "Love is in the air",
-  "location": null,
-  "website": null,
-  "cover": "https://fanse.co/api/storage/profile/cover/2.jpg",
-  "avatar": "https://fanse.co/api/storage/profile/avatar/2.jpg?1622",
-  "price": 0,
-  "is_subscribed": false,
-  "bundles": [],
-  "updates": {
-    "notifications": 0,
-    "messages": 0
-  }
-}
-      this.$saveUser(jsonObj);
     }
   },
 };
