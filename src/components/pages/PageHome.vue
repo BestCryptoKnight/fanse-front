@@ -14,6 +14,7 @@
 <script>
 import Post from "../models/Post";
 import UiPosts from "../ui/UiPosts.vue";
+import AppSuggestions from "./AppSuggestions.vue";
 export default {
   data: function () {
     return {
@@ -28,7 +29,7 @@ export default {
     window.addEventListener("scroll", this.updateScroll);
   },
   components: {
-    UiPosts,
+    UiPosts,AppSuggestions
   },
   methods: {
     updateScroll() {
