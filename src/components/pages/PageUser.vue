@@ -11,10 +11,10 @@
           <b-link to="/">
             <i class="bi-arrow-left" />
           </b-link>
-          <h5 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
+          <h6 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
             <ui-username :user="user" :asLink="false" :bold="false" />
-            <div><span style="font-size: 0.8rem !important;"> 7 Posts | 1.3k Likes </span></div>
-          </h5>
+            <div  no-caret ><span style="font-size: 0.8rem !important;"> 7 Posts | 1.3k Likes </span></div>
+          </h6>
           <b-dropdown no-caret right variant="link">
             <template slot="button-content"
               ><i class="bi-three-dots-vertical text-white"
@@ -29,7 +29,7 @@
         </div>
       </b-row>
       <b-row>
-        <div class="bg-light cover w-100 position-relative">
+        <div class="bg-light cover w-100 position-relative" style="margin-top: -15px;">
           <b-img :src="user.cover + '?rnd=' + rnd" v-if="user.cover != null" />
         </div>
         <div class="subprofile w-100 d-flex">
