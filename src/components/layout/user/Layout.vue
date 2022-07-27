@@ -1,5 +1,5 @@
 <template>
-  <layout-authorized v-if="isLoggedIn || !isLoggedIn " />
+  <layout-authorized v-if="isLoggedIn" />
   <layout-landing v-else />
 </template>
 <script>
