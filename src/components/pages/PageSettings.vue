@@ -67,6 +67,7 @@
           />
           <ui-form-textarea
             name="bio"
+            maxlength="250"
             v-model="user.bio"
             :errors="errors"
             :label="$t('general.bio')"
