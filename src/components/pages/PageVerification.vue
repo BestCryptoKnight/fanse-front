@@ -24,35 +24,35 @@
       <b-row>
         <b-form class="w-100 mx-3 mt-3">
           <div class="" style="padding-bottom: 30px;">
-            <h2 class="mb-0 font-montserrat"><i class="bi bi-patch-check-fill" style="
+            <h4 class="mb-0 font-montserrat"><i class="bi bi-patch-check-fill" style="
                         color: #00aff0;
-                    "></i> Become a Verify Creator</h2>
-            <div class="btn-block text-center " style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
-            <p class="text-home-w4">Fill in your address, city, ZIP and attach a photo of you holding your ID and a handwritten note
+                    "></i> Become a Verify Creator</h4>
+            <div class="btn-block" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
+            <p class="text-home-w4" style="font-size: 14px;margin-top: 15px;">Fill in your address, city, ZIP and attach a photo of you holding your ID and a handwritten note
             </p><i style="/* color: #000000; */font-style: inherit;display: block;/* vertical-align: top; */font-size: 26px;font-weight: bold;">Rules :</i>
             <p class="bollets-home" style="
                 margin-top: 10px;
-                margin-left: 0px;
+                margin-left: 0px;font-size: 14px;
                 margin-bottom: 7px;
             "><i class="bi bi-patch-check-fill" style="color: #00aff0;"></i> Image must be clear
             </p>
             <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
+                margin-left: 0px;font-size: 14px;
                 margin-bottom: 7px;
             "><i class="bi bi-patch-check-fill" style="color: #00aff0;"></i> Your ID must be fully in frame
             </p>
             <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
+                margin-left: 0px;font-size: 14px;
                 margin-bottom: 7px;
             "><i class="bi bi-patch-check-fill" style="color: #00aff0;"></i> Text must be clearly visible
             </p>
             <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
+                margin-left: 0px;font-size: 14px;
                 margin-bottom: 7px;
             "><i class="bi bi-patch-check-fill" style="color: #00aff0;"></i> Image should not be edited, resized or rotated
             </p>
             <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
+                margin-left: 0px;font-size: 14px;
                 margin-bottom: 7px;
             "><i class="bi bi-patch-check-fill" style="color: #00aff0;"></i> Facial verification is required so the face must be clear
             </p>
@@ -144,7 +144,9 @@
             :errors="errors"
             :label="$t('general.zip')"
           />
-
+          <b-alert show variant="secondary" v-if="editing">{{
+            $t("general.verification-info-bottom")
+          }}</b-alert>
           <b-form-group
             :label="$t('general.photo-id')"
             label-for="photo"
