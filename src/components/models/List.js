@@ -2,7 +2,7 @@ export default class List {
 
     static DEFAULT_BOOKMARKS = 0;
     static DEFAULT_FANS = 1;
-    static DEFAULT_FOLLOWING = 2;
+    // static DEFAULT_FOLLOWING = 2;
     static DEFAULT_RECENT = 3;
 
     id = 0;
@@ -26,8 +26,8 @@ export default class List {
                     return this.vue.$t('general.bookmarks');
                 case List.DEFAULT_FANS:
                     return this.vue.$t('general.fans');
-                case List.DEFAULT_FOLLOWING:
-                    return this.vue.$t('general.following');
+                // case List.DEFAULT_FOLLOWING:
+                //     return this.vue.$t('general.following');
                 case List.DEFAULT_RECENT:
                     return this.vue.$t('general.recent');
             }
