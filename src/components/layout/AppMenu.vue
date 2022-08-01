@@ -61,6 +61,11 @@
     line-height: 1.2rem;
     margin-right: 0.75rem;
   }
+  a {
+    color: black !important;
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
 </style>
 <script>
