@@ -17,7 +17,7 @@
             >{{ $t("general.cancel") }}</b-button
           >
           <b-button @click.prevent="action" variant="primary">{{
-            !editing ? $t("general.edit") : $t("general.save")
+            !editing ? $t("general.edit") : $t("general.send")
           }}</b-button>
         </div>
       </b-row>

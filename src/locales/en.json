@@ -127,7 +127,7 @@
     "zip": "ZIP / Postal",
     "photo-id": "Photo ID",
     "file-uploaded": "File Uploaded",
-    "verification-info-bottom": "Upload a photo with your ID, Make sure the photo you send meets the following requirements:<br>- Both your hand holding the ID card and your full face must be visible<br>– Your face must be clearly visible in both the photo and the ID<br>– The photo must be well lit and not too small, too dark or too blurry",
+    "verification-info-bottom": "Upload a photo with your ID, Make sure the photo you send meets the following requirements:<br />- Both your hand holding the ID card and your full face must be visible <br />– Your face must be clearly visible in both the photo and the ID <br />– The photo must be well lit and not too small, too dark or too blurry",
     "verification-info": "In order to verify your account and allow you to accept payments for your content please provide your legal name and address.",
     "verification-status": "Status of your verification request is: {0}",
     "pending": "Pending",
