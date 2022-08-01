@@ -131,7 +131,7 @@
           </div>
         </div>
       </b-nav-item>
-      <b-nav-item to="/posts/create">
+      <b-nav-item :to="currentUser.isCreator ? '/posts/create' : '/payouts'">
         <div class="icon d-inline-block"><i class="bi-plus-circle" /></div>
       </b-nav-item>
       <b-nav-item to="/messages">
