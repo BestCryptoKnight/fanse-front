@@ -33,6 +33,9 @@
       <b-nav-item to="/lists">
         <i class="bi-list" /> {{ $t("general.lists") }}
       </b-nav-item>
+      <b-nav-item to="/subscriptions">
+        <i class="bi-heart" /> {{ $t("general.subscriptions") }}
+      </b-nav-item>
       <b-nav-item to="/settings">
         <i class="bi-gear" /> {{ $t("general.settings") }}
       </b-nav-item>
