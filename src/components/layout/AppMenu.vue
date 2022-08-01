@@ -46,9 +46,14 @@
         <i class="bi-bank" /> {{ $t("general.payouts") }}
       </b-nav-item>
     </b-nav>
-    <b-nav vertical class="py-2">
+      <b-nav vertical class="py-2">
       <b-nav-item @click.prevent="logOut()">
         <i class="bi-box-arrow-left" /> {{ $t("general.logout") }}
+      </b-nav-item>
+    </b-nav>
+    <b-nav v-if="currentUser.isCreator" vertical class="py-2">
+      <b-nav-item to="/payouts">
+        <i class="bi-bank" /> {{ $t("general.payouts") }}
       </b-nav-item>
     </b-nav>
   </b-sidebar>
