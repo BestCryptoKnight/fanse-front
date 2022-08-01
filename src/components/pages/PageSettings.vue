@@ -102,10 +102,10 @@
       <b-row>
         <b-card  no-body :header="$t('general.subscription')" class="w-100 m-3">
           <b-list-group flush>
-            <b-list-group-item v-if="currentUser.isCreator" to="/settings/price">{{
+            <b-list-group-item v-if="user.isCreator" to="/settings/price">{{
               $t("general.price-bundles")
             }}</b-list-group-item>
-            <b-list-group-item v-if="!currentUser.isCreator" to="/payouts">{{
+            <b-list-group-item v-if="!user.isCreator" to="/payouts">{{
               $t("general.become")
             }}</b-list-group-item>
           </b-list-group>
