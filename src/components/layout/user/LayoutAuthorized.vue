@@ -41,6 +41,12 @@
                 $t("general.messages")
               }}</span>
             </b-nav-item>
+            <b-nav-item class ="nav-hover" to="/bookmarks" exact>
+              <div class="icon d-inline-block"><i class="bi-bookmark" /></div>
+              <span class="d-none d-lg-inline ml-3">{{
+                $t("general.bookmarks")
+              }}</span>
+            </b-nav-item>
             <b-nav-item class ="nav-hover" to="/lists">
               <div class="icon d-inline-block"><i class="bi-list" /></div>
               <span class="d-none d-lg-inline ml-3">{{
