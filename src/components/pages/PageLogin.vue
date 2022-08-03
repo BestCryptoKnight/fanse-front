@@ -35,7 +35,6 @@
 
     <ui-form-input
       type="text"
-      style="height: 50px;"
       name="email"
       v-model="email"
       :errors="errors"
@@ -44,7 +43,6 @@
 
     <ui-form-input
       type="password"
-      style="height: 50px;"
       name="password"
       v-model="password"
       :errors="errors"
@@ -81,7 +79,9 @@
 </template>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
-
+.input-group.form-control{
+height: 50px !important;
+}
 .btn-google {
   margin-bottom: 50px;
   height: 50px;
