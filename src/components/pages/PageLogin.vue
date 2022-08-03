@@ -79,10 +79,10 @@
 </template>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
-
-.form-control {
-  height: 50px !important;
+input{
+height: 50px !important;
 }
+
 .btn-google {
   margin-bottom: 50px;
   height: 50px;
