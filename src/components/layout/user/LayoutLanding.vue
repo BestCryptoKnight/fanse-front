@@ -9,9 +9,9 @@
       </div>
       <div class="w-50 position-relative">
         <div class="middle main main-login">
-          <div class="px-5 pb-5">
+          <!-- <div class="px-5 pb-5">
             <ui-logo class="logo d-md-none text-primary" />
-          </div>
+          </div> -->
           <router-view name="login"></router-view>
         </div>
       </div>
