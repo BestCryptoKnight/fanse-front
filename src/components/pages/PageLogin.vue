@@ -74,7 +74,7 @@
     color: #21252a;
     position: relative;
     background: #FCFCFC;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    // box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
     border-radius: 6px;
   .icon {
     position: absolute;
