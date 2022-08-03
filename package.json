@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^1.25.0",
+    "@vue/composition-api": "^1.7.0",
     "axios": "^0.22.0",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.7.2",
@@ -29,6 +30,7 @@
     "vue-clipboard2": "^0.3.3",
     "vue-google-login": "^2.0.5",
     "vue-i18n": "^8.26.3",
+    "vue-recaptcha": "^2.0.2",
     "vue-router": "^3.5.2",
     "vue2-dropzone": "^3.6.0",
     "vuex": "^3.6.2"
