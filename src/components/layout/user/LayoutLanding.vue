@@ -35,10 +35,13 @@
     }
   }
 }
-.main-login
+@media only screen and (min-width: 800px) {
+ .main-login
 {
   width: 45% !important;
 }
+}
+
 .main {
   width: 344px;
   .logo {
