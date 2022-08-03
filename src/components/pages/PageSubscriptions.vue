@@ -111,9 +111,9 @@ export default {
               if (sub) {
                 subs[i] = sub;
               } else {
-                continue;
-                valid.push(subs[i]);
+                continue;   
               }
+               valid.push(subs[i]);
             }
             // else {valid.push(subs[i]);}
           }
