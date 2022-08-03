@@ -222,7 +222,6 @@ export default {
       return this.scrollPosition >= 180;
     },
     isOwner: function () {
-      console.log(this.$store.state.currentUser)
       if (this.$store.state.currentUser) return this.user.id == this.$store.state.currentUser.id;
       else return false;
     },
@@ -301,7 +300,6 @@ export default {
             posts.push(new Post(obj));
           }
           this.posts = posts;
-          console.log("---------------------", posts)
           this.hasMore = data.next_page_url != null;
           this.isLoading = true;
         },

@@ -25,7 +25,7 @@ import PageNotifications from '../pages/PageNotifications.vue';
 import PagePayouts from '../pages/PagePayouts.vue';
 import PagePayments from '../pages/PagePayments.vue';
 import AppSide from '../layout/AppSide.vue';
-import AppSideProfile from '../layout/AppSideProfile.vue';
+// import AppSideProfile from '../layout/AppSideProfile.vue';
 
 import PageLoginAdmin from '../pages/admin/PageLogin';
 import PageDashboardAdmin from '../pages/admin/PageDashboard';
@@ -209,10 +209,7 @@ export default [
         children: [
             {
                 path: '/:username',
-                components: {
-                    default: PageUser,
-                    side: AppSideProfile
-                },
+                component: PageUser
             },
         ]
     },

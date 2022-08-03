@@ -200,7 +200,6 @@ export default {
           }
           this.total = data.total;
           this.perPage = data.per_page;
-          console.log(subs);
           callback(subs);
         },
         (errors) => {
