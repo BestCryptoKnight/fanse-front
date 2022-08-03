@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="w-50 position-relative">
-        <div class="middle main">
+        <div class="middle main-login">
           <div class="px-5 pb-5">
             <ui-logo class="logo d-md-none text-primary" />
           </div>
@@ -25,7 +25,8 @@
   background: $primary;
   color: $white;
   .middle {
-    width: 45%;
+    width: 100%;
+    max-width: 344px;
     .logo {
       height: 4rem;
     }
@@ -33,6 +34,10 @@
       font-weight: normal;
     }
   }
+}
+.main-login
+{
+  width: 45%;
 }
 .main {
   width: 344px;
