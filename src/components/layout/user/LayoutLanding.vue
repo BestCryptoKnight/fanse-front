@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="w-50 position-relative">
-        <div class="middle main-login">
+        <div class="middle main main-login">
           <div class="px-5 pb-5">
             <ui-logo class="logo d-md-none text-primary" />
           </div>
@@ -37,7 +37,7 @@
 }
 .main-login
 {
-  width: 45%;
+  width: 45% !important;
 }
 .main {
   width: 344px;
