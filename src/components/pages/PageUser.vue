@@ -15,7 +15,7 @@
             <ui-username :user="user" :asLink="false" :bold="false" />
             <div  no-caret ><span style="font-size: 0.8rem !important;"> 7 Posts | 1.3k Likes </span></div>
           </h6>
-          <b-dropdown no-caret right variant="link">
+          <b-dropdown no-caret right variant="link" v-if="this.$store.state.currentUser">
             <template slot="button-content"
               ><i class="bi-three-dots-vertical text-white"
             /></template>
@@ -41,7 +41,7 @@
               size="100px"
             />
           </div>
-          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%" >
+          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%" v-if="this.$store.state.currentUser">
             <b-link :to="'/messages/' + user.id" class="mx-2" v-if="!isOwner">
               <i class="bi-chat" />
             </b-link>
@@ -222,7 +222,9 @@ export default {
       return this.scrollPosition >= 180;
     },
     isOwner: function () {
-      return this.user.id == this.$store.state.currentUser.id;
+      console.log(this.$store.state.currentUser)
+      if (this.$store.state.currentUser) return this.user.id == this.$store.state.currentUser.id;
+      else return false;
     },
     username: function () {
       return this.$route.params.username;
@@ -327,7 +329,9 @@ export default {
       this.$store.state.addToListUser = user;
     },
     subscribe(bundle) {
-      if (this.user.isFree) {
+      if (!this.$store.state.currentUser) {
+        window.location.href = "/signup"
+      } else if (this.user.isFree) {
         this.$post(
           "/subscribe/" + this.user.id,
           {},

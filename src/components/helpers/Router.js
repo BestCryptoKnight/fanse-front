@@ -1,4 +1,5 @@
 import LayoutUser from '../layout/user/Layout.vue';
+import LayoutNoneUser from '../layout/user/LayoutNone.vue';
 import LayoutAdmin from '../layout/admin/Layout.vue';
 import PagePost from '../pages/PagePost.vue';
 import PageLogin from '../pages/PageLogin.vue';
@@ -34,6 +35,7 @@ import PageSubscriptionsAdmin from '../pages/admin/PageSubscriptions';
 import PagePaymentsAdmin from '../pages/admin/PagePayments';
 import PagePayoutsAdmin from '../pages/admin/PagePayouts';
 import PagePostsAdmin from '../pages/admin/PagePosts';
+import Store from './Store';
 
 export default [
     {
@@ -180,13 +182,6 @@ export default [
                 name: 'search'
             },
             {
-                path: '/:username',
-                components: {
-                    default: PageUser,
-                    side: AppSideProfile
-                },
-            },
-            {
                 path: '/:id/:username',
                 component: PagePost,
                 
@@ -201,5 +196,24 @@ export default [
             },
 
         ]
-    }
+    },
+    {
+        path: '/:username',
+        get component() {
+            if (Store.state.token==null) {
+                return LayoutNoneUser
+            } else {
+                return LayoutUser
+            }
+        },
+        children: [
+            {
+                path: '/:username',
+                components: {
+                    default: PageUser,
+                    side: AppSideProfile
+                },
+            },
+        ]
+    },
 ];
