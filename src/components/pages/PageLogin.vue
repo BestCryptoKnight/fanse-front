@@ -81,7 +81,7 @@
 @import "~@/assets/scss/_variables.scss";
 
 .form-control {
-  height: calc(2.5em + 0.75rem + 2px) !important;
+  height: 50px !important;
 }
 .btn-google {
   margin-bottom: 50px;
