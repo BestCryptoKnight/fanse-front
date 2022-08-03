@@ -25,8 +25,7 @@
   background: $primary;
   color: $white;
   .middle {
-    width: 100%;
-    max-width: 344px;
+    width: 45%;
     .logo {
       height: 4rem;
     }

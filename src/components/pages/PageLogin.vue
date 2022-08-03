@@ -1,5 +1,19 @@
 <template>
   <div>
+
+     <GoogleLogin
+      :params="google.params"
+      :onSuccess="googleSuccess"
+      :onFailure="failure"
+      class="w-100 btn btn-google"
+    >
+      <div class="icon">
+        <b-img :src="google.icon" />
+      </div>
+      {{ $t("general.sign-in-with-google") }}
+    </GoogleLogin>
+
+
     <div v-if="errors._ && errors._.length > 0">
       <div class="alert alert-danger" v-for="error in errors._" :key="error">
         {{ error }}
@@ -47,32 +61,28 @@
       <b-link to="/signup">{{ $t("general.create-new-account") }}</b-link>
     </div>
 
-    <GoogleLogin
-      :params="google.params"
-      :onSuccess="googleSuccess"
-      :onFailure="failure"
-      class="mt-5 w-100 btn btn-google"
-    >
-      <div class="icon">
-        <b-img :src="google.icon" />
-      </div>
-      {{ $t("general.sign-in-with-google") }}
-    </GoogleLogin>
+   
   </div>
 </template>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
+.form-control {
+  height: calc(2.5em + 0.75rem + 2px) !important;
+}
+
 .btn-google {
-  background-color: #4285f4;
-  color: #ffffff;
-  position: relative;
+    border-color: #ced4da;
+    color: #21252a;
+    position: relative;
+    background: #FCFCFC;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    border-radius: 6px;
   .icon {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 2.5rem;
-    background: #ffffff;
     display: flex;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
