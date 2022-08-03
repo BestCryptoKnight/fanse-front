@@ -112,9 +112,10 @@ export default {
                 subs[i] = sub;
               } else {
                 continue;
+                valid.push(subs[i]);
               }
             }
-            else {valid.push(subs[i]);}
+            // else {valid.push(subs[i]);}
           }
           this.subs = valid;
         },
