@@ -41,8 +41,8 @@
               size="100px"
             />
           </div>
-          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%" v-if="this.$store.state.currentUser">
-            <b-link :to="'/messages/' + user.id" class="mx-2" v-if="!isOwner">
+          <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
+            <b-link :to="this.$store.state.token ? '/messages/' + user.id : '/signup'" class="mx-2" v-if="!isOwner">
               <i class="bi-chat" />
             </b-link>
             <b-link class="mx-2" @click.prevent="addToList(user)" v-if="!isOwner">
@@ -51,8 +51,8 @@
             <b-link class="mx-2" @click.prevent="copyLink">
               <i class="bi-box-arrow-up-right" />
             </b-link>
-            <b-link :to="'/settings'" class="mx-2"  v-if="isOwner">
-              <i class="bi-gear" /> 
+            <b-link :to="'/settings'" class="mx-2" v-if="isOwner">
+              <i class="bi-gear" />
             </b-link>
             <b-link @click.prevent="tip" class="mx-2" v-if="!isOwner">
               <i class="bi-coin" />
@@ -327,7 +327,8 @@ export default {
       });
     },
     addToList(user) {
-      this.$store.state.addToListUser = user;
+      if (this.$store.state.token) this.$store.state.addToListUser = user;
+      else window.location.href="/signup"
     },
     subscribe(bundle) {
       if (!this.$store.state.currentUser) {
@@ -353,10 +354,15 @@ export default {
       }
     },
     tip() {
-      this.$buyItem({
+      if (this.$store.state.token) {
+        this.$buyItem({
         type: Payment.TYPE_TIP,
         user: this.user,
       });
+      } else {
+        window.location.href="/?next='/adminuser'"
+      }
+      
     },
   },
 };

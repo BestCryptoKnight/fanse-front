@@ -123,7 +123,7 @@
       <b-nav-item to="/" exact>
         <div class="icon d-inline-block"><i class="bi-house" /></div>
       </b-nav-item>
-      <b-nav-item to="/notifications">
+      <b-nav-item to="/notifications" v-if="this.$store.state.token">
         <div class="icon d-inline-block">
           <div class="icon d-inline-block"><i class="bi-bell" /></div>
           <div class="icon d-inline-block">
@@ -134,7 +134,7 @@
       <b-nav-item :to="currentUser.isCreator ? '/posts/create' : '/payouts'" v-if="this.$store.state.token">
         <div class="icon d-inline-block"><i class="bi-plus-circle" /></div>
       </b-nav-item>
-      <b-nav-item to="/messages">
+      <b-nav-item to="/messages" v-if="this.$store.state.token">
         <div class="icon d-inline-block">
           <div class="icon d-inline-block"><i class="bi-chat" /></div>
           <div class="icon d-inline-block">
