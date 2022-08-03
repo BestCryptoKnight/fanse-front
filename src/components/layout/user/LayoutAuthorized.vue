@@ -4,7 +4,7 @@
       <b-row>
         <b-col lg="3" md="2" sm="2" class="d-none d-sm-block">
           <b-nav vertical class="sticky-top">
-            <b-nav-item v-b-toggle.sidebar>
+            <b-nav-item v-b-toggle.sidebar v-if="this.$store.state.token">
               <b-avatar
                 :text="currentUser.initials"
                 :src="currentUser.avatar"
@@ -17,13 +17,13 @@
                 $t("general.home")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" :to="currentUser.url" exact>
+            <b-nav-item class ="nav-hover" :to="currentUser.url" exact v-if="this.$store.state.token">
               <div class="icon d-inline-block"><i class="bi-person" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.my-profile")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" to="/notifications">
+            <b-nav-item class ="nav-hover" to="/notifications" v-if="this.$store.state.token">
               <div class="icon d-inline-block">
                 <i class="bi-bell" />
                 <i class="bi-dot" v-if="updates.notifications > 0" />
@@ -32,7 +32,7 @@
                 $t("general.notifications")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" to="/messages">
+            <b-nav-item class ="nav-hover" to="/messages" v-if="this.$store.state.token">
               <div class="icon d-inline-block">
                 <i class="bi-chat" />
                 <i class="bi-dot" v-if="updates.messages > 0" />
@@ -41,37 +41,37 @@
                 $t("general.messages")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" to="/bookmarks" exact>
+            <b-nav-item class ="nav-hover" to="/bookmarks" exact v-if="this.$store.state.token">
               <div class="icon d-inline-block"><i class="bi-bookmark" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.bookmarks")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" to="/lists">
+            <b-nav-item class ="nav-hover" to="/lists" v-if="this.$store.state.token">
               <div class="icon d-inline-block"><i class="bi-list" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.lists")
               }}</span>
             </b-nav-item>
-            <b-nav-item  class ="nav-hover" to="/subscriptions">
+            <b-nav-item  class ="nav-hover" to="/subscriptions" v-if="this.$store.state.token">
               <div class="icon d-inline-block"><i class="bi-heart" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.subscriptions")
               }}</span>
             </b-nav-item>
-            <b-nav-item class ="nav-hover" v-b-toggle.sidebar>
+            <b-nav-item class ="nav-hover" v-b-toggle.sidebar v-if="this.$store.state.token">
               <div class="icon d-inline-block"><i class="bi-three-dots" /></div>
               <span class="d-none d-lg-inline ml-3">{{
                 $t("general.more")
               }}</span>
             </b-nav-item>
-            <b-nav-item>
+            <b-nav-item v-if="this.$store.state.token">
               <b-button
                 class="w-100 d-lg-block d-md-none d-sm-none"
                 :to="currentUser.isCreator ? '/posts/create' : '/payouts'"
                 variant="primary"
-                >{{ $t("general.new-post") }}</b-button
-              >
+                >{{ $t("general.new-post") }}
+              </b-button>
               <b-button
                 class="w-100 d-md-block d-sm-block d-lg-none p-2"
                 :to="currentUser.isCreator ? '/posts/create' : '/payouts'"
@@ -131,7 +131,7 @@
           </div>
         </div>
       </b-nav-item>
-      <b-nav-item :to="currentUser.isCreator ? '/posts/create' : '/payouts'">
+      <b-nav-item :to="currentUser.isCreator ? '/posts/create' : '/payouts'" v-if="this.$store.state.token">
         <div class="icon d-inline-block"><i class="bi-plus-circle" /></div>
       </b-nav-item>
       <b-nav-item to="/messages">
@@ -142,7 +142,7 @@
           </div>
         </div>
       </b-nav-item>
-      <b-nav-item v-b-toggle.sidebar>
+      <b-nav-item v-b-toggle.sidebar v-if="this.$store.state.token">
         <b-avatar
           :text="currentUser.initials"
           :src="currentUser.avatar"

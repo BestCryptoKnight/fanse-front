@@ -19,7 +19,7 @@
 
       <div class="d-flex align-items-center">
         <div class="text-muted mr-3">{{ post.ago }}</div>
-        <b-dropdown no-caret right variant="link">
+        <b-dropdown no-caret right variant="link" v-if="this.$store.state.currentUser">
           <template slot="button-content"><i class="bi-three-dots" /></template>
           <b-dropdown-item @click.prevent="copyLink">{{
             $t("general.copy-link-to-post")
@@ -321,15 +321,15 @@ export default {
     },
     isOwner: function () {
       return (
-        this.$store.state.currentUser.isAdmin ||
-        (this.value && this.value.user.id == this.$store.state.currentUser.id)
+        this.$store.state.currentUser && (this.$store.state.currentUser.isAdmin ||
+        (this.value && this.value.user.id == this.$store.state.currentUser.id))
       );
     },
     currentUser() {
       return this.$store.state.currentUser;
     },
     hasAccess: function () {
-      return this.$store.state.currentUser.isAdmin || this.post.hasAccess;
+      return this.$store.state.currentUser && (this.$store.state.currentUser.isAdmin || this.post.hasAccess);
     },
     totalVotes() {
       let total = 0;

@@ -2,7 +2,7 @@
   <b-sidebar id="sidebar" no-header backdrop>
     <b-container fluid class="border-bottom p-3">
       <b-row class="gy-2">
-        <b-col cols="6">
+        <b-col cols="6" v-if="this.$store.state.token">
           <b-avatar
             :text="currentUser.initials"
             :src="currentUser.avatar"
@@ -15,7 +15,7 @@
             <i class="bi-x" />
           </b-button-close>
         </b-col>
-        <b-col cols="12" class="overflow-hidden">
+        <b-col cols="12" class="overflow-hidden" v-if="this.$store.state.token">
           <ui-username :user="currentUser" />
           <div class="small text-secondary username">
             @{{ currentUser.username }}

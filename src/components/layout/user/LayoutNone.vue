@@ -1,9 +1,9 @@
 <template>
-  <layout-none-authorized v-if="isLoggedIn" />
+  <layout-authorized v-if="isLoggedIn" />
   <layout-landing v-else />
 </template>
 <script>
-import LayoutNoneAuthorized from "./LayoutNoneAuthorized.vue";
+import LayoutAuthorized from "./LayoutAuthorized.vue";
 import LayoutLanding from "./LayoutLanding.vue";
 export default {
   computed: {
@@ -11,6 +11,6 @@ export default {
       return true;
     },
   },
-  components: { LayoutNoneAuthorized, LayoutLanding },
+  components: { LayoutAuthorized, LayoutLanding },
 };
 </script>

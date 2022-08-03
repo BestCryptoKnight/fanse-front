@@ -301,6 +301,7 @@ export default {
             posts.push(new Post(obj));
           }
           this.posts = posts;
+          console.log("---------------------", posts)
           this.hasMore = data.next_page_url != null;
           this.isLoading = true;
         },
