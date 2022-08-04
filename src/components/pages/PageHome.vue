@@ -31,7 +31,6 @@ import AppSuggestions from "./AppSuggestions.vue";
 export default {
   data: function () {
     return {
-      q: "",
       posts: [],
       page: 1,
       hasMore: false,
