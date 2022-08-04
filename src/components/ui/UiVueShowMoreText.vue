@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-bind:style="additionalContainerCss">
+  <div  v-bind:style="additionalContainerCss">
     <!-- eslint-disable -->  
     <div ref="detail" v-bind:class="{'default': !expanded, 'expanded': expanded}" 
       v-bind:style="`--lines: ${lines}`">
@@ -130,9 +130,7 @@ export default {
 }
 .anchor{
   display: block; 
-  text-align: right; 
-  padding: 8px; 
-  margin-bottom: 4px;
+  text-align: left; 
   color: #1976d2;
   cursor: pointer;
 }

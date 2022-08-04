@@ -65,11 +65,9 @@
         <div class="text-muted small small-username">
           {{ "@" + user.username }}
         </div>
-        <div class="bio mt-3 nl2br" v-if="user.bio">{{ user.bio }}</div>
         <UiVueShowMoreText
             :text="user.bio"
-            :lines="4"
-            additional-container-css="margin:14px;"
+            :lines="3"
             additional-content-css="font-size:16px;"
             additional-content-expanded-css="font-size:16px;"
             additional-anchor-css="font-size: 16px;"
