@@ -41,8 +41,7 @@
               size="100px"
             />
             <div style="position:absolute; bottom: 5px; right: 5px">
-              <i style="color: #00FF00" class="ml-1 bi bi-circle-fill" v-if="user.online_status"></i>
-              <i style="color: #808080" class="ml-1 bi bi-dash-circle-fill" v-else></i>
+              <i style="color: #65D164" class="ml-1 bi bi-circle-fill circle" v-if="user.online_status"></i>
             </div>
           </div>
           <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
@@ -65,9 +64,13 @@
         </div>
       </b-row>
       <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
-          <ui-username :user="user" :asLink="false" />
+          <div class="d-flex flex-float">
+            <ui-username :user="user" :asLink="false" />
+          </div>
         <div class="text-muted small small-username">
           {{ "@" + user.username }}
+          <span v-if="!user.online_status">&nbsp;&middot;&nbsp;&nbsp;Last seen {{user.time_difference}} {{user.hms}} ago</span>
+          <span v-else>&nbsp;&middot;&nbsp;&nbsp;Available now</span>
         </div>
         <UiVueShowMoreText
             :text="user.bio"
@@ -206,6 +209,15 @@
 .nav-tabs .nav-item.show .nav-link {
   color: $primary;
   border-color: $primary;
+}
+.circle {
+    background-color:#fff;
+    border:1px solid white;    
+    height:100px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:100px;
 }
 </style>
 <script>
