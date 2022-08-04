@@ -41,7 +41,7 @@
               size="100px"
             />
             <div style="position:absolute; bottom: 5px; right: 5px">
-              <i style="color: #65D164" class="ml-1 bi bi-circle-fill circle" v-if="user.online_status"></i>
+              <i style="color: #65D164" class="ml-1 bi bi-circle-fill" v-if="user.online_status"></i>
             </div>
           </div>
           <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
@@ -209,15 +209,6 @@
 .nav-tabs .nav-item.show .nav-link {
   color: $primary;
   border-color: $primary;
-}
-.circle {
-    background-color:#fff;
-    border:1px solid white;    
-    height:100px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    width:100px;
 }
 </style>
 <script>
