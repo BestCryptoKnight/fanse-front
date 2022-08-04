@@ -338,6 +338,7 @@ export default {
           () => {
             this.reset();
             this.loadUser();
+            this.post.hasAccess = true
           },
           (errors) => {
             console.log(errors);
