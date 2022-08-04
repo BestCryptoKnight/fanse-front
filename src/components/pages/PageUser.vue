@@ -66,6 +66,15 @@
           {{ "@" + user.username }}
         </div>
         <div class="bio mt-3 nl2br" v-if="user.bio">{{ user.bio }}</div>
+        <UiVueShowMoreText
+            :text="txtString"
+            :lines="4"
+            additional-container-css="margin:14px;"
+            additional-content-css="font-size:16px;"
+            additional-content-expanded-css="font-size:16px;"
+            additional-anchor-css="font-size: 16px;"
+            @click="change"
+          />
         <div v-if="user.location" class="text-muted small">
           {{ user.location }}
         </div>
@@ -203,8 +212,10 @@ import User from "../models/User";
 import UiPosts from "../ui/UiPosts.vue";
 import Payment from "../models/Payment";
 import UiUsername from "../ui/UiUsername.vue";
+import UiVueShowMoreText from "../ui/UiVueShowMoreText.vue";
+
 export default {
-  components: { UiPosts, UiUsername },
+  components: { UiPosts, UiUsername,UiVueShowMoreText },
   data: function () {
     return {
       user: null,
@@ -215,6 +226,7 @@ export default {
       isLoading: false,
       rnd: Math.random(),
       postsType: Post.TYPE_ACTIVE,
+      txtString: user.bio,
     };
   },
   computed: {
@@ -237,6 +249,7 @@ export default {
     },
   },
   watch: {
+    
     username: function (oldV, newV) {
       if (oldV && newV && oldV != newV) {
         this.reset();
@@ -249,6 +262,9 @@ export default {
     window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
+    change(showAll) {
+      console.log(showAll)
+    },
     updatePosts(type) {
       this.postsType = type;
       this.reset();
