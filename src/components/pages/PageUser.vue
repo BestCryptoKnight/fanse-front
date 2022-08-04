@@ -287,26 +287,50 @@ export default {
     },
     loadPosts() {
       this.isLoading = true;
-      this.$get(
-        "/posts/user/" +
-          this.user.id +
-          "?page=" +
-          this.page +
-          "&type=" +
-          this.postsType,
-        (data) => {
-          let posts = [...this.posts];
-          for (let obj of data.data) {
-            posts.push(new Post(obj));
+      if (this.$store.state.token){
+        this.$get(
+          "/posts/user/" +
+            this.user.id +
+            "?page=" +
+            this.page +
+            "&type=" +
+            this.postsType,
+          (data) => {
+            let posts = [...this.posts];
+            for (let obj of data.data) {
+              posts.push(new Post(obj));
+            }
+            this.posts = posts;
+            this.hasMore = data.next_page_url != null;
+            this.isLoading = true;
+          },
+          (errors) => {
+            console.log(errors);
           }
-          this.posts = posts;
-          this.hasMore = data.next_page_url != null;
-          this.isLoading = true;
-        },
-        (errors) => {
-          console.log(errors);
-        }
-      );
+        );
+      } else{
+        this.$get(
+          "/posts/guest/" +
+            this.user.id +
+            "?page=" +
+            this.page +
+            "&type=" +
+            this.postsType,
+          (data) => {
+            let posts = [...this.posts];
+            for (let obj of data.data) {
+              posts.push(new Post(obj));
+            }
+            this.posts = posts;
+            this.hasMore = data.next_page_url != null;
+            this.isLoading = true;
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      }
+      
     },
     loadMore() {
       if (this.hasMore) {
@@ -338,7 +362,6 @@ export default {
           () => {
             this.reset();
             this.loadUser();
-            this.post.hasAccess = true
           },
           (errors) => {
             console.log(errors);

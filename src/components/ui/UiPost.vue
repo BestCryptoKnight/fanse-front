@@ -454,25 +454,48 @@ export default {
     },
     loadPosts() {
       this.isLoading = true;
-      this.$get(
-        "/posts/user/" +
-          this.post.user.id +
-          "?page=" +
-          this.page +
-          "&type=0",
-        (data) => {
-          let posts = [...this.posts];
-          for (let obj of data.data) {
-            posts.push(new Post(obj));
+      if (this.$store.state.token) {
+        this.$get(
+          "/posts/user/" +
+            this.post.user.id +
+            "?page=" +
+            this.page +
+            "&type=0",
+          (data) => {
+            let posts = [...this.posts];
+            for (let obj of data.data) {
+              posts.push(new Post(obj));
+            }
+            this.posts = posts;
+            this.hasMore = data.next_page_url != null;
+            this.isLoading = true;
+          },
+          (errors) => {
+            console.log(errors);
           }
-          this.posts = posts;
-          this.hasMore = data.next_page_url != null;
-          this.isLoading = true;
-        },
-        (errors) => {
-          console.log(errors);
-        }
-      );
+        );
+      } else {
+        this.$get(
+          "/posts/guest/" +
+            this.post.user.id +
+            "?page=" +
+            this.page +
+            "&type=0",
+          (data) => {
+            let posts = [...this.posts];
+            for (let obj of data.data) {
+              posts.push(new Post(obj));
+            }
+            this.posts = posts;
+            this.hasMore = data.next_page_url != null;
+            this.isLoading = true;
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      }
+      
     },
     loadUser() {
       this.$get(
