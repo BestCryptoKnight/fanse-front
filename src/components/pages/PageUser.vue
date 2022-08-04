@@ -67,7 +67,7 @@
         </div>
         <div class="bio mt-3 nl2br" v-if="user.bio">{{ user.bio }}</div>
         <UiVueShowMoreText
-            :text="txtString"
+            :text="user.bio"
             :lines="4"
             additional-container-css="margin:14px;"
             additional-content-css="font-size:16px;"
@@ -226,7 +226,6 @@ export default {
       isLoading: false,
       rnd: Math.random(),
       postsType: Post.TYPE_ACTIVE,
-      txtString: user.bio,
     };
   },
   computed: {
