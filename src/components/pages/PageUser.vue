@@ -4,7 +4,7 @@
       <b-row
         :class="
           'page-header sticky-top' +
-          (isScrolled ? ' scrolled bg-white border-bottom ' : '')
+          (isScrolled ? ' scrolled bg-white ' : '')
         "
       >
         <div class="d-flex align-items-center w-100 px-3">
