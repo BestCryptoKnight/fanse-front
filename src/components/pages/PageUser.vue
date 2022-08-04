@@ -41,8 +41,8 @@
               size="100px"
             />
             <div style="position:absolute; bottom: 5px; right: 5px">
-              <i style="color: green" class="ml-1 bi bi-circle-fill" v-if="user.online_status"></i>
-              <i style="color: grey" class="ml-1 bi bi-dash-circle-fill" v-else></i>
+              <i style="color: #00FF00" class="ml-1 bi bi-circle-fill" v-if="user.online_status"></i>
+              <i style="color: #808080" class="ml-1 bi bi-dash-circle-fill" v-else></i>
             </div>
           </div>
           <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
