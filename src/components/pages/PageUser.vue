@@ -40,6 +40,10 @@
               :to="user.url"
               size="100px"
             />
+            <div style="position:absolute; bottom: 5px; right: 5px">
+              <i style="color: green" class="ml-1 bi bi-circle-fill" v-if="user.online_status"></i>
+              <i style="color: grey" class="ml-1 bi bi-dash-circle-fill" v-else></i>
+            </div>
           </div>
           <div class="d-flex mx-2 mt-2 ml-auto" style="font-size: 150%">
             <b-link :to="this.$store.state.token ? '/messages/' + user.id : '/signup'" class="mx-2" v-if="!isOwner">
@@ -61,13 +65,7 @@
         </div>
       </b-row>
       <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
-        <div class="d-flex flex-float">
           <ui-username :user="user" :asLink="false" />
-          <div class="d-flex align-items-center">
-            <i style="height:20px; color: green" class="ml-1 bi bi-check2-circle" v-if="user.online_status"></i>
-            <i style="height:23px" class="ml-1 bi bi-dash-circle-fill" v-else> {{user.time_difference}} {{user.hms}} ago</i>
-          </div>
-        </div>
         <div class="text-muted small small-username">
           {{ "@" + user.username }}
         </div>
