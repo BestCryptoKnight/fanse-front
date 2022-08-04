@@ -6,13 +6,33 @@
           <h5 class="text-uppercase my-3">{{ $t("general.home") }}</h5>
         </b-col>
       </b-row>
+      <div v-if="isMobile()" ref="swiper" class="swiper w-100 overflow-hidden">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide d-block"
+            v-for="(item, key) in chunkedArr"
+            :key="key"
+          >
+            <ui-suggestion
+              :user="user"
+              v-for="(user, k) in item"
+              :key="k"
+              class="mb-2"
+            />
+          </div>
+        </div>
+      </div>
       <ui-posts v-model="posts" />
     </b-col>
   </b-row>
 </template>
 <script>
+import { Swiper } from "swiper";
+import "swiper/swiper-bundle.css";
+import User from "../models/User";
 import Post from "../models/Post";
 import UiPosts from "../ui/UiPosts.vue";
+import UiSuggestion from "../ui/UiSuggestion.vue";
 export default {
   data: function () {
     return {
@@ -20,16 +40,58 @@ export default {
       page: 1,
       hasMore: false,
       isLoading: false,
+      users: [],
+      swiper: null,
     };
+  },
+  components: {
+    UiPosts,
+    UiSuggestion,
   },
   mounted() {
     this.loadPosts();
     window.addEventListener("scroll", this.updateScroll);
+     this.swiper = new Swiper(this.$refs.swiper, {
+      // Optional parameters
+      direction: "horizontal",
+    });
+    this.loadSuggestions();
   },
-  components: {
-    UiPosts,
+  computed: {
+    chunkedArr() {
+      const result = [];
+      for (let i = 0; i < this.users.length; i += 3)
+        result.push(this.users.slice(i, i + 3));
+      return result;
+    },
   },
   methods: {
+    loadSuggestions() {
+      this.$get(
+        "/users",
+        (data) => {
+          let users = [];
+          for (let obj of data.users) {
+            if (obj.role == 1){
+              users.push(new User(obj));
+            }
+          }
+          this.users = users;
+          this.$nextTick(function () {
+            this.swiper.update();
+          });
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+    slideLeft() {
+      this.swiper.slidePrev();
+    },
+    slideRight() {
+      this.swiper.slideNext();
+    },
     isMobile() {
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       return true
