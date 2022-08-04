@@ -6,7 +6,7 @@
           <h5 class="text-uppercase my-3">{{ $t("general.home") }}</h5>
         </b-col>
       </b-row>
-      <div v-if="isMobile()" ref="swiper" class="swiper w-100 overflow-hidden">
+      <div v-if="isMobile()" ref="swiper" class="swiper w-100 overflow-hidden" style="margin-top:15px;">
         <div class="swiper-wrapper">
           <div
             class="swiper-slide d-block"
@@ -60,8 +60,8 @@ export default {
   computed: {
     chunkedArr() {
       const result = [];
-      for (let i = 0; i < this.users.length; i += 3)
-        result.push(this.users.slice(i, i + 3));
+      for (let i = 0; i < this.users.length; i += 2)
+        result.push(this.users.slice(i, i + 2));
       return result;
     },
   },
