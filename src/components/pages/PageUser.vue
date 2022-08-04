@@ -61,7 +61,13 @@
         </div>
       </b-row>
       <b-row class="px-3 mt-3 d-block border-bottom pb-3 overflow-hidden">
-        <ui-username :user="user" :asLink="false" />
+        <div class="d-flex flex-float">
+          <ui-username :user="user" :asLink="false" />
+          <div class="d-flex align-items-center">
+            <i style="height:20px; color: green" class="ml-1 bi bi-check2-circle" v-if="user.online_status"></i>
+            <i style="height:23px" class="ml-1 bi bi-dash-circle-fill" v-else> {{user.time_difference}} {{user.hms}} ago</i>
+          </div>
+        </div>
         <div class="text-muted small small-username">
           {{ "@" + user.username }}
         </div>
