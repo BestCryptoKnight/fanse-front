@@ -29,7 +29,7 @@
         </div>
       </b-row>
       <b-row>
-        <div class="bg-light cover w-100 position-relative" style="margin-top: -15px;">
+        <div class="bg-light cover w-100 position-relative" style="margin-top: -70px;">
           <b-img :src="user.cover + '?rnd=' + rnd" v-if="user.cover != null" />
         </div>
         <div class="subprofile w-100 d-flex">
@@ -149,7 +149,6 @@
 .profile {
   .page-header {
     top: -56px;
-    margin-bottom: -56px;
     transition: top 0.2s;
     color: white;
     .btn,
