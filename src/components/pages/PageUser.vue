@@ -293,16 +293,30 @@ export default {
       }
     },
     loadUser() {
-      this.$get(
-        "/users/" + this.username,
-        (data) => {
-          this.user = new User(data);
-          this.loadPosts();
-        },
-        (errors) => {
-          console.log(errors);
-        }
-      );
+      if (this.$store.state.token){
+        this.$get(
+          "/users/" + this.username,
+          (data) => {
+            this.user = new User(data);
+            this.loadPosts();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      } else {
+        this.$get(
+          "/users/guest/" + this.username,
+          (data) => {
+            this.user = new User(data);
+            this.loadPosts();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      }
+      
     },
     loadPosts() {
       this.isLoading = true;

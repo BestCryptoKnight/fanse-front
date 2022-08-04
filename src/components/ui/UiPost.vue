@@ -498,16 +498,30 @@ export default {
       
     },
     loadUser() {
-      this.$get(
-        "/users/" + this.post.user.username,
-        (data) => {
-          this.post.user = new User(data);
-          this.loadPosts();
-        },
-        (errors) => {
-          console.log(errors);
-        }
-      );
+      if (this.$store.state.token){
+        this.$get(
+          "/users/" + this.post.user.username,
+          (data) => {
+            this.post.user = new User(data);
+            this.loadPosts();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      } else {
+        this.$get(
+          "/users/guest/" + this.post.user.username,
+          (data) => {
+            this.post.user = new User(data);
+            this.loadPosts();
+          },
+          (errors) => {
+            console.log(errors);
+          }
+        );
+      }
+      
     },
     subscribe(bundle) {
       if (this.post.user.isFree) {
