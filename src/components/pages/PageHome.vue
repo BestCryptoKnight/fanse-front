@@ -6,11 +6,24 @@
           <h5 class="text-uppercase my-3">{{ $t("general.home") }}</h5>
         </b-col>
       </b-row>
-      <app-suggestions v-if="isMobile()" />
+      <div class="display-mobile">
+        <app-suggestions/>
+      </div>
+      
       <ui-posts v-model="posts" />
     </b-col>
   </b-row>
 </template>
+<style scoped>
+.display-mobile {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .display-mobile {
+    display: block;
+  }
+}
+</style>
 <script>
 import Post from "../models/Post";
 import UiPosts from "../ui/UiPosts.vue";
@@ -34,13 +47,6 @@ export default {
     AppSuggestions,
   },
   methods: {
-    isMobile() {
-      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-      return false
-      }
-    },
     updateScroll() {
       const scrollPosition = window.innerHeight + window.scrollY;
       if (
