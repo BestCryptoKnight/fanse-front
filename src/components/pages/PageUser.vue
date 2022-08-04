@@ -76,7 +76,7 @@
             :lines="3"
             additional-content-css="font-size:16px;"
             additional-content-expanded-css="font-size:16px;"
-            additional-anchor-css="font-size: 16px;"
+            additional-anchor-css="font-size: 12px;"
             @click="change"
           />
         <div v-if="user.location" class="text-muted small">
