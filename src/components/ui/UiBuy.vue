@@ -11,7 +11,7 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <div class="rounded suggestion w-100 bg-light">
+        <!-- <div class="rounded suggestion w-100 bg-light">
           <b-img :src="this.$store.state.buyItem.user.cover" v-if="this.$store.state.buyItem.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
@@ -24,7 +24,7 @@
               {{ "@" + this.$store.state.buyItem.user.username }}
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- {{ description }} -->
        <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
