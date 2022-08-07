@@ -86,6 +86,13 @@
             :errors="errors"
             :label="$t('general.website')"
           />
+          <ui-form-input
+            type="url"
+            name="instagram"
+            v-model="user.instagram"
+            :errors="errors"
+            :label="$t('general.instagram')"
+          />
         </b-form>
       </b-row>
       <b-row>
@@ -204,6 +211,7 @@ export default {
           bio: this.user.bio,
           location: this.user.location,
           website: this.user.website,
+          instagram: this.user.instagram,
         },
 
         (data) => {

@@ -18,6 +18,10 @@ export default class User {
   bio = null;
   location = null;
   website = null;
+  instagram = null;
+  twitter = null;
+  snapchat = null;
+  tiktok = null;
   price = 0;
   bundles = [];
   isSubscribed = false;
@@ -35,6 +39,10 @@ export default class User {
     this.bio = data.bio ? data.bio : null;
     this.location = data.location ? data.location : null;
     this.website = data.website ? data.website : null;
+    this.instagram = data.instagram ? data.instagram : null;
+    // this.twitter = data.twitter ? data.twitter : null;
+    // this.snapchat = data.snapchat ? data.snapchat : null;
+    // this.tiktok = data.tiktok ? data.tiktok : null;
     this.price = data.price ? data.price / 100 : null;
     this.isSubscribed = data.is_subscribed;
     this.last_seen = data.last_seen ? (new Date(data.last_seen). getTime()) : 0;

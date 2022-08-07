@@ -65,6 +65,13 @@
               :label="$t('general.website')"
             />
             <ui-form-input
+              type="url"
+              name="instagram"
+              v-model="user.instagram"
+              :errors="errors"
+              :label="$t('general.instagram')"
+            />
+            <ui-form-input
               type="email"
               name="email"
               v-model="email"
@@ -148,6 +155,7 @@ export default {
           bio: this.user.bio,
           location: this.user.location,
           website: this.user.website,
+          instagram: this.user.instagram,
           email: this.email,
           new_password: this.newPassword,
           new_password_confirmation: this.newPasswordConfirm,
