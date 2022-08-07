@@ -81,7 +81,7 @@
             @click="change"
           />
         <div v-if="user.location" class="text-muted small"><i class="bi bi-geo-alt-fill"></i> 
-          {{ user.location }} <b-link  v-if="user.website" target="_blank" :href="user.website"> &nbsp;&middot;&nbsp;&nbsp; <i class="bi bi-link-45deg"></i> 
+          {{ user.location }} <b-link  v-if="user.website" target="_blank" :href="user.website"> &nbsp;&middot;&nbsp; <i class="bi bi-link-45deg"></i> 
           {{user.website}}</b-link>
         </div>
         <div style="display:flex; overflow: scroll;">

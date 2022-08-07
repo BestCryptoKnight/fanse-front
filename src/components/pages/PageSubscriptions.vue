@@ -11,7 +11,7 @@
           </h5>
         </div>
       </b-row>
-      <div v-if="subs[0] == null" class="empty-section"> No subscriptions yet!</div>
+      <div v-if="subs[0] == null && !isLoading " class="empty-section"> No subscriptions yet!</div>
       <b-row class="users">
         <b-col
           lg="4"
@@ -42,7 +42,7 @@
   }
 }
 .empty-section{
-   text-align: center;margin-top: 50%;font-weight: bold;color: #8a96a3c4;font-size: 1.2rem;line-height: 1.4rem;font-weight: 500;
+   text-align: center;margin-top: 20%;font-weight: bold;color: #8a96a3c4;font-size: 1.2rem;line-height: 1.4rem;font-weight: 500;
 }
 </style>
 <script>
