@@ -11,20 +11,20 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <!-- <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+        <div class="rounded suggestion w-100 bg-light">
+          <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <b-avatar
-            :src="item.user.avatar"
-            :text="item.user.initials"
-            :to="item.user.url"
+            :src="user.avatar"
+            :text="user.initials"
+            :to="user.url"
           />
           <div class="overflow-hidden w-100 subprofile py-2 pr-2">
-            <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
+            <ui-username :user="user" :asLink="false" class="text-white " style="color:white;"  />
             <div class="text-white small username-white">
-              {{ "@" + item.user }}
+              {{ "@" + user.username }}
             </div>
           </div>
-        </div> -->
+        </div>
         <!-- {{ description }} -->
        <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
@@ -257,6 +257,9 @@ export default {
       }
       return "";
     },
+  },
+  props: {
+    user: User,
   },
   methods: {
     init() {
