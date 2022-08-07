@@ -74,17 +74,14 @@
         </div>
         <UiVueShowMoreText
             :text="user.bio"
-            :lines="3"
+            :lines="2"
             additional-content-css="font-size:16px;"
             additional-content-expanded-css="font-size:16px;"
             additional-anchor-css="font-size: 12px;"
             @click="change"
           />
-        <div v-if="user.location" class="text-muted small">
-          {{ user.location }}
-        </div>
-        <div v-if="user.website" class="small">
-          <b-link target="_blank" :href="user.website">{{
+        <div v-if="user.location" class="text-muted small"><i class="bi bi-geo-alt-fill"></i> 
+          {{ user.location }} &nbsp;&middot;&nbsp;&nbsp; <b-link target="_blank" :href="user.website">{{
             user.website
           }}</b-link>
         </div>
