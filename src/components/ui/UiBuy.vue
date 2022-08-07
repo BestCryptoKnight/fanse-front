@@ -12,7 +12,7 @@
     >
       <div v-if="!isTip" >
         <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <!-- <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  /> -->
           <!-- <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
             :text="this.$store.state.buyItem.user.initials"
@@ -25,7 +25,7 @@
             </div>
           </div> -->
         </div>
-         {{ description }} 
+         <!-- {{ description }}  -->
        <div class="btn-block m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
