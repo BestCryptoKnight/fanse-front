@@ -11,20 +11,10 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <!-- <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="this.$store.state.buyItem.user.cover" v-if="this.$store.state.buyItem.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
-          <b-avatar
-            :src="this.$store.state.buyItem.user.avatar"
-            :text="this.$store.state.buyItem.user.initials"
-            :to="this.$store.state.buyItem.user.url"
-          />
-          <div class="overflow-hidden w-100 subprofile py-2 pr-2">
-            <ui-username :user="this.$store.state.buyItem.user" :asLink="false" class="text-white " style="color:white;"  />
-            <div class="text-white small username-white">
-              {{ "@" + this.$store.state.buyItem.user.username }}
-            </div>
-          </div>
-        </div> -->
+        <ui-suggestion
+              :user="item.user"
+              class="mb-2"
+            />
         <!-- {{ description }} -->
        <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
@@ -179,8 +169,9 @@ import User from "../models/User";
 import UiCreditCard from "./UiCreditCard.vue";
 import UiFormInput from "./UiFormInput.vue";
 import UiUsername from "./UiUsername.vue";
+import UiBuyUser from "./ui/UiBuyUser.vue";
 export default {
-  components: { UiCreditCard, UiUsername, UiFormInput },
+  components: { UiCreditCard, UiUsername, UiFormInput ,UiBuyUser},
   data: function () {
     return {
       gateway: null,
