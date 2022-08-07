@@ -27,10 +27,7 @@
           </div>
         </b-link>
         {{ description }}
-       
-        </div>
-      <div v-else class="m-3">
-         <div v-if="!isTip" class="btn-block text-center border-bottom" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
+       <div class="btn-block text-center border-bottom" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
@@ -54,7 +51,10 @@
                 margin-bottom: 7px;
             "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
             </p>
-        </div>      
+        </div>     
+        </div>
+      <div v-else class="m-3">
+          
         <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
             :src="item.user.avatar"
