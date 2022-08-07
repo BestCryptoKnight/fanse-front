@@ -10,9 +10,9 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" >
-      <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+      <div v-if="!isTip" class="border-bottom" >
+      <b-link :to="item.user.url" class="suggestion w-100 bg-light d-block">
+          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
@@ -129,6 +129,12 @@
   </div>
 </template>
 <style scoped lang="scss">
+.modal-header{
+  padding: 0.5rem 1rem!important;
+}
+.modal-dialog{
+  max-width: 390px!important;
+  }
 .suggestion {
   position: relative;
   .avatar {
