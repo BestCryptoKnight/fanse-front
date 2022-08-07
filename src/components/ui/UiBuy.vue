@@ -16,7 +16,7 @@
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
-            :to="item.buyItem.user.url"
+            :to="item.user.url"
           /> 
           <div class="overflow-hidden w-100 subprofile py-2 pr-2">
             <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
