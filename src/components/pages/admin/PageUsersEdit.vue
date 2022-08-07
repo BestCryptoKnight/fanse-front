@@ -72,6 +72,27 @@
               :label="$t('general.instagram')"
             />
             <ui-form-input
+              type="url"
+              name="twitter"
+              v-model="user.twitter"
+              :errors="errors"
+              :label="$t('general.twitter')"
+            />
+            <ui-form-input
+              type="url"
+              name="snapchat"
+              v-model="user.snapchat"
+              :errors="errors"
+              :label="$t('general.snapchat')"
+            />
+            <ui-form-input
+              type="url"
+              name="tiktok"
+              v-model="user.tiktok"
+              :errors="errors"
+              :label="$t('general.tiktok')"
+            />
+            <ui-form-input
               type="email"
               name="email"
               v-model="email"
@@ -156,6 +177,9 @@ export default {
           location: this.user.location,
           website: this.user.website,
           instagram: this.user.instagram,
+          twitter: this.user.twitter,
+          snapchat: this.user.snapchat,
+          tiktok: this.user.tiktok,
           email: this.email,
           new_password: this.newPassword,
           new_password_confirmation: this.newPasswordConfirm,
