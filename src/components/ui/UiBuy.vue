@@ -11,20 +11,21 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  /> -->
+      <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
+          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
-            :to="item.user.url"
-          /> 
+            size="100px"
+            class="avatar m-2"
+          />
           <div class="overflow-hidden w-100 subprofile py-2 pr-2">
             <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
-            <div class="text-white small username-white">
+            <div class="text-white small username-white d-block ">
               {{ "@" + item.user.username }}
             </div>
           </div>
-        </div>
+      </b-link>
          {{ description }} 
        <div class="btn-block m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
@@ -51,7 +52,7 @@
             "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
             </p>
         </div>     
-        </div>
+      </div>
       <div v-else class="m-3">
           
         <div class="d-flex" style="margin-top: 10px;">
