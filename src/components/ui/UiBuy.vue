@@ -26,6 +26,19 @@
           </div>
         </div> -->
         <!-- {{ description }} -->
+        <div class="d-flex" style="margin-top: 10px;">
+          <b-avatar
+            :src="item.user.avatar"
+            :text="item.user.initials"
+            :to="item.user.url"
+          />
+          <div class="d-flex flex-column ml-2 overflow-hidden">
+            <ui-username :user="item.user" :asLink="false" />
+            <span class="text-muted small small-username">
+              {{ "@" + item.user.username }}
+            </span>
+          </div>
+        </div>
        <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
