@@ -175,7 +175,7 @@
       </b-row>
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
-        v-if="!user.isSubscribed && !isOwner && !user.isCreator"
+        v-if="!user.isSubscribed && !isOwner && user.isCreator"
       >
         <h5 class="mb-3">{{ $t("general.subscription") }}</h5>
         <b-button variant="primary" block @click.prevent="subscribe">
@@ -192,6 +192,7 @@
           !isOwner &&
           !user.isSubscribed &&
           !user.isFree &&
+          user.isCreator &&
           user.bundles.length > 0
         "
       >
