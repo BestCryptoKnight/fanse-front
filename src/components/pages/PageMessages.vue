@@ -84,6 +84,7 @@
           </div>
         </b-row>
       </div>
+      <div v-if="chats[0] == null" class="empty-section"> Nothing was found!</div>
     </b-col>
     <b-col
       lg="7"
@@ -97,6 +98,7 @@
         v-if="showChatId != null && !isComposing"
       />
       <page-mass-message v-model="mass" v-if="isComposing" />
+      <div v-if="chats[0] == null" class="empty-section"> Please subscribe to a creator to access this area.</div>
     </b-col>
   </b-row>
 </template>
@@ -120,6 +122,10 @@
   .chats {
     border-right-width: 1px !important;
   }
+}
+
+.empty-section{
+  text-align-last: center;margin-top: 50%;font-weight: bold;color: #8a96a3c4;font-size: 1.2rem;line-height: 1.4rem;font-weight: 500;
 }
 .chats {
   min-height: calc(var(--vh, 1vh) * 100);

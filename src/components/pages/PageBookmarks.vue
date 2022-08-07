@@ -11,10 +11,16 @@
           </h5>
         </div>
       </b-row>
+      <div v-if="posts[0] == null" class="empty-section"> No bookmarks yet!</div>
       <ui-posts v-model="posts" />
     </b-col>
   </b-row>
 </template>
+<style scoped lang="scss">
+.empty-section{
+  text-align-last: center;margin-top: 50%;font-weight: bold;color: #8a96a3c4;font-size: 1.2rem;line-height: 1.4rem;font-weight: 500;
+}
+</style>
 <script>
 import Post from "../models/Post";
 import UiPosts from "../ui/UiPosts.vue";
