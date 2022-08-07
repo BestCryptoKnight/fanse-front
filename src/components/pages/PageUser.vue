@@ -13,11 +13,14 @@
           </b-link>
           <h6 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
             <ui-username :user="user" :asLink="false" :bold="false" />
-            <div  no-caret ><span style="font-size: 0.8rem !important;"> 7 Posts | 1.3k Likes </span></div>
+            <div class="d-flex align-items-center small">
+          <span v-if="!user.online_status">Last seen {{user.time_difference}} {{user.hms}} ago</span>
+          <span v-else>Available now</span>
+        </div>
           </h6>
           <b-dropdown no-caret right variant="link" v-if="this.$store.state.currentUser">
             <template slot="button-content"
-              ><i class="bi-three-dots-vertical text-white"
+              ><i class="bi-three-dots-vertical"
             /></template>
             <b-dropdown-item @click.prevent="copyLink">{{
               $t("general.copy-link-to-profile")
