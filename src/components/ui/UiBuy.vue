@@ -11,9 +11,9 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <!-- <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="this.$store.state.buyItem.user.cover" v-if="this.$store.state.buyItem.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
-          <b-avatar
+        <div class="rounded suggestion w-100 bg-light">
+          <b-img :src="User.cover" v-if="User.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <!-- <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
             :text="this.$store.state.buyItem.user.initials"
             :to="this.$store.state.buyItem.user.url"
@@ -23,23 +23,10 @@
             <div class="text-white small username-white">
               {{ "@" + this.$store.state.buyItem.user.username }}
             </div>
-          </div>
-        </div> -->
-         <div class="d-flex" style="margin-top: 10px;">
-          <b-avatar
-            :src="item.user.avatar"
-            :text="item.user.initials"
-            :to="item.user.url"
-          />
-          <div class="d-flex flex-column ml-2 overflow-hidden">
-            <ui-username :user="item.user" :asLink="false" />
-            <span class="text-muted small small-username">
-              {{ "@" + item.user.username }}
-            </span>
-          </div>
+          </div> -->
         </div>
          {{ description }} 
-       <!-- <div class="btn-block border-bottom m-3" style="text-align: left !important;">
+       <div class="btn-block m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
@@ -63,7 +50,7 @@
                 margin-bottom: 7px;
             "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
             </p>
-        </div>      -->
+        </div>     
         </div>
       <div v-else class="m-3">
           
