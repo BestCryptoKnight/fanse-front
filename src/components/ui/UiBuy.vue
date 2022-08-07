@@ -11,7 +11,7 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
+        <!-- <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
           <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover"  />
           <b-avatar
             :src="item.user.avatar"
@@ -25,7 +25,7 @@
               {{ "@" + item.user.username }}
             </div>
           </div>
-        </b-link>
+        </b-link> -->
         {{ description }}
        <div class="btn-block text-center border-bottom" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
             <p class="bollets-home" style="
