@@ -11,7 +11,7 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <ui-userview
+        <ui-suggestion
               :user="item.user"
               class="mb-2"
             />
@@ -130,9 +130,9 @@ import User from "../models/User";
 import UiCreditCard from "./UiCreditCard.vue";
 import UiFormInput from "./UiFormInput.vue";
 import UiUsername from "./UiUsername.vue";
-import UiUserview from "./ui/UiUserview.vue";
+import UiSuggestion from "./ui/UiSuggestion.vue";
 export default {
-  components: { UiCreditCard, UiUsername, UiFormInput , UiUserview},
+  components: { UiCreditCard, UiUsername, UiFormInput , UiSuggestion},
   data: function () {
     return {
       gateway: null,
