@@ -14,8 +14,8 @@
           <h6 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
             <ui-username :user="user" :asLink="false" :bold="false" />
             <div class="d-flex align-items-center small">
-          <span v-if="!user.online_status">Last seen {{user.time_difference}} {{user.hms}} ago</span>
-          <span v-else>Available now</span>
+          <span style="opacity: 0.5;" v-if="!user.online_status">Last seen {{user.time_difference}} {{user.hms}} ago</span>
+          <span v-else style="opacity: 0.5;">Available now</span>
         </div>
           </h6>
           <b-dropdown no-caret right variant="link" v-if="this.$store.state.currentUser">
