@@ -84,7 +84,8 @@
           {{ user.location }} &nbsp;&middot;&nbsp;&nbsp; <b-link target="_blank" :href="user.website">{{
             user.website
           }}</b-link>
-          <b-link v-if="user.instagram" :to="user.instagram">
+        </div>
+        <b-link v-if="user.instagram" :to="user.instagram">
             <svg width="90" height="50" viewBox="0 0 179 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" y="0.5" width="178" height="59" rx="14.5" fill="#F5F6FA"></rect>
 <g clip-path="url(#clip0_3_900)">
@@ -114,7 +115,6 @@
 </clipPath>
 </defs>
             </svg>
-        </div>
       </b-row>
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
