@@ -259,9 +259,6 @@ export default {
       return "";
     },
   },
-  props: {
-    user: User,
-  },
   methods: {
     init() {
       this.message = "";
