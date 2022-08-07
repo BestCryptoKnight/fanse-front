@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { VueReCaptcha } from 'vue-recaptcha-v3'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import App from './App.vue'
@@ -24,15 +25,19 @@ import './registerServiceWorker'
 const store = new Vuex.Store(stores);
 var rnd = Math.random();
 console.log(rnd);
+
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 Vue.use(VueClipboard)
 Vue.use(Misc);
 Vue.use(VueMask);
-
-
-
+Vue.use(VueReCaptcha, {
+  siteKey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+  loaderOptions: {
+    autoHideBadge: true
+  }
+});
 
 new Vue({
   router,

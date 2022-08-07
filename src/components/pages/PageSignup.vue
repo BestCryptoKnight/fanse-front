@@ -70,15 +70,26 @@ export default {
       return process.env.VUE_APP_APP_URL;
     },
   },
+  mounted(){
+    const recaptcha = this.$recaptchaInstance
+    recaptcha.showBadge()
+  },
+  beforeDestroy() {
+    const recaptcha = this.$recaptchaInstance
+    recaptcha.hideBadge()
+  },
   methods: {
-    submitForm() {
+    async submitForm() {
       this.errors = {};
+      await this.$recaptchaLoaded();
+      const token = await this.$recaptcha('login');
       this.$post(
         "/auth/signup",
         {
           email: this.email,
           password: this.password,
           name: this.name,
+          captcha_token: token
         },
         (data) => {
           this.$saveToken(data.token);
