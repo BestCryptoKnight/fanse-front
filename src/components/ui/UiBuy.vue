@@ -10,9 +10,14 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" >
+      <div class="d-flex" v-if="!isTip" >
         <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="userBuy.cover" v-if="userBuy.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <b-avatar
+            :src="item.user.avatar"
+            :text="item.user.initials"
+            :to="item.user.url"
+          />
+          <!-- <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  /> -->
           <!-- <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
             :text="this.$store.state.buyItem.user.initials"
@@ -25,7 +30,7 @@
             </div>
           </div> -->
         </div>
-         <!-- {{ description }}  -->
+         {{ description }} 
        <div class="btn-block m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
@@ -183,7 +188,6 @@ export default {
   components: { UiCreditCard, UiUsername, UiFormInput },
   data: function () {
     return {
-      user: null,
       gateway: null,
       gateways: [],
       method: null,
@@ -196,21 +200,6 @@ export default {
         },
       },
     };
-  },
-  props: {
-    userBuy: User,
-    full: {
-      type: Boolean,
-      default: false,
-    },
-    asLink: {
-      type: Boolean,
-      default: true,
-    },
-    bold: {
-      type: Boolean,
-      default: true,
-    },
   },
   computed: {
     currency() {
