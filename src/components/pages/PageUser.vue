@@ -226,7 +226,7 @@
         </b-nav>
       </b-row>
       <ui-posts v-model="posts" />
-      <div v-if="posts[0] == null && !isLoading"  class="empty-section">
+      <div v-if="posts[0] == null"  class="empty-section">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="200" preserveAspectRatio="xMidYMid meet" version="1.0" style="
     opacity: 0.25;
 "><defs><filter x="0%" y="0%" width="100%" height="100%" id="id1"><feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" color-interpolation-filters="sRGB"></feColorMatrix></filter><mask id="id2"><g filter="url(#id1)">
