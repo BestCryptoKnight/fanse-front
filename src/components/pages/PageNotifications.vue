@@ -11,6 +11,9 @@
           </h5>
         </div>
       </b-row>
+      <span v-if="notifications[0] == null">
+        No Notifications
+      </span>
       <b-row
         v-for="(item, index) in notifications"
         :key="index"
