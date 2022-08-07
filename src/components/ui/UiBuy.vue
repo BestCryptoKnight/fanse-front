@@ -25,8 +25,7 @@
             </div>
           </div>
         </div> -->
-        <!-- {{ description }} -->
-        <div class="d-flex" style="margin-top: 10px;">
+         <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
@@ -39,7 +38,8 @@
             </span>
           </div>
         </div>
-       <div class="btn-block border-bottom m-3" style="text-align: left !important;">
+         {{ description }} 
+       <!-- <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
@@ -63,7 +63,7 @@
                 margin-bottom: 7px;
             "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
             </p>
-        </div>     
+        </div>      -->
         </div>
       <div v-else class="m-3">
           
