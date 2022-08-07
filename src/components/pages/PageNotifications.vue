@@ -11,7 +11,7 @@
           </h5>
         </div>
       </b-row>
-      <div v-if="notifications[0] == null" class="empty-section"> No notifications yet!</div>
+      <div v-if="notifications[0] == null && !isLoading " class="empty-section"> No notifications yet!</div>
       <b-row
         v-for="(item, index) in notifications"
         :key="index"

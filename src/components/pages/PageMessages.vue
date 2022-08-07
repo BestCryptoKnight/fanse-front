@@ -84,7 +84,7 @@
           </div>
         </b-row>
       </div>
-      <div v-if="chats[0] == null" class="empty-section"> Nothing was found!</div>
+      <div v-if="chats[0] == null && !isLoading " class="empty-section"> Nothing was found!</div>
     </b-col>
     <b-col
       lg="7"
@@ -98,7 +98,7 @@
         v-if="showChatId != null && !isComposing"
       />
       <page-mass-message v-model="mass" v-if="isComposing" />
-      <div v-if="chats[0] == null" class="empty-section"> Please subscribe to a creator to access this area.</div>
+      <div v-if="chats[0] == null && !isLoading " class="empty-section"> Please subscribe to a creator to access this area.</div>
     </b-col>
   </b-row>
 </template>

@@ -11,7 +11,7 @@
           </h5>
         </div>
       </b-row>
-      <div v-if="posts[0] == null" class="empty-section"> No bookmarks yet!</div>
+      <div v-if="posts[0] == null && !isLoading" class="empty-section"> No bookmarks yet!</div>
       <ui-posts v-model="posts" />
     </b-col>
   </b-row>
