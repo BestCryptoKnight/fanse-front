@@ -11,7 +11,7 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <ui-suggestion
+        <ui-userview
               :user="item.user"
               class="mb-2"
             />
@@ -118,49 +118,10 @@
   </div>
 </template>
 <style scoped lang="scss">
-.suggestion {
-  position: relative;
-  .avatar {
-    position: relative;
-    z-index: 1;
-  }
-  .cover {
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .subprofile {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    padding-left: calc(100px + 1rem);
-    background-color: rgba(0, 0, 0, 0.39);
-    border-bottom-left-radius: 0.25rem !important;
-    border-bottom-right-radius: 0.25rem !important;
-  }
-  .buttons {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 11;
-    button {
-      padding: 0;
-    }
-  }
-}
 .gateway {
   img {
     height: 1.5em;
   }
-}
-.modal-content{
-      max-width: 370px;
 }
 </style>
 <script>
@@ -169,9 +130,10 @@ import User from "../models/User";
 import UiCreditCard from "./UiCreditCard.vue";
 import UiFormInput from "./UiFormInput.vue";
 import UiUsername from "./UiUsername.vue";
-import UiBuyUser from "./ui/UiBuyUser.vue";
+import UiUserview from "./ui/UiUserview.vue";
+import UiUserview from './UiUserview.vue';
 export default {
-  components: { UiCreditCard, UiUsername, UiFormInput ,UiBuyUser},
+  components: { UiCreditCard, UiUsername, UiFormInput ,Uiuserview, UiUserview},
   data: function () {
     return {
       gateway: null,
