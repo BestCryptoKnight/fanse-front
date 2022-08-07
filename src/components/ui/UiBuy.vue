@@ -12,7 +12,7 @@
     >
       <div v-if="!isTip" >
         <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover"  />
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
