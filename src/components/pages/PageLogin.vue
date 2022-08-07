@@ -49,18 +49,6 @@
       :label="$t('general.password')"
     />
 
-    <vue-recaptcha
-      :sitekey="site_key"
-      @verify="onCaptchaVerify"
-    />
-
-    <span
-      v-if="recaptcha_error"
-      class="error-message"
-    >
-      Please confirm you are not a robot.
-    </span>
-
     <b-button
       variant="primary"
       class="w-100 mb-3"
@@ -112,16 +100,14 @@ height: 50px !important;
 import GoogleLogin from "vue-google-login";
 import User from "../models/User";
 import UiFormInput from "../ui/UiFormInput.vue";
-import { VueRecaptcha } from 'vue-recaptcha';
 export default {
-  components: { UiFormInput, GoogleLogin, VueRecaptcha },
+  components: { UiFormInput, GoogleLogin },
   data() {
     return {
       recaptcha_error: false,
       email: "",
       password: "",
       errors: {},
-      captchaToken: "",
     };
   },
   computed: {
@@ -139,22 +125,10 @@ export default {
         icon: require("@/assets/google.svg"),
       };
     },
-    site_key() {
-      return process.env.VUE_APP_RECAPTCHA_SITE_KEY
-    },
   },
   methods: {
-    onCaptchaVerify(token) {
-      // Provide the token response to the form object.
-      this.captchaToken = token;
-    },
     submitForm() {
-      if (!this.captchaToken) {
-        // Show error after submit.
-        this.recaptcha_error = true;
-      } else {
-        this.login(User.CHANNEL_EMAIL);
-      }
+      this.login(User.CHANNEL_EMAIL);
     },
     googleSuccess(googleUser) {
       this.login(
@@ -170,7 +144,6 @@ export default {
       if (type == User.CHANNEL_EMAIL) {
         fields.email = this.email;
         fields.password = this.password;
-        fields.captchaToken = this.captchaToken;
       } else {
         fields.token = token;
       }

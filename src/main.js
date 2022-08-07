@@ -33,7 +33,7 @@ Vue.use(VueClipboard)
 Vue.use(Misc);
 Vue.use(VueMask);
 Vue.use(VueReCaptcha, {
-  siteKey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+  siteKey: process.env.VUE_APP_RECAPTCHAV3_SITE_KEY,
   loaderOptions: {
     autoHideBadge: true
   }
