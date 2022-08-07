@@ -11,9 +11,7 @@
           </h5>
         </div>
       </b-row>
-      <span v-if="notifications[0] == null">
-        No Notifications
-      </span>
+      <div v-if="notifications[0] == null" class="no-notification"> No notifications yet!</div>
       <b-row
         v-for="(item, index) in notifications"
         :key="index"
@@ -58,6 +56,9 @@
     text-decoration: none;
     background-color: var(--light);
   }
+}
+.no-notification{
+  text-align-last: center;margin-top: 50%;font-weight: bold;color: #8a96a3c4;font-size: 1.2rem;line-height: 1.4rem;font-weight: 500;
 }
 </style>
 <script>
