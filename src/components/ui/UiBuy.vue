@@ -11,10 +11,20 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <ui-suggestion
-              :user="item.user"
-              class="mb-2"
-            />
+        <!-- <div class="rounded suggestion w-100 bg-light">
+          <b-img :src="this.$store.state.buyItem.user.cover" v-if="this.$store.state.buyItem.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <b-avatar
+            :src="this.$store.state.buyItem.user.avatar"
+            :text="this.$store.state.buyItem.user.initials"
+            :to="this.$store.state.buyItem.user.url"
+          />
+          <div class="overflow-hidden w-100 subprofile py-2 pr-2">
+            <ui-username :user="this.$store.state.buyItem.user" :asLink="false" class="text-white " style="color:white;"  />
+            <div class="text-white small username-white">
+              {{ "@" + this.$store.state.buyItem.user.username }}
+            </div>
+          </div>
+        </div> -->
         <!-- {{ description }} -->
        <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
@@ -118,10 +128,49 @@
   </div>
 </template>
 <style scoped lang="scss">
+.suggestion {
+  position: relative;
+  .avatar {
+    position: relative;
+    z-index: 1;
+  }
+  .cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .subprofile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    padding-left: calc(100px + 1rem);
+    background-color: rgba(0, 0, 0, 0.39);
+    border-bottom-left-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+  }
+  .buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    button {
+      padding: 0;
+    }
+  }
+}
 .gateway {
   img {
     height: 1.5em;
   }
+}
+.modal-content{
+      max-width: 370px;
 }
 </style>
 <script>
@@ -130,9 +179,8 @@ import User from "../models/User";
 import UiCreditCard from "./UiCreditCard.vue";
 import UiFormInput from "./UiFormInput.vue";
 import UiUsername from "./UiUsername.vue";
-import UiSuggestion from "./ui/UiSuggestion.vue";
 export default {
-  components: { UiCreditCard, UiUsername, UiFormInput , UiSuggestion},
+  components: { UiCreditCard, UiUsername, UiFormInput },
   data: function () {
     return {
       gateway: null,
