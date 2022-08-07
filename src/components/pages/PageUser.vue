@@ -20,7 +20,8 @@
           </h6>
           <b-dropdown no-caret right variant="link" v-if="this.$store.state.currentUser">
             <template slot="button-content"
-              ><i class="bi-three-dots-vertical"
+              ><i class="btn bi-three-dots-vertical"
+              
             /></template>
             <b-dropdown-item @click.prevent="copyLink">{{
               $t("general.copy-link-to-profile")
