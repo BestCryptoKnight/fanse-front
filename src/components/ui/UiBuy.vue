@@ -10,7 +10,7 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" class="m-3">
+      <div v-if="!isTip" >
         <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
           <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <b-avatar
@@ -26,9 +26,36 @@
             </div>
           </div>
         </b-link>
-        {{ description }}</div>
+        {{ description }}
+       
+        </div>
       <div v-else class="m-3">
-        <div class="d-flex mb-3">
+         <div v-if="!isTip" class="btn-block text-center border-bottom" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
+            <p class="bollets-home" style="
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+                font-weight: bold;
+            ">Subscribe and get these features:
+
+            </p><p class="bollets-home" style="
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #00aff0;"></i> Full access to the creator's content
+            </p>
+            <p class="bollets-home" style="margin-top: 0px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #00aff0;"></i> Access to Direct Messages with this creator
+            </p>
+            <p class="bollets-home" style="margin-top: 0px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
+            </p>
+        </div>      
+        <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
