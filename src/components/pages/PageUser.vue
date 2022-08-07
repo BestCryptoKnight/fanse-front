@@ -76,7 +76,7 @@
         <UiVueShowMoreText
             :text="user.bio"
             :lines="2"
-            additional-content-css="font-size:16px;"
+            additional-content-css="font-size:16px;margin-bottom: 7px;"
             additional-content-expanded-css="font-size:16px;"
             additional-anchor-css="font-size: 12px;"
             @click="change"

@@ -12,7 +12,7 @@
     >
       <div v-if="!isTip" >
         <div class="rounded suggestion w-100 bg-light">
-          <!-- <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  /> -->
+          <b-img :src="userBuy.cover" v-if="userBuy.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <!-- <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
             :text="this.$store.state.buyItem.user.initials"
@@ -196,6 +196,21 @@ export default {
         },
       },
     };
+  },
+  props: {
+    userBuy: User,
+    full: {
+      type: Boolean,
+      default: false,
+    },
+    asLink: {
+      type: Boolean,
+      default: true,
+    },
+    bold: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     currency() {
