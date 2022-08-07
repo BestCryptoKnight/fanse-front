@@ -11,23 +11,22 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-        <div class="rounded suggestion w-100 bg-light d-block">
-          <b-img class="rounded cover"  />
+        <div class="rounded suggestion w-100 bg-light">
+          <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
-            size="100px"
-            class="avatar m-2"
+            :to="item.user.url"
           />
           <div class="overflow-hidden w-100 subprofile py-2 pr-2">
             <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
-            <div class="text-white small username-white d-block ">
-              {{ "@" + item.user.username }}
+            <div class="text-white small username-white">
+              {{ "@" + item.user }}
             </div>
           </div>
         </div>
-        {{ description }}
-       <div class="btn-block text-center border-bottom" style="/* max-width: 800px; *//* margin-right: auto; *//* margin-left: auto; */text-align: left !important;">
+        <!-- {{ description }} -->
+       <div class="btn-block border-bottom m-3" style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
@@ -169,6 +168,9 @@
   img {
     height: 1.5em;
   }
+}
+.modal-content{
+      max-width: 370px;
 }
 </style>
 <script>
