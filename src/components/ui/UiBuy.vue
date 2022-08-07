@@ -11,9 +11,9 @@
       body-class="p-0"
     >
       <div v-if="!isTip" >
-      <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
-          <b-avatar
+      <b-link :to="link" class="rounded suggestion w-100 bg-light d-block">
+          <b-img :src="cover" v-if="cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <!-- <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"
             size="100px"
@@ -24,7 +24,7 @@
             <div class="text-white small username-white d-block ">
               {{ "@" + item.user.username }}
             </div>
-          </div>
+          </div> -->
       </b-link>
          {{ description }} 
        <div class="btn-block m-3" style="text-align: left !important;">
@@ -232,6 +232,12 @@ export default {
         }
       }
       return "";
+    },
+    link(){
+      return this.$store.state.buyItem.user.url
+    },
+    cover(){
+      return this.$store.state.buyItem.user.cover
     },
     description() {
       if (this.$store.state.buyItem) {
