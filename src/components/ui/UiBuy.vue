@@ -131,9 +131,8 @@ import UiCreditCard from "./UiCreditCard.vue";
 import UiFormInput from "./UiFormInput.vue";
 import UiUsername from "./UiUsername.vue";
 import UiUserview from "./ui/UiUserview.vue";
-import UiUserview from './UiUserview.vue';
 export default {
-  components: { UiCreditCard, UiUsername, UiFormInput ,Uiuserview, UiUserview},
+  components: { UiCreditCard, UiUsername, UiFormInput , UiUserview},
   data: function () {
     return {
       gateway: null,
