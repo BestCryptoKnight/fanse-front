@@ -10,7 +10,23 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" class="m-3">{{ description }}</div>
+      <div v-if="!isTip" class="m-3">
+        <b-link :to="item.user.url" class="rounded suggestion w-100 bg-light d-block">
+          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <b-avatar
+            :src="item.user.avatar"
+            :text="item.user.initials"
+            size="100px"
+            class="avatar m-2"
+          />
+          <div class="overflow-hidden w-100 subprofile py-2 pr-2">
+            <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
+            <div class="text-white small username-white d-block ">
+              {{ "@" + item.user.username }}
+            </div>
+          </div>
+        </b-link>
+        {{ description }}</div>
       <div v-else class="m-3">
         <div class="d-flex mb-3">
           <b-avatar
@@ -86,6 +102,42 @@
   </div>
 </template>
 <style scoped lang="scss">
+.suggestion {
+  position: relative;
+  .avatar {
+    position: relative;
+    z-index: 1;
+  }
+  .cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .subprofile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    padding-left: calc(100px + 1rem);
+    background-color: rgba(0, 0, 0, 0.39);
+    border-bottom-left-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+  }
+  .buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    button {
+      padding: 0;
+    }
+  }
+}
 .gateway {
   img {
     height: 1.5em;

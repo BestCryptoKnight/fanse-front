@@ -81,7 +81,7 @@
             @click="change"
           />
         <div v-if="user.location" class="text-muted small"><i class="bi bi-geo-alt-fill"></i> 
-          {{ user.location }} &nbsp;&middot;&nbsp;&nbsp; <b-link target="_blank" :href="user.website">{{
+          {{ user.location }} <b-link  v-if="user.website" target="_blank" :href="user.website"> &nbsp;&middot;&nbsp;&nbsp;  {{
             user.website
           }}</b-link>
         </div>
