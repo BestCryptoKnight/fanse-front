@@ -12,7 +12,7 @@
     >
       <div v-if="!isTip" >
         <div class="rounded suggestion w-100 bg-light">
-          <b-img :src="User.cover" v-if="User.cover != null" class="rounded cover" onContextMenu="return false;"  />
+          <b-img :src="user.cover" v-if="user.cover != null" class="rounded cover" onContextMenu="return false;"  />
           <!-- <b-avatar
             :src="this.$store.state.buyItem.user.avatar"
             :text="this.$store.state.buyItem.user.initials"
@@ -183,6 +183,7 @@ export default {
   components: { UiCreditCard, UiUsername, UiFormInput },
   data: function () {
     return {
+      user: null,
       gateway: null,
       gateways: [],
       method: null,
