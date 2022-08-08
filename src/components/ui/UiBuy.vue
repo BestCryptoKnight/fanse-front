@@ -300,18 +300,7 @@ export default {
     loadUser() {
       if (this.$store.state.token){
         this.$get(
-          "/users/" + this.username,
-          (data) => {
-            this.user = new User(data);
-            this.loadPosts();
-          },
-          (errors) => {
-            console.log(errors);
-          }
-        );
-      } else {
-        this.$get(
-          "/users/guest/" + this.username,
+          "/users/" + this.$store.state.buyItem.user.username,
           (data) => {
             this.user = new User(data);
             this.loadPosts();
@@ -321,7 +310,6 @@ export default {
           }
         );
       }
-      
     },
     token(title, token) {
       this.proceed({
