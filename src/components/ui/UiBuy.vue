@@ -44,8 +44,8 @@
       </div>
       <div v-else class="border-bottom" >
       <b-link class="suggestion w-100 bg-light d-block">
-          <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
-          <b-avatar
+          <b-img :src="this.cover" v-if="this.cover != null" class="cover" onContextMenu="return false;"  />
+          <!-- <b-avatar
             :src="userbuy.avatar"
             :text="userbuy.initials"
             size="100px"
@@ -56,7 +56,7 @@
             <div class="text-white small username-white d-block ">
               {{ "@" + userbuy.username }}
             </div>
-          </div>
+          </div> -->
       </b-link>
          <!-- {{ description }}  -->
        <div class="btn-block m-3" style="text-align: left !important;">
@@ -193,6 +193,7 @@ export default {
     return {
       gateway: null,
       gateways: [],
+      cover: null,
       method: null,
       userbuy: null,
       errors: {},
@@ -303,6 +304,7 @@ export default {
           "/users/" + this.$store.state.buyItem.user.username,
           (data) => {
             this.userbuy = new User(data);
+            this.cover = userbuy.cover;
           },
           (errors) => {
             console.log(errors);
