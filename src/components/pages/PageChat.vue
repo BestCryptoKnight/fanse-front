@@ -50,7 +50,7 @@
           </div>
         </div>
       </b-row>
-      <b-row class="border-top" v-if="party && party.is_subscribed || currentUser.isCreator">
+      <b-row class="border-top" v-if="party && party.isSubscribed || currentUser.isCreator">
         <ui-media-uploader v-model="media" ref="uploader" />
 
         <b-form-textarea
@@ -114,7 +114,7 @@
           </b-input-group>
         </b-modal>
       </b-row>
-      <b-row class="border-top" v-if="party" >
+      <b-row class="border-top" v-if="party && !party.isSubscribed || !currentUser.isCreator" >
        <p class="px-3 py-3 my-3">
          <i class="bi bi-info-circle-fill"></i>
           Please <a :href="url + '/' + party.username"> subscribe </a> to access this feature.
