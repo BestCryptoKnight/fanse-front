@@ -275,7 +275,7 @@ export default {
         m.isRead = true;
       }
     },
-    loadMessages(page) {
+    async loadMessages(page) {
       this.isLoading = true;
       this.$get(
         "/messages/" + this.chatId + "?page=" + (page ? page : this.page),
