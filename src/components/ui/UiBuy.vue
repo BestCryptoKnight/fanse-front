@@ -11,18 +11,18 @@
       body-class="p-0"
     >
       <div v-if="!isTip" class="border-bottom" >
-      <b-link :to="item.user.url" class="suggestion w-100 bg-light d-block">
-          <b-img :src="item.user.cover" v-if="item.user.cover != null" class="cover" onContextMenu="return false;"  />
+      <b-link :to="user.url" class="suggestion w-100 bg-light d-block">
+          <b-img :src="user.cover" v-if="user.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
-            :src="item.user.avatar"
-            :text="item.user.initials"
+            :src="user.avatar"
+            :text="user.initials"
             size="100px"
             class="avatar m-2"
           />
           <div class="overflow-hidden w-100 subprofile py-2 pr-2">
-            <ui-username :user="item.user" :asLink="false" class="text-white " style="color:white;"  />
+            <ui-username :user="user" :asLink="false" class="text-white " style="color:white;"  />
             <div class="text-white small username-white d-block ">
-              {{ "@" + item.user.username }}
+              {{ "@" + user.username }}
             </div>
           </div>
       </b-link>
