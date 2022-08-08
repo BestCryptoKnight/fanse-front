@@ -211,8 +211,10 @@
           {{$t(hascamp=true)}}
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
-              $t("general.regular-price", user.priceFormatted)
-            }} /month</h7>
+              $t("general.subscribe-for-x", [
+                user.isFree ? $t("general.free") : user.priceFormatted,
+              ])
+            }}</h7>
          </div>
          <b-row  class="px-3 mt-3 d-block border-bottom pb-3"
           v-if="!hascamp">
@@ -233,19 +235,24 @@
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0
-        "
-      >
-        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
-        <b-button
-          variant="primary"
-          block
-          @click.prevent="subscribe(item)"
-          v-for="(item, index) in user.bundles"
+          user.bundles.length > 0">
+       
+        <div
+          v-for="(item, index) in user.bundles" 
           :key="index"
         >
-          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
+        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
+        <b-button variant="primary"
+          block
+          @click.prevent="subscribe(item)"
+          :key="index"
+          v-if="item.months!=1"
+          >
+          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}  
+          {{$t(hascamp=true)}}
         </b-button>
+  
+         </div>
       </b-row>
       <b-row class="d-block" v-if="isOwner">
         <b-nav tabs justified>
