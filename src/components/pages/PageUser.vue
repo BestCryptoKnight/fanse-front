@@ -211,7 +211,7 @@
           {{$t(hascamp=true)}}
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
-              $t("general.subscribe-for-x", [
+              $t("general.regular-price", [
                 user.isFree ? $t("general.free") : user.priceFormatted,
               ])
             }}</h7>
@@ -236,12 +236,12 @@
           !user.isFree &&
           user.isCreator &&
           user.bundles.length > 0">
-       
+       <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
         <div
           v-for="(item, index) in user.bundles" 
           :key="index"
         >
-        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
+
         <b-button variant="primary"
           block
           @click.prevent="subscribe(item)"
