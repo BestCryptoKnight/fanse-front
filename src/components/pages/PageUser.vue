@@ -206,8 +206,10 @@
           block
           @click.prevent="subscribe(item)"
           :key="index"
-          v-if="item.months==1">
-          {{ $t("general.get-x-months-for-y-z-off", item.title(user),hascamp=true) }}
+          v-if="item.months==1"
+          >
+          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}  
+          {{$t(hascamp=true)}}
         </b-button>
          </p>
          <b-row  class="px-3 mt-3 d-block border-bottom pb-3"
