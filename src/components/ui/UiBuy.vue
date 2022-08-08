@@ -10,7 +10,7 @@
       @show="init"
       body-class="p-0"
     >
-      <div class="border-bottom" >
+      <div v-if="this.$store.state.buyItem.type == 0" class="border-bottom" >
       <b-link class="suggestion w-100 bg-light d-block">
           <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
@@ -53,7 +53,7 @@
             </p>
         </div>     
         </div>
-      <div v-if="isTip()" class="m-3">
+      <div v-else class="m-3">
           
         <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
