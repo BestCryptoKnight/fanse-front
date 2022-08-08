@@ -194,14 +194,13 @@
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0 
-        "
-      >
-        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
-        <p
+          user.bundles.length > 0">
+       
+        <div
           v-for="(item, index) in user.bundles" 
           :key="index"
         >
+        <h5 v-if="item.months==1" class="mb-3">{{ $t("general.subscription") }}</h5>
         <b-button variant="primary"
           block
           @click.prevent="subscribe(item)"
@@ -211,7 +210,10 @@
           {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}  
           {{$t(hascamp=true)}}
         </b-button>
-         </p>
+        <h7 v-if="item.months==1" class="text-muted small">{{
+              $t("general.regular-price", user.priceFormatted)
+            }} /month</h7>
+         </div>
          <b-row  class="px-3 mt-3 d-block border-bottom pb-3"
           v-if="!hascamp">
           <h5 class="mb-3">{{ $t("general.subscription") }}</h5>

@@ -90,6 +90,7 @@
     "price-bundles": "Price and Bundles",
     "price-per-month": "Price per Month",
     "subscription-bundles": "Subscription Bundles",
+    "regular-price" :"Regular Price  {0}",
     "subscription-offer": "Limited Time Offer",
     "add": "Add",
     "get-x-months-for-y-z-off": "Get {0} months for {1} (total) {2}% off",
