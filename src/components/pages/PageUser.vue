@@ -237,11 +237,10 @@
           user.isCreator &&
           user.bundles.length > 0">
        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
-        <div style="margin-bottom: 10x;"
+        <div class="pb-3"
           v-for="(item, index) in user.bundles" 
           :key="index"
         >
-
         <b-button variant="primary"
           block
           @click.prevent="subscribe(item)"
