@@ -11,7 +11,7 @@
       body-class="p-0"
     >
       <div v-if="!isTip" class="border-bottom" >
-      <b-link :to="userbuy.url" class="suggestion w-100 bg-light d-block">
+      <b-link class="suggestion w-100 bg-light d-block">
           <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
             :src="userbuy.avatar"
