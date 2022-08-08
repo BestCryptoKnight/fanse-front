@@ -174,9 +174,9 @@
         </b-link>
         </div>
       </b-row>
-      <b-row
+      <b-row 
         class="px-3 mt-3 d-block border-bottom pb-3"
-        v-if="!user.isSubscribed && !isOwner && user.isCreator"
+        v-if="!user.isSubscribed && !isOwner && user.isCreator && !user.bundles.length > 0"
       >
         <h5 class="mb-3">{{ $t("general.subscription") }}</h5>
         <b-button variant="primary" block @click.prevent="subscribe">
@@ -186,6 +186,30 @@
             ])
           }}
         </b-button>
+      </b-row>
+      <b-row
+        class="px-3 mt-3 d-block border-bottom pb-3"
+        v-if="
+          !isOwner &&
+          !user.isSubscribed &&
+          !user.isFree &&
+          user.isCreator &&
+          user.bundles.length > 0 
+        "
+      >
+        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
+        <li
+          v-for="(item, index) in user.bundles" 
+          :key="index"
+        >
+        <b-button variant="primary"
+          block
+          @click.prevent="subscribe(item)"
+          :key="index"
+          v-if="item.months==1">
+          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
+        </b-button>
+        </li>
       </b-row>
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
