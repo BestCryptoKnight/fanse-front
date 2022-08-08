@@ -237,7 +237,7 @@
           user.isCreator &&
           user.bundles.length > 0">
        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
-        <div
+        <div style="margin-bottom: 10x;"
           v-for="(item, index) in user.bundles" 
           :key="index"
         >
