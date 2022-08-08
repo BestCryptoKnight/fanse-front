@@ -114,7 +114,7 @@
           </b-input-group>
         </b-modal>
       </b-row>
-      <b-row class="border-top" v-if="party && !party.isSubscribed || !currentUser.isCreator" >
+      <b-row class="border-top" v-else >
        <p class="px-3 py-3 my-3">
          <i class="bi bi-info-circle-fill"></i>
           Please <a :href="url + '/' + party.username"> subscribe </a> to access this feature.
