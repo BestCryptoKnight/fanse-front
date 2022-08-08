@@ -39,17 +39,17 @@
                 margin-top: 10px;
                 margin-left: 0px;
                 margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #00aff0;"></i> Full access to the creator's content
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Full access to the creator's content
             </p>
             <p class="bollets-home" style="margin-top: 0px;
                 margin-left: 0px;
                 margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #00aff0;"></i> Access to Direct Messages with this creator
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Access to Direct Messages with this creator
             </p>
             <p class="bollets-home" style="margin-top: 0px;
                 margin-left: 0px;
                 margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #00aff0;"></i> Cancel your subscription at any time
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Cancel your subscription at any time
             </p>
         </div>     
         </div>

@@ -50,7 +50,7 @@
           </div>
         </div>
       </b-row>
-      <b-row class="border-top">
+      <b-row class="border-top" v-if="message.user.isSubscribed">
         <ui-media-uploader v-model="media" ref="uploader" />
 
         <b-form-textarea
@@ -113,6 +113,12 @@
             />
           </b-input-group>
         </b-modal>
+      </b-row>
+      <b-row v-else class="border-top">
+       
+       <p class="px-3 py-0 my-3">
+         Please subscribe to access this feature.
+       </p>
       </b-row>
     </b-col>
   </b-row>
