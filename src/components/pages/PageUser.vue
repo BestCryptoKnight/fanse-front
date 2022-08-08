@@ -206,8 +206,8 @@
           @click.prevent="subscribe(item)"
           :key="index"
           v-if="item.months==1"
-          hascamp=true
           >
+          <p hascamp=true></p>
           {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
