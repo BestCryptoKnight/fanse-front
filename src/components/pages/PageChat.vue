@@ -117,7 +117,7 @@
       <b-row v-else >
        <p class="px-3 py-3 my-3">
          <i class="bi bi-info-circle-fill"></i>
-        Please <a :to=party.user.username > subscribe </a> to access this feature.
+        Please <a :to=party.username > subscribe </a> to access this feature.
        </p>
       </b-row>
     </b-col>
