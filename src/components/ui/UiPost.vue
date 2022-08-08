@@ -441,29 +441,16 @@ export default {
       if (this.post.hasVoted) {
         return;
       }
-      if (this.$store.state.token) {
-        this.$post(
-          "/posts/" + this.post.id + "/" + id + "/vote",
-          {},
-          (data) => {
-            this.post = new Post(data);
-          },
-          (errors) => {
-            console.log(errors);
-          }
-        );
-      } else {
-        this.$post(
-          "/posts/guest/" + this.post.id + "/" + id + "/vote",
-          {},
-          (data) => {
-            this.post = new Post(data);
-          },
-          (errors) => {
-            console.log(errors);
-          }
-        );
-      }
+      this.$post(
+        "/posts/" + this.post.id + "/" + id + "/vote",
+        {},
+        (data) => {
+          this.post = new Post(data);
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
     },
     loadPosts() {
       this.isLoading = true;
