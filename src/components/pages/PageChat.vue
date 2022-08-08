@@ -50,7 +50,7 @@
           </div>
         </div>
       </b-row>
-      <b-row class="border-top" >
+      <b-row class="border-top" v-if="party.isSubscribed">
         <ui-media-uploader v-model="media" ref="uploader" />
 
         <b-form-textarea
@@ -59,7 +59,6 @@
           v-model="message"
           aria-describedby="errors"
           :placeholder="$t('general.type-message')"
-          v-if="message.user.isSubscribed"
           :state="Object.keys(errors).length > 0 ? false : null"
         />
 
@@ -115,11 +114,11 @@
           </b-input-group>
         </b-modal>
       </b-row>
-      <!-- <b-row v-else class="border-top">
+      <b-row v-else class="border-top">
        <p class="px-3 py-0 my-3">
          Please subscribe to access this feature.
        </p>
-      </b-row> -->
+      </b-row>
     </b-col>
   </b-row>
 </template>
