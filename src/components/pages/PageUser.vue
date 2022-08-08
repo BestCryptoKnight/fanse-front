@@ -207,10 +207,10 @@
           @click.prevent="subscribe(item)"
           :key="index"
           v-if="item.months==1">
-          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
+          {{ $t("general.get-x-months-for-y-z-off", item.title(user),hascamp=true) }}
         </b-button>
          <b-row  class="px-3 mt-3 d-block border-bottom pb-3"
-          v-if="item.months!=1 && user.bundles.length==index">
+          v-if="!hascamp">
           <h5 class="mb-3">{{ $t("general.subscription") }}</h5>
           <b-button variant="primary" block @click.prevent="subscribe">
             {{
@@ -357,6 +357,7 @@ export default {
   data: function () {
     return {
       user: null,
+      hascamp: false,
       posts: [],
       scrollPosition: null,
       page: 1,
