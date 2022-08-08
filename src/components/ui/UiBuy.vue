@@ -298,7 +298,7 @@ export default {
         }
       );
     },
-    loadUser() {
+    async loadUser() {
         this.$get(
           "/users/" + this.$store.state.buyItem.user.username,
           (data) => {
