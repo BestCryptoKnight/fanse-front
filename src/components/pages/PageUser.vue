@@ -200,7 +200,8 @@
           v-for="(item, index) in user.bundles" 
           :key="index"
         >
-        <h5 v-if="item.months==1" class="mb-3">{{ $t("general.subscription") }}</h5>
+        <h5 v-if="item.months==1" class="mb-3">{{ $t("general.limited-offer", item.title(user)) }} 
+          {{$t(hascamp=true)}}</h5>
         <b-button variant="primary"
           block
           @click.prevent="subscribe(item)"
