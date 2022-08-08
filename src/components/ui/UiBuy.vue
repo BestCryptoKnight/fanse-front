@@ -10,7 +10,7 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="this.$store.state.buyItem.type == 0" class="border-bottom" >
+      <div v-if="!isTip" class="border-bottom" >
       <b-link class="suggestion w-100 bg-light d-block">
           <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
@@ -300,8 +300,8 @@ export default {
     loadUser() {
         this.$get(
           "/users/" + this.$store.state.buyItem.user.username,
-          (data) => {
-            this.userbuy = new User(data);
+          (data1) => {
+            this.userbuy = new User(data1);
           },
           (errors) => {
             console.log(errors);
