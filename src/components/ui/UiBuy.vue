@@ -10,7 +10,39 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" class="border-bottom" >
+      
+      <div v-if="isTip" class="m-3">
+          
+        <div class="d-flex" style="margin-top: 10px;">
+          <b-avatar
+            :src="item.user.avatar"
+            :text="item.user.initials"
+            :to="item.user.url"
+          />
+          <div class="d-flex flex-column ml-2 overflow-hidden">
+            <ui-username :user="item.user" :asLink="false" />
+            <span class="text-muted small small-username">
+              {{ "@" + item.user.username }}
+            </span>
+          </div>
+        </div>
+        <ui-form-input
+          type="number"
+          name="amount"
+          :prepend="currency"
+          v-model="amount"
+          :errors="errors"
+          :placeholder="$t('general.amount')"
+        />
+        <ui-form-input
+          type="text"
+          name="message"
+          v-model="message"
+          :errors="errors"
+          :placeholder="$t('general.message-optional')"
+        />
+      </div>
+      <div v-else class="border-bottom" >
       <b-link class="suggestion w-100 bg-light d-block">
           <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
@@ -53,37 +85,6 @@
             </p>
         </div>     
         </div>
-      <div v-else class="m-3">
-          
-        <div class="d-flex" style="margin-top: 10px;">
-          <b-avatar
-            :src="item.user.avatar"
-            :text="item.user.initials"
-            :to="item.user.url"
-          />
-          <div class="d-flex flex-column ml-2 overflow-hidden">
-            <ui-username :user="item.user" :asLink="false" />
-            <span class="text-muted small small-username">
-              {{ "@" + item.user.username }}
-            </span>
-          </div>
-        </div>
-        <ui-form-input
-          type="number"
-          name="amount"
-          :prepend="currency"
-          v-model="amount"
-          :errors="errors"
-          :placeholder="$t('general.amount')"
-        />
-        <ui-form-input
-          type="text"
-          name="message"
-          v-model="message"
-          :errors="errors"
-          :placeholder="$t('general.message-optional')"
-        />
-      </div>
       <div v-if="method == null">
         <div class="m-3">
           <div v-if="errors._ && errors._.length > 0">
@@ -300,8 +301,8 @@ export default {
     loadUser() {
         this.$get(
           "/users/" + this.$store.state.buyItem.user.username,
-          (data1) => {
-            this.userbuy = new User(data1);
+          (data) => {
+            this.userbuy = new User(data);
           },
           (errors) => {
             console.log(errors);
