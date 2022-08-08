@@ -117,7 +117,7 @@
       <b-row class="border-top" v-else >
        <p class="px-3 py-3 my-3">
          <i class="bi bi-info-circle-fill"></i>
-        Please <a :href="url + '/' + party.username" > subscribe </a> to access this feature.
+        Please to access this feature.
        </p>
       </b-row>
     </b-col>
@@ -275,7 +275,7 @@ export default {
         m.isRead = true;
       }
     },
-    async loadMessages(page) {
+    loadMessages(page) {
       this.isLoading = true;
       this.$get(
         "/messages/" + this.chatId + "?page=" + (page ? page : this.page),
