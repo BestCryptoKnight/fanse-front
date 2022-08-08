@@ -10,7 +10,7 @@
       @show="init"
       body-class="p-0"
     >
-      <div v-if="!isTip" class="border-bottom" >
+      <div v-if="this.$store.state.buyItem.type == Payment.TYPE_SUBSCRIPTION_NEW" class="border-bottom" >
       <b-link class="suggestion w-100 bg-light d-block">
           <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
           <b-avatar
