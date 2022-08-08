@@ -98,7 +98,6 @@
         v-if="showChatId != null && !isComposing"
       />
       <page-mass-message v-model="mass" v-if="isComposing" />
-      <div v-if="chats[0] == null && !isLoading " class="empty-section"> Please subscribe to a creator to access this area.</div>
     </b-col>
   </b-row>
 </template>
