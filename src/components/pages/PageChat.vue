@@ -50,7 +50,7 @@
           </div>
         </div>
       </b-row>
-      <b-row class="border-top" v-if="party.is_subscribed || party.isCreator">
+      <b-row class="border-top" v-if="party.is_subscribed || currentUser.isCreator">
         <ui-media-uploader v-model="media" ref="uploader" />
 
         <b-form-textarea
