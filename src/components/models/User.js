@@ -49,8 +49,8 @@ export default class User {
     var currentTimestamp = Date.now();
     var difference = currentTimestamp - this.last_seen
     console.log(difference)
-    this.time_difference = difference > 60*60*1000 ? Math.round(difference/60/60/1000) : (difference > 60*1000 ? Math.round(difference/60/1000) : Math.round(difference/1000))
-    this.hms = difference >= 2*60*60*1000 ? 'hours' : (difference >= 60*60*1000 ? 'hour' : (difference >= 2*60*1000 ? 'minutes' : ( difference >= 60*1000 ? 'minute' : '')))
+    this.time_difference =  difference >= 24*60*60*1000 ? Math.round(difference/24/60/60/1000) : (difference > 60*60*1000 ? Math.round(difference/60/60/1000) : (difference > 60*1000 ? Math.round(difference/60/1000) : Math.round(difference/1000)))
+    this.hms = difference >= 2*24*60*60*1000 ? 'days' : (difference >= 24*60*60*1000 ? : 'day' : (difference >= 2*60*60*1000 ? 'hours' : (difference >= 60*60*1000 ? 'hour' : (difference >= 2*60*1000 ? 'minutes' : ( difference >= 60*1000 ? 'minute' : '')))))
     this.online_status = (difference < 60*1000)
 
     if (data.bundles) {
