@@ -50,7 +50,7 @@
           </div>
         </div>
       </b-row>
-      <b-row class="border-top">
+      <b-row class="border-top" v-if="party.isSubscribed && !party.isCreator">
         <ui-media-uploader v-model="media" ref="uploader" />
 
         <b-form-textarea
@@ -113,6 +113,12 @@
             />
           </b-input-group>
         </b-modal>
+      </b-row>
+      <b-row class="border-top" v-else >
+       <p class="px-3 py-3 my-3">
+         <i class="bi bi-info-circle-fill"></i>
+        Please <a :href="url + '/' + party.username" > subscribe </a> to access this feature.
+       </p>
       </b-row>
     </b-col>
   </b-row>
@@ -200,6 +206,9 @@ export default {
     };
   },
   computed: {
+    url() {
+      return process.env.VUE_APP_APP_URL;
+    },
     currency() {
       return process.env.VUE_APP_CURRENCY_SIGN;
     },
