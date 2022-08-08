@@ -10,8 +10,50 @@
       @show="init"
       body-class="p-0"
     >
-      
-      <div v-if="isTip" class="m-3">
+      <div v-if="!isTip && loading_sources" class="border-bottom" >
+      <b-link class="suggestion w-100 bg-light d-block">
+          <b-img :src="userbuy.cover" v-if="userbuy.cover != null" class="cover" onContextMenu="return false;"  />
+          <b-avatar
+            :src="userbuy.avatar"
+            :text="userbuy.initials"
+            size="100px"
+            class="avatar m-2"
+          />
+          <div class="overflow-hidden w-100 subprofile py-2 pr-2">
+            <ui-username :user="userbuy" :asLink="false" class="text-white " style="color:white;"  />
+            <div class="text-white small username-white d-block ">
+              {{ "@" + userbuy.username }}
+            </div>
+          </div>
+      </b-link>
+         <!-- {{ description }}  -->
+       <div class="btn-block m-3" style="text-align: left !important;">
+            <p class="bollets-home" style="
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+                font-weight: bold;
+            ">Subscribe and get these features:
+
+            </p><p class="bollets-home" style="
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Full access to the creator's content
+            </p>
+            <p class="bollets-home" style="margin-top: 0px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Access to Direct Messages with this creator
+            </p>
+            <p class="bollets-home" style="margin-top: 0px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+            "><i class="bi bi-check2" style="color: #2081E2;"></i> Cancel your subscription at any time
+            </p>
+        </div>     
+        </div>
+      <div v-else class="m-3">
           
         <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
@@ -42,49 +84,6 @@
           :placeholder="$t('general.message-optional')"
         />
       </div>
-      <div v-else class="border-bottom" >
-      <b-link class="suggestion w-100 bg-light d-block">
-          <b-img :src="this.cover" v-if="this.cover != null" class="cover" onContextMenu="return false;"  />
-          <!-- <b-avatar
-            :src="userbuy.avatar"
-            :text="userbuy.initials"
-            size="100px"
-            class="avatar m-2"
-          />
-          <div class="overflow-hidden w-100 subprofile py-2 pr-2">
-            <ui-username :user="userbuy" :asLink="false" class="text-white " style="color:white;"  />
-            <div class="text-white small username-white d-block ">
-              {{ "@" + userbuy.username }}
-            </div>
-          </div> -->
-      </b-link>
-         <!-- {{ description }}  -->
-       <div class="btn-block m-3" style="text-align: left !important;">
-            <p class="bollets-home" style="
-                margin-top: 10px;
-                margin-left: 0px;
-                margin-bottom: 7px;
-                font-weight: bold;
-            ">Subscribe and get these features:
-
-            </p><p class="bollets-home" style="
-                margin-top: 10px;
-                margin-left: 0px;
-                margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #2081E2;"></i> Full access to the creator's content
-            </p>
-            <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
-                margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #2081E2;"></i> Access to Direct Messages with this creator
-            </p>
-            <p class="bollets-home" style="margin-top: 0px;
-                margin-left: 0px;
-                margin-bottom: 7px;
-            "><i class="bi bi-check2" style="color: #2081E2;"></i> Cancel your subscription at any time
-            </p>
-        </div>     
-        </div>
       <div v-if="method == null">
         <div class="m-3">
           <div v-if="errors._ && errors._.length > 0">
@@ -193,8 +192,8 @@ export default {
     return {
       gateway: null,
       gateways: [],
-      cover: null,
       method: null,
+      loading_sources: false,
       userbuy: null,
       errors: {},
       amount: "",
@@ -304,7 +303,7 @@ export default {
           "/users/" + this.$store.state.buyItem.user.username,
           (data) => {
             this.userbuy = new User(data);
-            this.cover = userbuy.cover;
+            this.loading_sources = true;
           },
           (errors) => {
             console.log(errors);
