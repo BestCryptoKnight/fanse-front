@@ -207,8 +207,7 @@
           :key="index"
           v-if="item.months==1"
           >
-          <p hascamp=true></p>
-          {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}
+          {{ $t("general.get-x-months-for-y-z-off", item.title(user))}} {{$t(hascamp=true)}}
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
               $t("general.regular-price", [
@@ -248,7 +247,6 @@
           v-if="item.months!=1"
           >
           {{ $t("general.get-x-months-for-y-z-off", item.title(user)) }}  
-          {{$t(hascamp=true)}}
         </b-button>
   
          </div>
