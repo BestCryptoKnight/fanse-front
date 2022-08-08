@@ -53,7 +53,7 @@
             </p>
         </div>     
         </div>
-      <div v-else class="m-3">
+      <div v-if="isTip" class="m-3">
           
         <div class="d-flex" style="margin-top: 10px;">
           <b-avatar
