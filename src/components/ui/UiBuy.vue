@@ -190,10 +190,10 @@ export default {
   components: { UiCreditCard, UiUsername, UiFormInput },
   data: function () {
     return {
-      userbuy: null,
       gateway: null,
       gateways: [],
       method: null,
+      userbuy: null,
       errors: {},
       amount: "",
       message: "",
@@ -270,8 +270,8 @@ export default {
     init() {
       this.message = "";
       this.amount = "";
-      this.loadGateways();
       this.loadUser();
+      this.loadGateways();
     },
     getCCGateway() {
       for (let g of this.gateways) {
@@ -298,7 +298,6 @@ export default {
       );
     },
     loadUser() {
-      if (this.$store.state.token){
         this.$get(
           "/users/" + this.$store.state.buyItem.user.username,
           (data) => {
@@ -308,7 +307,6 @@ export default {
             console.log(errors);
           }
         );
-      }
     },
     token(title, token) {
       this.proceed({
