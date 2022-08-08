@@ -115,11 +115,11 @@
           </b-input-group>
         </b-modal>
       </b-row>
-      <b-row v-else class="border-top">
+      <!-- <b-row v-else class="border-top">
        <p class="px-3 py-0 my-3">
          Please subscribe to access this feature.
        </p>
-      </b-row>
+      </b-row> -->
     </b-col>
   </b-row>
 </template>
