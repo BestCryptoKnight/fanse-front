@@ -25,7 +25,7 @@
         <b-form class="w-100 mx-3 mt-3">
           <div class="" style="padding-bottom: 30px;">
             <h4 class="mb-0 font-montserrat"><i class="bi bi-patch-check-fill" style="
-                        color: #00aff0;
+                        color: #2081E2;
                     "></i> Become a Verify Creator</h4>
               </div>
           <b-alert show variant="secondary" v-if="editing">{{

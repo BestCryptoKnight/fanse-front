@@ -24,8 +24,8 @@ module.exports = {
       ],
     },
     name: 'Fanse',
-    themeColor: '#00aff0',
-    msTileColor: '#00aff0',
+    themeColor: '#2081E2',
+    msTileColor: '#2081E2',
     appleMobileWebAppStatusBarStyle: 'default',
     iconPaths: {
       favicon32: 'img/icons/favicon-32x32.png',
