@@ -92,6 +92,7 @@
             v-model="user.instagram"
             :errors="errors"
             :label="$t('general.instagram')"
+            
           />
           <ui-form-input
             type="url"
