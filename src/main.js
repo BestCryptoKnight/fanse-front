@@ -9,6 +9,7 @@ import VueMask from 'v-mask'
 import Misc from './plugins/Misc'
 
 import "@/assets/scss/_theming.scss";
+import 'mdb-vue-ui-kit/css/mdb.min.css';
 import i18n from './i18n'
 
 import routes from './components/helpers/Router';
