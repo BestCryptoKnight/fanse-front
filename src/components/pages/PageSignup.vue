@@ -73,7 +73,7 @@
 
     <div class="text-center d-block w-100">
     <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" width="50%" class="logo align-baseline" style="
-                        width: 80%;margin-bottom-15px;">
+                        width: 80%;margin-bottom: 15px;">
     </div>
   </b-form>
 </template>
