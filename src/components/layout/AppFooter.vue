@@ -2,14 +2,14 @@
   <footer>
     <div class="footer  border-top">
     <div class="row">
-    <a href="#" style="padding-bottom: 20px;"><i style="font-size: 10px;" class="bi bi-facebook"></i></a>
-    <a href="#" style="padding-bottom: 20px;"><i style="font-size: 10px;" class="bi bi-instagram"></i></a>
-    <a href="#" style="padding-bottom: 20px;" ><i style="font-size: 10px;" class="bi bi-youtube"></i></a>
-    <a href="#" style="padding-bottom: 20px;padding-right: 0px;" ><i style="font-size: 10px;" class="bi bi-twitter"></i></a>
+    <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-facebook"></i></a>
+    <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-instagram"></i></a>
+    <a href="#" style="padding-bottom: 10px;" ><i style="font-size: 20px;" class="bi bi-youtube"></i></a>
+    <a href="#" style="padding-bottom: 10px;padding-right: 0px;" ><i style="font-size: 20px;" class="bi bi-twitter"></i></a>
     </div>
 
     <div class="row" style="padding-bottom: 7px;">
-    <ul style="margin-bottom: 7px;display: -webkit-inline-box;text-align: -webkit-center;">
+    <ul style="margin-bottom: 7px;display: -webkit-inline-box;text-align: -webkit-center; display: contents;">
     <li><a href="#">Contact us</a></li>
     <li><a href="#">Our Services</a></li>
     <li><a href="#">Privacy Policy</a></li>
@@ -21,8 +21,7 @@
     <div class="row" style="
       justify-content: center;
       font-size: 10px;
-      color: #bbb7b7;
-      display: contents;">
+      color: #bbb7b7;">
     FANSE Copyright © 2021 Inferno - All rights reserved 
     </div>
     </div>
@@ -55,7 +54,7 @@ padding: 7px;
 }
 
 .footer .row a:hover{
-color:#fff;
+color:rgb(87, 87, 87);
 }
 
 .footer .row ul{
