@@ -4,6 +4,10 @@ $primary: #2081E2;
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+
+.form-control{
+    height: 50px !important;
+    }
 .btn-primary {
 	border-radius: 30px;
     height: 45px;
