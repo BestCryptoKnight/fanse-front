@@ -82,7 +82,7 @@
 height: 50px !important;
 }
 .btn-google {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   height: 50px;
   border-color: #eaeaea;
     color: #21252a;
@@ -110,7 +110,7 @@ height: 50px !important;
 display:flex;
 justify-content:center;
 align-items: center;
-color:grey;
+color:#bcb8b8;
 }
 
 .or:after,
