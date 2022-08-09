@@ -2,10 +2,10 @@
   <footer>
     <div class="footer">
     <div class="row">
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="#"><i class="fa fa-youtube"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-instagram"></i></a>
+    <a href="#"><i class="bi bi-youtube"></i></a>
+    <a href="#"><i class="bi bi-twitter"></i></a>
     </div>
 
     <div class="row">
@@ -38,6 +38,7 @@ text-align:center;
 width:100%;
 color:gray;
 font-size:0.8em;
+justify-content: center;
 }
 
 .footer .row a{
