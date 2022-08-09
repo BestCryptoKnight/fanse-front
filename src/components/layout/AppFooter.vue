@@ -2,13 +2,13 @@
   <footer>
     <div class="footer  border-top">
     <div class="row">
-    <a href="#" style="padding-bottom: 7px;"><i style="font-size: 10px;" class="bi bi-facebook"></i></a>
-    <a href="#" style="padding-bottom: 7px;"><i style="font-size: 10px;" class="bi bi-instagram"></i></a>
-    <a href="#" style="padding-bottom: 7px;" ><i style="font-size: 10px;" class="bi bi-youtube"></i></a>
-    <a href="#" style="padding-bottom: 7px;padding-right: 0px;" ><i style="font-size: 10px;" class="bi bi-twitter"></i></a>
+    <a href="#" style="padding-bottom: 20px;"><i style="font-size: 10px;" class="bi bi-facebook"></i></a>
+    <a href="#" style="padding-bottom: 20px;"><i style="font-size: 10px;" class="bi bi-instagram"></i></a>
+    <a href="#" style="padding-bottom: 20px;" ><i style="font-size: 10px;" class="bi bi-youtube"></i></a>
+    <a href="#" style="padding-bottom: 20px;padding-right: 0px;" ><i style="font-size: 10px;" class="bi bi-twitter"></i></a>
     </div>
 
-    <div class="row">
+    <div class="row" style="padding-bottom: 7px;">
     <ul style="margin-bottom: 7px;display: -webkit-inline-box;text-align: -webkit-center;">
     <li><a href="#">Contact us</a></li>
     <li><a href="#">Our Services</a></li>
@@ -22,7 +22,7 @@
       justify-content: center;
       font-size: 10px;
       color: #bbb7b7;
-      padding: 0p;">
+      display: contents;">
     FANSE Copyright © 2021 Inferno - All rights reserved 
     </div>
     </div>
@@ -40,7 +40,7 @@ text-align:center;
 
 .footer .row{
 width:100%;
-color:gray;
+color:#bcb8b8;
 font-size:0.8em;
 justify-content: center;
 margin-right: 0px !important;
@@ -49,8 +49,9 @@ margin-left: 0px !important;
 
 .footer .row a{
 text-decoration:none;
-color:gray;
+color:#bcb8b8;
 transition:0.5s;
+padding: 7px;
 }
 
 .footer .row a:hover{
@@ -74,7 +75,7 @@ margin:0% 1%;
 @media (max-width:720px){
 .footer{
 text-align:left;
-padding:5%;
+padding:3%;
 }
 .footer .row ul li{
 display:block;
