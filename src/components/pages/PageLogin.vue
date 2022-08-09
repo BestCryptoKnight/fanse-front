@@ -84,12 +84,12 @@ height: 50px !important;
 .btn-google {
   margin-bottom: 50px;
   height: 50px;
-  border-color: #ced4da;
+  border-color: #eaeaea;
     color: #21252a;
     position: relative;
-    background: #FCFCFC;
+    background: #fffcfc;
     // box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
-    border-radius: 6px;
+    border-radius: 30px;
   .icon {
     position: absolute;
     top: 0;
