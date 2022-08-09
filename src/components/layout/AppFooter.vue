@@ -1,15 +1,15 @@
 <template>
   <footer>
-    <div class="footer">
+    <div class="footer  border-top">
     <div class="row">
-    <a href="#"><i class="bi bi-facebook"></i></a>
-    <a href="#"><i class="bi bi-instagram"></i></a>
-    <a href="#"><i class="bi bi-youtube"></i></a>
-    <a href="#"><i class="bi bi-twitter"></i></a>
+    <a href="#" style="padding-bottom: 7px;"><i style="font-size: 10px;" class="bi bi-facebook"></i></a>
+    <a href="#" style="padding-bottom: 7px;"><i style="font-size: 10px;" class="bi bi-instagram"></i></a>
+    <a href="#" style="padding-bottom: 7px;" ><i style="font-size: 10px;" class="bi bi-youtube"></i></a>
+    <a href="#" style="padding-bottom: 7px;padding-right: 0px;" ><i style="font-size: 10px;" class="bi bi-twitter"></i></a>
     </div>
 
     <div class="row">
-    <ul>
+    <ul style="margin-bottom: 7px;display: -webkit-inline-box;text-align: -webkit-center;">
     <li><a href="#">Contact us</a></li>
     <li><a href="#">Our Services</a></li>
     <li><a href="#">Privacy Policy</a></li>
@@ -18,8 +18,12 @@
     </ul>
     </div>
 
-    <div class="row">
-    INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By: Mahesh 
+    <div class="row" style="
+      justify-content: center;
+      font-size: 10px;
+      color: #bbb7b7;
+      padding: 0p;">
+    FANSE Copyright © 2021 Inferno - All rights reserved 
     </div>
     </div>
 </footer>
@@ -28,7 +32,7 @@
 <style scoped>
 
 .footer{
-background:rgb(228, 228, 228);
+background: #fffcfc;
 padding:10px 0px;
 font-family: 'Play', sans-serif;
 text-align:center;
@@ -39,6 +43,8 @@ width:100%;
 color:gray;
 font-size:0.8em;
 justify-content: center;
+margin-right: 0px !important;
+margin-left: 0px !important;
 }
 
 .footer .row a{
