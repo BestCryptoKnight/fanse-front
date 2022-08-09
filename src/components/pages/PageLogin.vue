@@ -66,6 +66,12 @@
       <i class="bi-dot" />
       <b-link to="/signup">{{ $t("general.create-new-account") }}</b-link>
     </div>
+    <div class="text-center d-block w-100">
+    <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" width="50%" class="logo align-baseline mb-1" style="
+                        width: 80%;
+                        margin-top: 30px;
+                    ">
+    </div>
 
     
   </div>
