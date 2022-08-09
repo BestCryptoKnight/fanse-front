@@ -68,7 +68,6 @@ margin:0px 5px;
 
 .footer .row a i{
 font-size:2em;
-margin:0% 1%;
 }
 
 @media (max-width:720px){
@@ -81,8 +80,6 @@ display:block;
 margin:2px 0px;
 text-align:left;
 }
-.footer .row a i{
-margin:0% 3%;
-}
+
 }
 </style>
