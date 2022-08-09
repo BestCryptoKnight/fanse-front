@@ -30,7 +30,7 @@
       </div>
       {{ $t("general.sign-in-with-google") }}
     </GoogleLogin> 
-
+    <small class="btn-block text-center my-3 text-uppercase or">or</small>
 
     <div v-if="errors._ && errors._.length > 0">
       <div class="alert alert-danger" v-for="error in errors._" :key="error">
@@ -105,6 +105,22 @@ height: 50px !important;
       height: 60%;
     }
   }
+}
+.or {
+display:flex;
+justify-content:center;
+align-items: center;
+color:grey;
+}
+
+.or:after,
+.or:before {
+  content: "";
+  display: block;
+  background: #adb5bd;
+  width: 50%;
+  height:1px;
+  margin: 0 10px;
 }
 </style>
 <script>
