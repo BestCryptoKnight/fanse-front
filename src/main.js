@@ -22,6 +22,10 @@ Vue.use(Vuex)
 import stores from './components/helpers/Store';
 import './registerServiceWorker'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import VueSocialauth from 'vue-social-auth'
+
 const store = new Vuex.Store(stores);
 var rnd = Math.random();
 console.log(rnd);
@@ -37,6 +41,16 @@ Vue.use(VueReCaptcha, {
   loaderOptions: {
     autoHideBadge: true
   }
+});
+
+Vue.use(VueAxios, axios);
+Vue.use(VueSocialauth, {
+    providers: {
+        google: {
+            clientId: process.env.VUE_APP_GOOGLE_CLIENT_ID,
+            redirectUri: process.env.VUE_APP_REDIRECT_URI
+        }
+    }
 });
 
 new Vue({
