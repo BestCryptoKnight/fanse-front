@@ -194,6 +194,12 @@ export default [
                     side: AppSide
                 }
             },
+            {
+                path: '/auth/:provider/callback',
+                component: {
+                  template: '<div class="auth-component"></div>'
+                }
+            },
 
         ]
     },

@@ -1,5 +1,5 @@
 import User from "../components/models/User";
-import axios from "axios";
+
 
 export default {
 
@@ -101,46 +101,58 @@ export default {
     }
 
     Vue.prototype.$api = function (method, url, data, success, failure) {
-      let headers = {};
+      const headers = {'Content-Type': 'application/json'};
       if (this.$store.state.token) {
         headers["Authorization"] = "Bearer " + this.$store.state.token;
       }
-      axios(
+      
+      fetch(url,
         {
+          headers: headers,
           method: method,
-          url: url,
-          data: data ? data : {},
-          headers: headers
+          body: data ? JSON.stringify( data) : undefined,
         }
-      )
-        .then((response) => {
-          if (response.data.updates) {
-            this.$store.state.updates = {
-              notifications: response.data.updates.notifications,
-              messages: response.data.updates.messages,
-            };
-          }
+      ).then(resp => {
+        if (resp.ok) {
+          return resp.json()
+        } else {
           this.$hideSpinner();
-          success(response.data);
-        })
-        .catch((error) => {
-          this.$hideSpinner();
-          if (error.response && error.response.status == 401) {
+          if (resp && resp.status == 401) {
             this.$saveToken(null);
             this.$saveUser(null);
-            location = process.env.VUE_APP_APP_URL;
+            // location = process.env.VUE_APP_APP_URL;
           }
 
           var errs = {};
-          if (error.response && error.response.data && error.response.data.errors) {
-            for (let field in error.response.data.errors) {
-              errs[field] = [];
-              for (let e in error.response.data.errors[field]) {
-                errs[field].push(error.response.data.errors[field][e]);
+          resp.json().then(data => {
+            if (data.errors) {
+              for (let field in data.errors) {
+                errs[field] = [];
+                for (let e in data.errors[field]) {
+                  errs[field].push(data.errors[field][e]);
+                }
               }
             }
+            failure(errs);
+          }).catch(() => {
+            failure(errs);
+          })
+          
+        }
+      }
+        )
+        .then((response) => {
+          if (response.updates) {
+            this.$store.state.updates = {
+              notifications: response.updates.notifications,
+              messages: response.updates.messages,
+            };
           }
-          failure(errs);
+          this.$hideSpinner();
+          success(response);
+        })
+        .catch((err) => {
+          console.log(err);
         });
     }
   },

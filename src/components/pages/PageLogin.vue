@@ -19,17 +19,10 @@
         </g>
     </g>
 </svg></div>
-    <GoogleLogin
-      :params="google.params"
-      :onSuccess="googleSuccess"
-      :onFailure="failure"
-      class=" w-100 btn btn-google"
-    >
-      <div class="icon">
-        <b-img :src="google.icon" />
-      </div>
-      {{ $t("general.sign-in-with-google") }}
-    </GoogleLogin> 
+    <button @click="AuthProvider('google')" type="button" class="btn btn-lg btn-info" style="border: solid 1px black; width: 100%;">
+        <img width="15px" style="margin-bottom:3px; margin-right:5px" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Sign in with Google
+    </button>
     <small class="btn-block text-center my-3 text-uppercase or">or</small>
 
     <div v-if="errors._ && errors._.length > 0">
@@ -124,11 +117,10 @@ color:#bcb8b8;
 }
 </style>
 <script>
-import GoogleLogin from "vue-google-login";
 import User from "../models/User";
 import UiFormInput from "../ui/UiFormInput.vue";
 export default {
-  components: { UiFormInput, GoogleLogin },
+  components: { UiFormInput },
   data() {
     return {
       recaptcha_error: false,
@@ -137,31 +129,28 @@ export default {
       errors: {},
     };
   },
-  computed: {
-    google() {
-      return {
-        params: {
-          client_id: process.env.VUE_APP_GOOGLE_CLIENT_ID,
-          scope: "profile email",
-        },
-        renderParams: {
-          longtitle: true,
-          height: 36,
-          theme: "dark",
-        },
-        icon: require("@/assets/google.svg"),
-      };
-    },
-  },
   methods: {
     submitForm() {
       this.login(User.CHANNEL_EMAIL);
     },
-    googleSuccess(googleUser) {
-      this.login(
-        User.CHANNEL_GOOGLE,
-        googleUser.getAuthResponse().access_token
-      );
+    AuthProvider(provider) {
+      var self = this
+      this.$auth.authenticate(provider).then(response =>{
+        self.SocialLogin(provider,response)
+        }).catch(err => {
+            console.log({err:err})
+        })
+    },
+    SocialLogin(provider,data){
+      this.$post('/sociallogin/'+provider,data, response => {
+        this.email = response.data
+        this.password = response.data
+        this.$saveUser(response.user);
+        this.$saveToken(response.token);
+        
+      }, err => {
+          console.log(err)
+      })
     },
     login(type, token) {
       this.errors = {};
@@ -182,6 +171,7 @@ export default {
           this.$saveUser(data.user);
         },
         (errors) => {
+          console.log(errors);
           this.errors = errors;
         }
       );
