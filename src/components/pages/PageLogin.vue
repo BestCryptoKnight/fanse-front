@@ -19,7 +19,7 @@
         </g>
     </g>
 </svg></div>
-    <button @click="AuthProvider('google')" type="button" class="btn btn-lg btn-info" style="border: solid 1px black; width: 100%;">
+    <button @click="AuthProvider('google')" type="button" class="btn btn-lg btn-google" style="border: solid 1px black; width: 100%;">
         <img width="15px" style="margin-bottom:3px; margin-right:5px" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
         Sign in with Google
     </button>
