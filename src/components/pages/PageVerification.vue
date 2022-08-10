@@ -23,35 +23,11 @@
       </b-row>
       <b-row>
         <b-form class="w-100 mx-3 mt-3">
-          <!-- <div class="" style="padding-bottom: 10px;">
+          <div class="" style="padding-bottom: 30px;">
             <h4 class="mb-0 font-montserrat"><i class="bi bi-patch-check-fill" style="
                         color: #2081E2;
                     "></i> Become a Verify Creator</h4>
               </div>
-          <div class="btn-block " style="text-align: left !important;">
-            <p class="bollets-home" style="
-                margin-top: 10px;
-                margin-left: 0px;
-                margin-bottom: 10px;
-            "><d class="" style="color: #2081E2;">💕</d> You take home <strong>85%</strong> of your earnings! <strong>Lower than anywhere else!</strong>
-            </p>
-            <p class="bollets-home" style="
-                margin-left: 0px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-            "><d class="" style="color: #2081E2;">💎</d> Legend Creators are getting <strong>social media Promotions FOR FREE!</strong></p>
-            
-          <p class="bollets-home" style="
-              margin-left: 0px;
-              margin-top: 10px;
-              margin-bottom: 10px;
-          "><d class="" style="color: #2081E2;">💸</d> Join the <strong>most converting</strong> social subscription platform!</p>
-          <p class="bollets-home" style="
-                          margin-left: 0px;
-                          margin-top: 10px;
-                          margin-bottom: 10px;
-              "><d class="" style="color: #2081E2;">✔️</d> Fast verification</p>
-        </div> -->
           <b-alert show variant="secondary" v-if="editing">{{
             $t("general.verification-info")
           }}</b-alert>
@@ -138,7 +114,9 @@
             :errors="errors"
             :label="$t('general.zip')"
           />
-          <b-alert show variant="secondary" v-if="editing"></b-alert>
+          <b-alert show variant="secondary" v-if="editing">{{
+            $t("general.verification-info-bottom")
+          }}</b-alert>
           <b-form-group
             :label="$t('general.photo-id')"
             label-for="photo"
