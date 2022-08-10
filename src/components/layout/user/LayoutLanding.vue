@@ -60,9 +60,8 @@
 </style>
 <script>
 import AppFooter from "../AppFooter.vue";
-import UiLogo from "../../ui/UiLogo.vue";
 export default {
-  components: { AppFooter, UiLogo },
+  components: { AppFooter },
   computed: {
     appname() {
       return process.env.VUE_APP_APP_NAME;
