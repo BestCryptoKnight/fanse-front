@@ -93,7 +93,7 @@ height: 50px !important;
   .icon {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
     height: 100%;
     width: 2.5rem;
     display: flex;

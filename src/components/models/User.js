@@ -61,8 +61,8 @@ export default class User {
   }
 
   get initials() {
-    const a = this.username.charAt(0).toUpperCase();
-    const b = this.username.charAt(1);
+    const a = this.name.charAt(0).toUpperCase();
+    const b = this.name.charAt(1);
     return a + b;
   }
 
