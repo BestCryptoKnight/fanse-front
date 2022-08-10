@@ -101,20 +101,35 @@ export default {
     }
 
     Vue.prototype.$api = function (method, url, data, success, failure) {
-      const headers = {'Content-Type': 'application/json'};
+      const headers = {};
       if (this.$store.state.token) {
         headers["Authorization"] = "Bearer " + this.$store.state.token;
       }
-      
+
+      let body = data;
+
+      if (!(data instanceof FormData)) {
+        headers['Content-Type'] = 'application/json';
+        body = data ? JSON.stringify(data) : undefined;
+      }
       fetch(url,
         {
-          headers: headers,
+          headers,
           method: method,
-          body: data ? JSON.stringify( data) : undefined,
+          body,
         }
       ).then(resp => {
         if (resp.ok) {
-          return resp.json()
+          return resp.json().then((response) => {
+            if (response.updates) {
+              this.$store.state.updates = {
+                notifications: response.updates.notifications,
+                messages: response.updates.messages,
+              };
+            }
+            this.$hideSpinner();
+            success(response);
+          })
         } else {
           this.$hideSpinner();
           if (resp && resp.status == 401) {
@@ -137,20 +152,10 @@ export default {
           }).catch(() => {
             failure(errs);
           })
-          
+
         }
       }
-        )
-        .then((response) => {
-          if (response.updates) {
-            this.$store.state.updates = {
-              notifications: response.updates.notifications,
-              messages: response.updates.messages,
-            };
-          }
-          this.$hideSpinner();
-          success(response);
-        })
+      )
         .catch((err) => {
           console.log(err);
         });
