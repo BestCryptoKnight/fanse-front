@@ -23,39 +23,31 @@
       </b-row>
       <b-row>
         <b-form class="w-100 mx-3 mt-3">
-          <div class="" style="padding-bottom: 30px;">
+          <div class="" style="padding-bottom: 10px;">
             <h4 class="mb-0 font-montserrat"><i class="bi bi-patch-check-fill" style="
                         color: #2081E2;
                     "></i> Become a Verify Creator</h4>
               </div>
-          <div class="btn-block border-bottom" style="text-align: left !important;border-bottom: 1px solid #dee2e6!important;/* width: 100%; */padding: 0px;">
+          <div class="btn-block border-bottom" style="text-align: left !important;border-bottom: 1px solid #dee2e6!important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
-                margin-bottom: 7px;
-                margin-top: 10px;
                 margin-bottom: 10px;
             "><d class="" style="color: #2081E2;">💕</d> You take home <strong>85%</strong> of your earnings! <strong>Lower than anywhere else!</strong>
             </p>
             <p class="bollets-home" style="
-                margin-top: 0px;
                 margin-left: 0px;
-                margin-bottom: 7px;
                 margin-top: 10px;
                 margin-bottom: 10px;
             "><d class="" style="color: #2081E2;">💎</d> Legend Creators are getting <strong>social media Promotions FOR FREE!</strong></p>
             
           <p class="bollets-home" style="
-              margin-top: 0px;
               margin-left: 0px;
-              margin-bottom: 7px;
               margin-top: 10px;
               margin-bottom: 10px;
           "><d class="" style="color: #2081E2;">💸</d> Join the <strong>most converting</strong> social subscription platform!</p>
           <p class="bollets-home" style="
-                          margin-top: 0px;
                           margin-left: 0px;
-                          margin-bottom: 7px;
                           margin-top: 10px;
                           margin-bottom: 10px;
               "><d class="" style="color: #2081E2;">✔️</d> Fast verification</p>
