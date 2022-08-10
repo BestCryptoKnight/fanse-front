@@ -28,6 +28,38 @@
                         color: #2081E2;
                     "></i> Become a Verify Creator</h4>
               </div>
+          <div class="btn-block border-bottom" style="text-align: left !important;border-bottom: 1px solid #dee2e6!important;/* width: 100%; */padding: 0px;">
+            <p class="bollets-home" style="
+                margin-top: 10px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            "><d class="" style="color: #2081E2;">💕</d> You take home <strong>85%</strong> of your earnings! <strong>Lower than anywhere else!</strong>
+            </p>
+            <p class="bollets-home" style="
+                margin-top: 0px;
+                margin-left: 0px;
+                margin-bottom: 7px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            "><d class="" style="color: #2081E2;">💎</d> Legend Creators are getting <strong>social media Promotions FOR FREE!</strong></p>
+            
+          <p class="bollets-home" style="
+              margin-top: 0px;
+              margin-left: 0px;
+              margin-bottom: 7px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+          "><d class="" style="color: #2081E2;">💸</d> Join the <strong>most converting</strong> social subscription platform!</p>
+          <p class="bollets-home" style="
+                          margin-top: 0px;
+                          margin-left: 0px;
+                          margin-bottom: 7px;
+                          margin-top: 10px;
+                          margin-bottom: 10px;
+              "><d class="" style="color: #2081E2;">✔️</d> Fast verification</p>
+        </div>
           <b-alert show variant="secondary" v-if="editing">{{
             $t("general.verification-info")
           }}</b-alert>
@@ -114,9 +146,7 @@
             :errors="errors"
             :label="$t('general.zip')"
           />
-          <b-alert show variant="secondary" v-if="editing">{{
-            $t("general.verification-info-bottom")
-          }}</b-alert>
+          <b-alert show variant="secondary" v-if="editing">Upload a photo with your ID, Make sure the photo you send meets the following requirements:<br />- Both your hand holding the ID card and your full face must be visible <br />– Your face must be clearly visible in both the photo and the ID <br />– The photo must be well lit and not too small, too dark or too blurry</b-alert>
           <b-form-group
             :label="$t('general.photo-id')"
             label-for="photo"
