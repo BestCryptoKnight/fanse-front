@@ -28,7 +28,7 @@
                         color: #2081E2;
                     "></i> Become a Verify Creator</h4>
               </div>
-          <div class="btn-block border-bottom" style="text-align: left !important;border-bottom: 1px solid #dee2e6!important;">
+          <div class="btn-block " style="text-align: left !important;">
             <p class="bollets-home" style="
                 margin-top: 10px;
                 margin-left: 0px;
@@ -138,7 +138,7 @@
             :errors="errors"
             :label="$t('general.zip')"
           />
-          <b-alert show variant="secondary" v-if="editing">Upload a photo with your ID, Make sure the photo you send meets the following requirements:<br />- Both your hand holding the ID card and your full face must be visible <br />– Your face must be clearly visible in both the photo and the ID <br />– The photo must be well lit and not too small, too dark or too blurry</b-alert>
+          <b-alert show variant="secondary" v-if="editing">Upload a photo with your ID, Make sure the photo you send meets the following requirements:<br />– Both your hand holding the ID card and your full face must be visible  <br />– Your face must be clearly visible in both the photo and the ID <br />– The photo must be well lit and not too small, too dark or too blurry</b-alert>
           <b-form-group
             :label="$t('general.photo-id')"
             label-for="photo"
