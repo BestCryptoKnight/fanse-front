@@ -13,7 +13,7 @@
 <script>
 import AppSearch from "./AppSearch.vue";
 import AppSuggestions from "./AppSuggestions.vue";
-import AppFooter from "../AppFooter.vue";
+import AppFooter from "./AppFooter.vue";
 export default {
   data: function () {
     return {
