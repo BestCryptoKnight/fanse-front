@@ -3,6 +3,7 @@
     <div class="flex-grow-1 d-flex flex-row">
       <div class="w-50 promo position-relative d-none d-md-block">
         <div class="middle">
+          <ui-logo class="logo mb-3" />
           <h2>{{ $t("general.signup-slogan") }}</h2>
         </div>
       </div>
@@ -60,8 +61,9 @@
 </style>
 <script>
 import AppFooter from "../AppFooter.vue";
+import UiLogo from "../../ui/UiLogo.vue";
 export default {
-  components: { AppFooter },
+  components: { AppFooter, UiLogo },
   computed: {
     appname() {
       return process.env.VUE_APP_APP_NAME;
