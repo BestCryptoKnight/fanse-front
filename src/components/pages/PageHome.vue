@@ -8,7 +8,7 @@
       </b-row>
       <div class="box-become">
         <div class="inner-box"><p class="p-inner">
-          <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into Paid followers</p>
+          <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into <br> Paid followers</p>
           <div style="flex: 1 1 0%;">
             <a class="a-box" tabindex="0" href="/payout">Become a creator</a></div></div></div>
       <div v-if="isMobile()" ref="swiper" class="swiper w-100 overflow-hidden" style="margin-top:15px;">
@@ -37,7 +37,7 @@
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 8%) 0px 4px 10px;
     margin-bottom: 8px;
-    padding: 16px;
+    padding: 10px;
     margin-top: 10px;
 }
 .inner-box{
@@ -48,10 +48,11 @@
     flex-direction: row;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    text-align: -webkit-center;
-    padding: 10px;
+    text-align: -webkit-center !important;
+
+        
 }
-.p-box{
+.p-inner{
   flex: 1 1 0%;
     margin: 10px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -60,6 +61,7 @@
     line-height: 1.5;
     letter-spacing: 0.00938em;
     color: rgb(255, 255, 255);
+    text-align: initial;
 }
 .span-box{
   margin: 0px;
@@ -92,7 +94,7 @@
     font-family: Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.75;
     min-width: 64px;
-    width: 100%;
+    width: 90%;
     box-shadow: none;
     border-radius: 25px;
     text-transform: initial;
@@ -105,6 +107,15 @@
     padding: 6px 24px;
     background: #fff;
     color: #2196f3;
+}
+@media (max-width:720px){
+.p-inner{
+text-align: -webkit-center !important;
+}
+.inner-box{
+display: inherit;
+}
+  
 }
 </style>
 <script>
