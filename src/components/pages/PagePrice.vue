@@ -93,8 +93,6 @@ export default {
           60: "60%",
           70: "70%",
           80: "80%",
-          90: "90%",
-          95: "95%",
         },
         months: {
           null: this.$t("general.months"),

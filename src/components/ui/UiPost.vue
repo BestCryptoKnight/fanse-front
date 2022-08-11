@@ -147,7 +147,7 @@
           </div>
          
           
-       <div v-if="post.user.price<1"
+       <div v-if="post.user.price<1 && post.user.isSubscribed"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
