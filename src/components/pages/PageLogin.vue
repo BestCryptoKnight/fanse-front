@@ -1,6 +1,6 @@
 <template>
   <div>
-<div style="text-align: center;">
+<div style="text-align: center;margin-top:20px">
 <svg width="200px" height="132px" viewBox="0 0 903 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Group 4</title>
     <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -59,7 +59,7 @@
       <i class="bi-dot" />
       <b-link to="/signup">{{ $t("general.create-new-account") }}</b-link>
     </div>
-    <div class="text-center d-block w-100">
+    <div class="text-center d-block w-100" style="margin-bottom:20px;">
     <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" width="50%" class="logo align-baseline mb-1" style="
                         width: 80%;
                         margin-top: 30px;
