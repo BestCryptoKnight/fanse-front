@@ -22,7 +22,7 @@
       justify-content: center;
       font-size: 10px;
       color: #bbb7b7;">
-    FANSE Copyright © 2021 Inferno - All rights reserved 
+    FANSE Copyright © 2021 Fanse - All rights reserved 
     </div>
     </div>
 </footer>
