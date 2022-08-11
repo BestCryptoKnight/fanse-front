@@ -71,10 +71,7 @@
       <b-link to="/">{{ $t("general.login") }}</b-link>
     </div>
 
-    <div class="text-center d-block w-100" style="margin-bottom: 25px;">
-    <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" width="50%" class="logo align-baseline" style="
-                        width: 80%;">
-    </div>
+    
   </b-form>
 </template>
 <script>
