@@ -3,7 +3,7 @@
     <div class="flex-grow-1 d-flex flex-row">
       <div class="w-50 promo position-relative d-none d-md-block">
         <div class="middle">
-          <h2>{{ $t("general.signup-slogan") }}</h2>
+          <h2 style="margin: 0;color: inherit;font-weight: 700;">{{ $t("general.signup-slogan") }}</h2>
         </div>
       </div>
       <div class="w-50 position-relative">
@@ -25,7 +25,7 @@
   color: $white;
   .middle {
     width: 100%;
-    max-width: 344px;
+    max-width: 444px;
     .logo {
       height: 4rem;
     }
