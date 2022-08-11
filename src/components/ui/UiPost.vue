@@ -167,6 +167,14 @@
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
           </div> 
+          <div v-if="post.price>1 && post.user.isSubscribed"
+            class="position-absolute p-3"
+            style="bottom: 0; left: 0; right: 0"
+          >
+            <b-button variant="primary" block @click.prevent="unlock">{{
+              $t("general.unlock-post-for-x", [post.priceFormatted])
+            }}</b-button>
+          </div> 
            <div v-if="post.user.price>1 && !post.user.isSubscribed"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
