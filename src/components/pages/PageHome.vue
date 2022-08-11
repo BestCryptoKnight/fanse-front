@@ -44,7 +44,7 @@
   width: 100%;
     -webkit-box-align: center;
     align-items: center;
-    display: inline;
+    display: flex;
     flex-direction: row;
     -webkit-box-pack: justify;
     justify-content: space-between;
