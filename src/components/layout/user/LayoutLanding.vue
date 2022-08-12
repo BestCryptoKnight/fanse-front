@@ -37,7 +37,7 @@
 @media only screen and (min-width: 800px) {
  .main-login
 {
-  width: 45% !important;
+  width: 55% !important;
 }
 }
 
