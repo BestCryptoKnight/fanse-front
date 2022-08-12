@@ -443,8 +443,7 @@ export default {
         this.$get(
           "/users/" + this.username,
           (data) => {
-            this.status = data.active
-            console.log(this.status, 'AAAAAAAAAAAAAA')
+            this.status = data.active;
             this.user = new User(data);
             this.loadPosts();
           },
