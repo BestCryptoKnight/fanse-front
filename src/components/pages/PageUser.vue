@@ -190,11 +190,12 @@
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="
-          !isOwner &&
+          (!isOwner &&
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0">
+          user.bundles.length > 0) || 
+          status == false">
        
         <div
           v-for="(item, index) in user.bundles" 
@@ -208,7 +209,7 @@
           v-if="item.months==1"
           >
           {{ $t("general.get-x-months-for-y-z-off", item.title(user))}} 
-          <p style="display:none;">{{$t(hascamp=true)}}</p>
+          <p style="display:none;">{{$t(hascamp=false)}}</p>
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
               $t("general.regular-price", [
@@ -231,11 +232,12 @@
       <b-row
         class="px-3 mt-3 d-block border-bottom pb-3"
         v-if="
-          !isOwner &&
+          (!isOwner &&
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0">
+          user.bundles.length > 0) || 
+          status == false">
        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
         <div class="pb-3"
           v-for="(item, index) in user.bundles" 
@@ -271,7 +273,7 @@
           >
         </b-nav>
       </b-row>
-      <ui-posts v-model="posts" />
+      <ui-posts v-model="posts" :status="status" />
       <div v-if="posts[0] == null"  class="empty-section">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="200" preserveAspectRatio="xMidYMid meet" version="1.0" style="
     opacity: 0.25;
@@ -441,6 +443,7 @@ export default {
         this.$get(
           "/users/" + this.username,
           (data) => {
+            this.status = data.active;
             this.user = new User(data);
             this.loadPosts();
           },
