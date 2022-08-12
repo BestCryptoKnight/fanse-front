@@ -9,7 +9,9 @@
           <h5 class="text-uppercase p-0 my-3 mx-2 flex-grow-1">
             {{ postId ? $t("general.edit-post") : $t("general.new-post") }}
           </h5>
-          <b-button @click.prevent="submitPost">{{
+          <b-button 
+          class="btn-primary" 
+          @click.prevent="submitPost">{{
             $t("general.post")
           }}</b-button>
         </div>
@@ -170,10 +172,15 @@
 textarea {
   border: none;
   scroll-behavior: smooth;
+  height: 120px !important;
 }
 textarea:focus {
   border: none;
   box-shadow: none;
+}
+.btn-primary{
+      padding: 8px 18px !important;
+    height: 40px !important;
 }
 </style>
 <script>
