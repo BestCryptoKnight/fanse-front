@@ -65,7 +65,7 @@
     <div class="px-3 pb-3 w-100 overflow-hidden nl2br wrap">
       {{ post.message }}
     </div>
-    <div class="media" v-if="post.media.length > 0 && hasAccess">
+    <div class="media" v-if="(post.media.length > 0 && hasAccess) || status == true">
       <div ref="swiper" class="swiper w-100" v-if="post.media.length > 1">
         <div class="swiper-wrapper">
           <div
