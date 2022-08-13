@@ -65,7 +65,7 @@
     <div class="px-3 pb-3 w-100 overflow-hidden nl2br wrap">
       {{ post.message }}
     </div>
-    <div class="media" v-if="(post.media.length > 0 && hasAccess)">
+    <div class="media" v-if="(post.media.length > 0 && hasAccess && status)">
       <div ref="swiper" class="swiper w-100" v-if="post.media.length > 1">
         <div class="swiper-wrapper">
           <div
@@ -126,7 +126,7 @@
         >/{{ post.media.length }}
       </div>
     </div>
-    <div class="bg-light w-100" v-else-if="(post.images > 0 || post.videos > 0) && !hasAccess && !status">
+    <div class="bg-light w-100" v-else-if="((post.images > 0 || post.videos > 0) && !hasAccess) || ((post.images > 0 || post.videos > 0) && hasAccess && !status)">
       <b-aspect aspect="4:3">
         <div class="w-100 h-100 position-relative">
           <div class="d-flex align-items-center h-100">
