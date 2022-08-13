@@ -126,7 +126,7 @@
         >/{{ post.media.length }}
       </div>
     </div>
-    <div class="bg-light w-100" v-else-if="((post.images > 0 || post.videos > 0 ) && !hasAccess) || (status == false)">
+    <div class="bg-light w-100" v-else-if="(post.images > 0 || post.videos > 0 || status == false) && !hasAccess">
       <b-aspect aspect="4:3">
         <div class="w-100 h-100 position-relative">
           <div class="d-flex align-items-center h-100">
@@ -145,9 +145,7 @@
               </div>
             </div>
           </div>
-         
-          
-       <div v-if="post.user.price<1"
+          <div v-if="post.user.price<1"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
@@ -157,7 +155,7 @@
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
           </div> 
-           <div v-if="post.user.price>1 && post.user.isSubscribed"
+          <div v-if="post.user.price>1"
             class="position-absolute p-3"
             style="bottom: 0; left: 0; right: 0"
           >
@@ -166,22 +164,7 @@
                 ? $t("general.subscribe-to-see")
                 : $t("general.unlock-post-for-x", [post.priceFormatted])
             }}</b-button>
-          </div> 
-          <div v-if="post.price>1 && post.user.isSubscribed"
-            class="position-absolute p-3"
-            style="bottom: 0; left: 0; right: 0"
-          >
-            <b-button variant="primary" block @click.prevent="unlock">{{
-              $t("general.unlock-post-for-x", [post.priceFormatted])
-            }}</b-button>
-          </div> 
-           <div v-if="post.user.price>1 && !post.user.isSubscribed"
-            class="position-absolute p-3"
-            style="bottom: 0; left: 0; right: 0"
-          >
-            <b-button variant="primary" block @click.prevent="subscribe">{{$t("general.subscribe-to-see")}}</b-button>
-          </div> 
-          
+          </div>  
         </div>
       </b-aspect>
     </div>

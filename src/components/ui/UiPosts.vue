@@ -1,7 +1,7 @@
 <template>
   <div class="posts">
     <b-row v-for="(post, key) in posts" :key="key">
-      <ui-post v-model="posts[key]" />
+      <ui-post v-model="posts[key]" :status="status" />
     </b-row>
   </div>
 </template>
@@ -10,6 +10,7 @@ import UiPost from "../ui/UiPost.vue";
 export default {
   props: {
     value: [],
+    status: Boolean,
   },
   computed: {
     posts: {
