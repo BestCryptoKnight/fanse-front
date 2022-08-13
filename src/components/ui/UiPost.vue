@@ -126,7 +126,7 @@
         >/{{ post.media.length }}
       </div>
     </div>
-    <div class="bg-light w-100" v-else-if="((post.images > 0 || post.videos > 0 ) && !hasAccess) || (status == false)">
+    <div class="bg-light w-100" v-else-if="(post.images > 0 || post.videos > 0 || status == false) && !hasAccess">
       <b-aspect aspect="4:3">
         <div class="w-100 h-100 position-relative">
           <div class="d-flex align-items-center h-100">
