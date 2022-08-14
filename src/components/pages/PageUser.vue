@@ -194,8 +194,7 @@
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0) || 
-          status == false">
+          user.bundles.length > 0) ">
        
         <div
           v-for="(item, index) in user.bundles" 
@@ -236,8 +235,7 @@
           !user.isSubscribed &&
           !user.isFree &&
           user.isCreator &&
-          user.bundles.length > 0) || 
-          status == false">
+          user.bundles.length > 0) ">
        <h5 class="mb-3">{{ $t("general.subscription-bundles") }}</h5>
         <div class="pb-3"
           v-for="(item, index) in user.bundles" 
@@ -273,7 +271,7 @@
           >
         </b-nav>
       </b-row>
-      <ui-posts v-model="posts" :status="status" />
+      <ui-posts v-model="posts" />
       <div v-if="posts[0] == null"  class="empty-section">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="200" preserveAspectRatio="xMidYMid meet" version="1.0" style="
     opacity: 0.25;
@@ -443,7 +441,6 @@ export default {
         this.$get(
           "/users/" + this.username,
           (data) => {
-            this.status = data.active;
             this.user = new User(data);
             this.loadPosts();
           },
