@@ -14,6 +14,7 @@ export default {
       loading: true,
       elements: null,
       stripe: null,
+      subscription: null,
     };
   },
   mounted() {
@@ -38,6 +39,7 @@ export default {
         };
         switch (this.item.type) {
           case Payment.TYPE_SUBSCRIPTION_NEW:
+            console.log(this.subscription);
             fields.sub_id = this.item.user.id;
             if (this.item.bundle) {
               fields.bundle_id = this.item.bundle.id;
@@ -62,6 +64,8 @@ export default {
           "/payments",
           fields,
           (data) => {
+            console.log(data);
+            this.subscription = {id: data.subscription_id};
             this.loadElement(data.token);
           },
           () => {}
