@@ -59,9 +59,8 @@
       <i class="bi-dot" />
       <b-link to="/signup">{{ $t("general.create-new-account") }}</b-link>
     </div>
-    <div class="text-center d-block w-100" style="margin-bottom:20px;">
-    <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" width="50%" class="logo align-baseline mb-1" style="
-                        width: 80%;">
+    <div class="text-center  d-block w-100" style="margin-bottom:20px;">
+    <img src="https://ybhltd.com/users.png" alt="STFU | Support Creators Content" class="desktop-img logo align-baseline mb-1">
     </div>
 
     
@@ -113,6 +112,15 @@ color:#bcb8b8;
   height:1px;
   margin: 0 10px;
 }
+.desktop-img{
+  width: 80%;
+}
+@media (min-width:720px){
+.desktop-img{
+width: 65%;
+}
+}
+
 </style>
 <script>
 import User from "../models/User";

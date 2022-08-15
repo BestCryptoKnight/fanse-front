@@ -19,14 +19,6 @@
         </g>
     </g>
 </svg></div>
-
-    <button @click="AuthProvider('google')" class="btn btn-lg btn-block" style="border: solid 1px #CED4DA;border-radius: 30px;">
-      <img width="30px" style="float:left" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-      <div style="font-size: 1rem;">Sign In With Google</div>
-    </button>
-    <small class="btn-block text-center my-3 text-uppercase or">or</small>
-
-
     <div v-if="errors._ && errors._.length > 0">
       <div class="alert alert-danger" v-for="error in errors._" :key="error">
         {{ error }}
@@ -82,50 +74,6 @@
     
   </b-form>
 </template>
-<style scoped lang="scss">
-@import "~@/assets/scss/_variables.scss";
-.btn-google {
-  margin-bottom: 10px;
-  height: 50px;
-  border-color: #eaeaea;
-    color: #21252a;
-    position: relative;
-    background: #fffcfc;
-    // box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
-    border-radius: 30px;
-  .icon {
-    position: absolute;
-    top: 0;
-    left: 5px;
-    height: 100%;
-    width: 2.5rem;
-    display: flex;
-    border-top-left-radius: $border-radius;
-    border-bottom-left-radius: $border-radius;
-    img {
-      display: block;
-      margin: auto;
-      height: 60%;
-    }
-  }
-}
-.or {
-display:flex;
-justify-content:center;
-align-items: center;
-color:#bcb8b8;
-}
-
-.or:after,
-.or:before {
-  content: "";
-  display: block;
-  background: #adb5bd;
-  width: 50%;
-  height:1px;
-  margin: 0 10px;
-}
-</style>
 <script>
 import UiFormInput from "../ui/UiFormInput.vue";
 export default {
@@ -175,24 +123,5 @@ export default {
       );
     },
   },
-  AuthProvider(provider) {
-      var self = this
-      this.$auth.authenticate(provider).then(response =>{
-        self.SocialLogin(provider,response)
-        }).catch(err => {
-            console.log({err:err})
-        })
-    },
-    SocialLogin(provider,data){
-      this.$post('/sociallogin/'+provider,data, response => {
-        this.email = response.data
-        this.password = response.data
-        this.$saveUser(response.user);
-        this.$saveToken(response.token);
-        
-      }, err => {
-          console.log(err)
-      })
-    },
 };
 </script>
