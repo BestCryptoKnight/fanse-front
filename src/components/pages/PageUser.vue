@@ -208,7 +208,7 @@
           v-if="item.months==1"
           >
           {{ $t("general.get-x-months-for-y-z-off", item.title(user))}} 
-          <p style="display:none;">{{$t(hascamp=false)}}</p>
+          <p style="display:none;">{{$t(hascamp=true)}}</p>
         </b-button>
         <h7 v-if="item.months==1" class="text-muted small">{{
               $t("general.regular-price", [
