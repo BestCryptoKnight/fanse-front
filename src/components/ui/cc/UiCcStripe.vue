@@ -64,7 +64,6 @@ export default {
           "/payments",
           fields,
           (data) => {
-            console.log(data);
             this.subscription = {id: data.subscription_id};
             this.loadElement(data.token);
           },

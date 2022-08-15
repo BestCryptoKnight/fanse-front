@@ -84,7 +84,7 @@
           :placeholder="$t('general.message-optional')"
         />
       </div>
-      <div v-if="method == null">
+      <div>
         <div class="m-3">
           <div v-if="errors._ && errors._.length > 0">
             <div
@@ -350,7 +350,6 @@ export default {
           }
           break;
       }
-
       this.$showSpinner();
       this.$post(
         "/payments",
