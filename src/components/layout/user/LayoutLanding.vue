@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="w-50 position-relative">
-        <div class="middle main main-login">
+        <div class="middle main main-login" style="padding-top: 30px;padding-bottom: 30px;">
           <!-- <div class="px-5 pb-5">
             <ui-logo class="logo d-md-none text-primary" />
           </div> -->
