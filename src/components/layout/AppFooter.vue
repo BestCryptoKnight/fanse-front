@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="footer  border-top">
+    <div class="footer  border-top" style="margin-top:25px">
     <div class="row">
     <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-facebook"></i></a>
     <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-instagram"></i></a>
