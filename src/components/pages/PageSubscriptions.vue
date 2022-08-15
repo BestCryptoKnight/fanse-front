@@ -130,7 +130,7 @@ export default {
     },
     subscribe(subscription) {
       this.$post(
-        "/subscribe/" + subscription.sub.id,
+        "/subscriptions/" + subscription.sub.id,
         {},
 
         (data) => {
