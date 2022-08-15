@@ -6,6 +6,7 @@ import App from './App.vue'
 import { BootstrapVue } from 'bootstrap-vue'
 import VueClipboard from 'vue-clipboard2'
 import VueMask from 'v-mask'
+import VueAnalytics from 'vue-analytics';
 import Misc from './plugins/Misc'
 
 import "@/assets/scss/_theming.scss";
@@ -17,6 +18,9 @@ const router = new VueRouter({
   mode: 'history'
 });
 
+Vue.use(VueAnalytics, {
+  id: 'UA-93505512-25'
+});
 
 Vue.use(Vuex)
 import stores from './components/helpers/Store';
