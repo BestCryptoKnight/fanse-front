@@ -3,6 +3,7 @@ import LayoutNoneUser from '../layout/user/LayoutNone.vue';
 import LayoutAdmin from '../layout/admin/Layout.vue';
 import PagePost from '../pages/PagePost.vue';
 import PageLogin from '../pages/PageLogin.vue';
+import PageWelcome from '../pages/PageWelcome.vue';
 import PageHome from '../pages/PageHome.vue';
 import PageSearch from '../pages/PageSearch.vue';
 import PageNewPost from '../pages/PageNewPost.vue';
@@ -193,6 +194,10 @@ export default [
                     login: PageLogin,
                     side: AppSide
                 }
+            },
+            {
+                path: '/welcome',
+                components: PageWelcome
             },
             {
                 path: '/auth/:provider/callback',
