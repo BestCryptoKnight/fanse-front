@@ -26,6 +26,7 @@
     "v-mask": "^2.3.0",
     "video.js": "^7.15.4",
     "vue": "^2.7.8",
+    "vue-analytics": "^5.22.1",
     "vue-axios": "^3.4.1",
     "vue-chartjs": "^3.5.1",
     "vue-clipboard2": "^0.3.3",
