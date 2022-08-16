@@ -3,8 +3,8 @@ import LayoutNoneUser from '../layout/user/LayoutNone.vue';
 import LayoutAdmin from '../layout/admin/Layout.vue';
 import PagePost from '../pages/PagePost.vue';
 import PageLogin from '../pages/PageLogin.vue';
-import PageWelcome from '../pages/PageWelcome.vue';
 import PageHome from '../pages/PageHome.vue';
+import PageWelcome from '../pages/PageWelcome.vue';
 import PageSearch from '../pages/PageSearch.vue';
 import PageNewPost from '../pages/PageNewPost.vue';
 import PageSettings from '../pages/PageSettings.vue';
@@ -27,7 +27,6 @@ import PagePayouts from '../pages/PagePayouts.vue';
 import PagePayments from '../pages/PagePayments.vue';
 import AppSide from '../layout/AppSide.vue';
 // import AppSideProfile from '../layout/AppSideProfile.vue';
-
 import PageLoginAdmin from '../pages/admin/PageLogin';
 import PageDashboardAdmin from '../pages/admin/PageDashboard';
 import PageUsersAdmin from '../pages/admin/PageUsers';
@@ -197,7 +196,11 @@ export default [
             },
             {
                 path: '/welcome',
-                components: PageWelcome
+                components: {
+                    default: PageHome,
+                    login: PageWelcome,
+                    side: AppSide
+                }
             },
             {
                 path: '/auth/:provider/callback',
