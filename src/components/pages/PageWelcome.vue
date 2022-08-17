@@ -1,5 +1,5 @@
 <template>
-  <b-form @submit.prevent="submitForm">
+  <b-form @submit.prevent="submitForm" class="form-welcome">
     <div style="text-align: center;margin-top:20px">
 <svg width="200px" height="132px" viewBox="0 0 903 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Group 4</title>
@@ -74,6 +74,22 @@
     
   </b-form>
 </template>
+<style scoped lang="scss">
+.form-welcome{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: solid 3px #2081e2;
+    border-radius: calc(8px * 3);
+    background: linear-gradient(332.31deg, rgba(36, 38, 41, 0.1) -4%, rgba(255, 255, 255, 0.26) 83.58%);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+
+}
+</style>
 <script>
 import UiFormInput from "../ui/UiFormInput.vue";
 export default {
