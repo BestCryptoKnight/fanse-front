@@ -75,20 +75,19 @@
   </b-form>
 </template>
 <style scoped lang="scss">
-.form-welcome{
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border: solid 3px #2081e2;
-    border-radius: calc(8px * 3);
-    background: linear-gradient(332.31deg, rgba(36, 38, 41, 0.1) -4%, rgba(255, 255, 255, 0.26) 83.58%);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
-
+.form-welcome {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border: solid 3px #2081e2;
+	border-radius: calc(8px * 3);
+	background: linear-gradient(332.31deg, rgba(36, 38, 41, 0.1) -4%, rgba(255, 255, 255, 0.26) 83.58%);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	margin: 0 auto;
 }
+
 </style>
 <script>
 import UiFormInput from "../ui/UiFormInput.vue";
