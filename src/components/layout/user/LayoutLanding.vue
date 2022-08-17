@@ -226,26 +226,24 @@
     box-sizing: inherit;
     display: block;
 }
-.color-home{
-      -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
-    font-family: "system-ui";
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.00938em;
-    font-size: 1rem;
-    box-sizing: inherit;
-    height: 600px;
-    left: calc(100% - 250px);
-    top: 10%;
-    width: 600px;
-    position: absolute;
-    z-index: 0;
-    
-    background: radial-gradient(50% 50% at 50% 50%,rgb(30 126 221 / 31%) 3.65%,rgba(30,30,30,0) 100%);
+.color-home {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	color: #F2F2F2;
+	font-family: "system-ui";
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.00938em;
+	font-size: 1rem;
+	box-sizing: inherit;
+	height: 600px;
+	left: calc(100% - 250px);
+	top: 10%;
+	width: 600px;
+	position: absolute;
+	z-index: 0;
+	background: radial-gradient(50% 50% at 50% 50%,rgb(30 126 221 / 31%) 3.65%,rgba(30,30,30,0) 100%);
 }
-
 @media only screen and (max-width: 800px) {
  .home-slide-2
 {
