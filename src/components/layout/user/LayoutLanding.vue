@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div v-if="$router.currentRoute.path == '/welcome'">
+    <div v-if="$router.currentRoute.path == '/welcome'" style="background-color: #121212;">
      <div class="home-slide">
       <div class="home-slide-1">
         <div class="home-slide-2">
@@ -64,7 +64,7 @@
 .home-login{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -90,7 +90,7 @@
 .home-describe{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -104,7 +104,7 @@
 .home-dot{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-family: "system-ui";
     font-weight: bold;
     font-size: 2rem;
@@ -121,7 +121,7 @@
     -webkit-text-size-adjust: 100%;
     box-sizing: inherit;
     margin: 0;
-    color: #000;
+    color: white;
     font-family: "system-ui";
     font-weight: bold;
     font-size: 3rem;
@@ -132,7 +132,7 @@
 .home-text{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -151,7 +151,7 @@
 .creators-home{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
@@ -170,20 +170,20 @@
 .home-slide{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
     font-size: 1rem;
     box-sizing: inherit;
-    margin-top: 0px;
+    margin-top: 60px;
     margin-bottom: 160px;
 }
 .home-slide-1{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #000;
+    color: white;
     font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
@@ -201,7 +201,7 @@
 .home-slide-2{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
+    color: white;
     font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
