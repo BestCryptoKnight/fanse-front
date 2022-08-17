@@ -217,7 +217,7 @@
     justify-content: flex-start;
 }
 .box-become{
-  background: linear-gradient(95.92deg, rgb(28 115 203) 0%, rgb(29 111 194) 20.05%, rgb(61 133 205) 100%);
+    background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 8%) 0px 4px 10px;
     margin-bottom: 8px;
