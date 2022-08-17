@@ -64,13 +64,13 @@
 .home-login{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
+    color: #000;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
     font-size: 1rem;
     box-sizing: inherit;
-    font-family: Roboto;
+    font-family: "system-ui";
     position: relative;
     z-index: 2;
 }
@@ -79,23 +79,23 @@
     -webkit-text-size-adjust: 100%;
     box-sizing: inherit;
     margin: 0;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-    font-size: 2.125rem;
+    font-family: "system-ui";
+    font-size: 1.125rem;
     letter-spacing: 0.00735em;
     text-align: left;
-    color: white;
+    color: 000;
     line-height: 1;
     font-weight: bold;
 }
 .home-describe{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
+    color: #000;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
     font-size: 1rem;
-    font-family: Roboto;
+    font-family: "system-ui";
     box-sizing: inherit;
     margin-top: 16px;
     padding-right: 24px;
@@ -104,12 +104,11 @@
 .home-dot{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: white;
-    font-family: Roboto;
+    color: #000;
+    font-family: "system-ui";
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 2rem;
     line-height: 1.167;
-    letter-spacing: -0.01562em;
     text-align: left;
     box-sizing: inherit;
     margin: 0;
@@ -122,10 +121,10 @@
     -webkit-text-size-adjust: 100%;
     box-sizing: inherit;
     margin: 0;
-    color: white;
-    font-family: Roboto;
+    color: #000;
+    font-family: "system-ui";
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 3rem;
     line-height: 1.167;
     letter-spacing: -0.01562em;
     text-align: left;
@@ -133,7 +132,7 @@
 .home-text{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
+    color: #000;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -144,7 +143,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     margin-bottom: 32px;
-    font-family: Roboto;
+    font-family: "system-ui";
     position: relative;
     z-index: 2;
     margin-right: 32px;
@@ -152,8 +151,8 @@
 .creators-home{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: #000;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -171,8 +170,8 @@
 .home-slide{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: #000;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -184,8 +183,8 @@
 .home-slide-1{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: #000;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -203,7 +202,7 @@
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -222,7 +221,7 @@
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -234,7 +233,7 @@
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     color: #F2F2F2;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: "system-ui";
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.00938em;
@@ -249,6 +248,12 @@
     background: radial-gradient(50% 50% at 50% 50%, rgba(251, 49, 96, 0.4) 3.65%, rgba(30, 30, 30, 0) 100%);
 }
 
+@media only screen and (max-width: 800px) {
+ .home-slide-2
+{
+  display: block !important;
+}
+}
 @media only screen and (min-width: 800px) {
  .main-login
 {
