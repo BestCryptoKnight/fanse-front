@@ -19,7 +19,7 @@
      <div class="home-slide">
       <div class="home-slide-1">
         <div class="home-slide-2">
-          <img src="https://www.ybhltd.com/fanse/creators-avatars.a3516290.png" alt="Creators Avatars" class="creators-home">
+          <img src="https://www.ybhltd.com/fanse/fansecreators.png" alt="Creators Avatars" class="creators-home">
           <div class="home-text">
             <h2 class="home-h2">Connect <span class="home-dot">.</span>
             </h2>
@@ -119,7 +119,6 @@
     font-family: "system-ui";
     font-weight: bold;
     font-size: 5rem;
-    line-height: 1.167;
     letter-spacing: -0.01562em;
     text-align: left;
 }
