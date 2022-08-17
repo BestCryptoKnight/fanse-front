@@ -80,7 +80,7 @@
     box-sizing: inherit;
     margin: 0;
     font-family: "system-ui";
-    font-size: 2.125rem;
+    font-size: 1.825rem;
     letter-spacing: 0.00735em;
     text-align: left;
     color: 000;
@@ -113,7 +113,6 @@
     box-sizing: inherit;
     margin: 0;
     background: linear-gradient(91.93deg, #F48A6C 0%, #FD1D5D 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .home-h2{
