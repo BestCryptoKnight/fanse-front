@@ -15,6 +15,11 @@
         </div>
       </div>
     </div>
+    <div v-if="window.location.href == 'https://fanse.co/welcome'">
+    <h2>
+      LOVE
+    </h2>
+    </div>
     <app-footer />
   </div>
 </template>
