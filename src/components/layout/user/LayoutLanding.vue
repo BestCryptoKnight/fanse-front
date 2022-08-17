@@ -45,7 +45,7 @@
           <div class="preguntas-frecuentes-contenedor serif">
             <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
             <h1 class="preguntas-frecuentes-encabezado">Preguntas Frecuentes</h1>
-                <ul class="preguntas">
+                <div class="preguntas">
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
                     <label for="pregunta-n1" class="pregunta">Accordion Heading 1</label>
@@ -61,7 +61,7 @@
                     <label for="pregunta-n3" class="pregunta">Accordion Heading 3</label>
                     <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
                   </li>
-                </ul> 
+                </div> 
             </div>      
       </div>
     </div>
@@ -87,7 +87,7 @@ body {
 	padding: 4rem 1.25rem 6rem;
 	position: relative;
 	overflow: hidden;
-	width: 92%;
+	width: 100%;
 	max-width: 106.25rem;
 }
 
