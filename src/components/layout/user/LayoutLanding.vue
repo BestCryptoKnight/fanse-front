@@ -42,164 +42,87 @@
             <a class="a-box" tabindex="0" href="/payouts">Become a creator</a></div>
         </div>
       </div>
-      <section class="faq">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-8 text-center">
-                    <div class="section-title">
-                        <h4>FAQ's</h4>
-                        <h2>Frequently Asking <span>Question’s</span></h2>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="row">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                What is Lorem Ipsum?
-                                            </button>
-                                        </h5>
-                                    </div>
-    
-                                    <div id="collapseOne" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Where does it come from?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                               Why do we use it?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
-                                                Where can I get some?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse4" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse5" aria-expanded="false" aria-controls="collapseOne">
-                                                What is Lorem Ipsum?
-                                            </button>
-                                        </h5>
-                                    </div>
-    
-                                    <div id="collapse5" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
-                                                Where does it come from?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse6" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
-                                                Why do we use it?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse7" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                                data-target="#collapse8" aria-expanded="false" aria-controls="collapseThree">
-                                                Where can I get some?
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse8" class="collapse" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            
-                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
-                                        </div>
-                                    </div>
-                                </div>
-    
-                            </div>
-    
+      
+<div class="our-faq-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+                        <div class="faq-title text-center pb-3">
+                            <h2>FAQ</h2>
                         </div>
-    
                     </div>
-    
-                </div>
+      <div class="col-lg-6">
+        <div class="accordion" id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Frequently Asked Questions ? </button>
+              </h5>
             </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Frequently Asked Questions ? </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Frequently Asked Questions ? </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="col-lg-6">
+        <div class="accordion" id="accordion2">
+          <div class="card">
+            <div class="card-header" id="heading4">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4"> Frequently Asked Questions ? </button>
+              </h5>
+            </div>
+            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion2">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading5">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5"> Frequently Asked Questions ? </button>
+              </h5>
+            </div>
+            <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion2">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading6">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6"> Frequently Asked Questions ? </button>
+              </h5>
+            </div>
+            <div id="collapse6" class="collapse show" aria-labelledby="heading6" data-parent="#accordion2">
+              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </div>
     </div>
@@ -208,143 +131,88 @@
 </template>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
-h1 {
-	color: #ff008b;
-}
-h2 {
-	color: #ff008b;
-}
-h3 {
-	color: #ff008b;
-}
-h4 {
-	color: #ff008b;
-}
-h5 {
-	color: #ff008b;
-}
-h6 {
-	color: #ff008b;
-}
-section {
-	padding: 60px;
-}
-a {
-	text-decoration: none;
-	outline: none;
-	&:hover {
-		text-decoration: none;
-		outline: none;
-	}
-	&:focus {
-		text-decoration: none;
-		outline: none;
-	}
-	&:active {
-		text-decoration: none;
-		outline: none;
-	}
-}
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.faq {
-	padding: 120px 0 90px;
-	background: #f7fbff;
-	min-height: 100vh;
-	.section-title {
-		margin-bottom: 54px;
-		h2 {
-			margin-bottom: 22px;
-		}
-	}
-	.accordion {
-		.card {
-			border: none;
-			margin-bottom: 30px;
-			&:not(:first-of-type) {
-				.card-header {
-					&:first-child {
-						border-radius: 10px;
-					}
-				}
-			}
-			.card-header {
-				border: none;
-				border-radius: 10px;
-				padding: 0;
-				h5 {
-					padding: 0;
-					button {
-						color: #1e3056;
-						font-size: 18px;
-						font-weight: 500;
-						text-decoration: none;
-						padding: 0 30px 0 70px;
-						height: 80px;
-						display: block;
-						width: 100%;
-						color: rgba(30, 48, 86, 0.8);
-						text-align: left;
-						background: #fff;
-						-webkit-box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
-						box-shadow: 0px -50px 140px 0px rgba(69, 81, 100, 0.1);
-						border-radius: 10px 10px 0 0;
-						position: relative;
-						&:after {
-							position: absolute;
-							left: 30px;
-							top: 50%;
-							margin-top: -10px;
-							width: 20px;
-							height: 20px;
-							background-color: transparent;
-							color: #ff5f74;
-							text-align: center;
-							border: 1px solid #ff5f74;
-							border-radius: 50%;
-							line-height: 100%;
-							content: '\f067';
-							font-size: 10px;
-							line-height: 18px;
-							font-family: "Font Awesome 5 Free";
-							font-weight: 900;
-						}
-					}
-					button.collapsed {
-						background: #fff;
-						border-radius: 10px;
-						-webkit-box-shadow: none;
-						box-shadow: none;
-						border: 1px solid rgba(97, 125, 255, 0.2);
-					}
-					button[aria-expanded="true"] {
-						&:after {
-							content: '\f068';
-							color: #fff;
-							background-image: -webkit-linear-gradient(-180deg, #5e7eff 0%, #ff5f74 30%, #a85fff 100%);
-						}
-					}
-				}
-			}
-			.card-body {
-				-webkit-box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
-				box-shadow: 0px 15px 140px 0px rgba(69, 81, 100, 0.1);
-				border-radius: 0 0 10px 10px;
-				padding-top: 0;
-				margin-top: -6px;
-				padding-left: 72px;
-				padding-right: 70px;
-				padding-bottom: 23px;
-				color: rgba(30, 48, 86, 0.8);
-				line-height: 30px;
-			}
-		}
-	}
+.our-faq-wrapper {
+  float: left;
+  width: 100%;
+  padding: 89px 0 60px;
+  background:#f5f5f5;
 }
 
+.our-faq-wrapper {
+    padding: 90px 0 60px;
+  background:#fff;  
+}
+.accordion .card {
+  border: none;
+  margin-bottom: 30px;
+}
+.our-faq-wrapper .btn-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  background: #242c42;
+  color: #fff;
+  border-radius: 0;
+  padding: 7px 15px 12px;
+  font-size: 16px;
+  overflow: hidden;
+  border: none;
+  font-weight:600;  
+}
+.our-faq-wrapper .btn-link:hover, .our-faq-wrapper .btn-link:focus {
+  text-decoration: none;
+}
+.our-faq-wrapper .btn-link:after {
+  position: absolute;
+  content: '\f068';
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: fontawesome;
+}
+.our-faq-wrapper .btn-link.collapsed:after {
+  content: '\f067';
+}
+.our-faq-wrapper .btn-link:before {
+  position: absolute;
+  content: '';
+  background: #86bc42;
+  -webkit-transform: skew(-35deg);
+  transform: skew(-35deg);
+  height: 100%;
+  width: 50%;
+  left: 90%;
+  top: 0;
+}
+.card-header {
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+}
+.card-body {
+  position: relative;
+}
+.card-body:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #242c42;
+}
+.card-body:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  background: #86bc42;
+  z-index: 1;
+}
 .promo {
   background: $primary;
   color: $white;
