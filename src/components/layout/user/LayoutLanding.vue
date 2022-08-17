@@ -80,7 +80,7 @@
     box-sizing: inherit;
     margin: 0;
     font-family: "system-ui";
-    font-size: 1.125rem;
+    font-size: 1.825rem;
     letter-spacing: 0.00735em;
     text-align: left;
     color: 000;
@@ -107,13 +107,12 @@
     color: white;
     font-family: "system-ui";
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 5rem;
     line-height: 1.167;
     text-align: left;
     box-sizing: inherit;
     margin: 0;
     background: linear-gradient(91.93deg, #F48A6C 0%, #FD1D5D 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .home-h2{
@@ -124,7 +123,7 @@
     color: white;
     font-family: "system-ui";
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 5rem;
     line-height: 1.167;
     letter-spacing: -0.01562em;
     text-align: left;
@@ -194,8 +193,8 @@
     box-sizing: border-box;
     margin-right: auto;
     display: block;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 14px;
+    padding-right: 14px;
     max-width: 1150px;
 }
 .home-slide-2{
@@ -253,6 +252,16 @@
 {
   display: block !important;
 }
+.home-h3{
+font-size: 1.125rem  !important;
+}
+.home-h2{
+  font-size: 2rem !important;
+}
+.home-dot{
+  font-size: 3rem  !important;
+}
+
 }
 @media only screen and (min-width: 800px) {
  .main-login
