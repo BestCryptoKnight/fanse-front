@@ -146,7 +146,6 @@
     font-family: "system-ui";
     position: relative;
     z-index: 2;
-    margin-right: 32px;
 }
 .creators-home{
   -webkit-font-smoothing: antialiased;
