@@ -15,13 +15,10 @@
         </div>
       </div>
     </div>
-    <div v-if="$router.currentRoute.path == '/welcome'" style="background-color: rgb(3 15 28);">
+    <div v-if="$router.currentRoute.path == '/welcome'" style="background-color: rgb(3 15 28);    overflow-x: hidden;">
      <div class="home-slide">
       <div class="home-slide-1">
         <div class="home-slide-2">
-          <div class="home-slide-3">
-            <div class="color-home"></div>
-          </div>
           <img src="https://www.ybhltd.com/fanse/creators-avatars.a3516290.png" alt="Creators Avatars" class="creators-home">
           <div class="home-text">
             <h2 class="home-h2">Connect <span class="home-dot">.</span>
@@ -214,36 +211,7 @@
     -webkit-box-pack: start;
     justify-content: flex-start;
 }
-.home-slide-3{
-      -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    color: #F2F2F2;
-    font-family: "system-ui";
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.00938em;
-    font-size: 1rem;
-    box-sizing: inherit;
-    display: block;
-}
-.color-home {
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-	color: #F2F2F2;
-	font-family: "system-ui";
-	font-weight: 400;
-	line-height: 1.5;
-	letter-spacing: 0.00938em;
-	font-size: 1rem;
-	box-sizing: inherit;
-	height: 600px;
-	left: calc(100% - 250px);
-	top: 10%;
-	width: 600px;
-	position: absolute;
-	z-index: 0;
-	background: radial-gradient(50% 50% at 50% 50%, rgba(30, 126, 221, 0.4) 3.65%, rgba(30, 30, 30, 0) 100%)
-}
+
 @media only screen and (max-width: 800px) {
  .home-slide-2
 {
@@ -257,6 +225,7 @@ font-size: 1.125rem  !important;
 }
 .home-h2{
   font-size: 4rem !important;
+  line-height: 0.927 !important;
 }
 .home-dot{
   font-size: 5rem  !important;
