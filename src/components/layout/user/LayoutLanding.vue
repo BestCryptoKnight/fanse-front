@@ -310,6 +310,7 @@ display: inherit;
 }
 .home-h3{
 font-size: 1.125rem  !important;
+text-align: center;
 }
 .home-h2{
   font-size: 4rem !important;
