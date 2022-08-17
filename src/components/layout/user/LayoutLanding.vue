@@ -15,14 +15,14 @@
         </div>
       </div>
     </div>
-    <div v-if="$router.currentRoute.path == '/welcome'" style="background-color: #121212;">
+    <div v-if="$router.currentRoute.path == '/welcome'" style="background-color: rgb(3 15 28);">
      <div class="home-slide">
       <div class="home-slide-1">
         <div class="home-slide-2">
           <div class="home-slide-3">
             <div class="color-home"></div>
           </div>
-          <img src="https://www.fanvue.com/_next/static/media/creators-avatars.a3516290.png" alt="Creators Avatars" class="creators-home">
+          <img src="https://www.ybhltd.com/fanse/creators-avatars.a3516290.png" alt="Creators Avatars" class="creators-home">
           <div class="home-text">
             <h2 class="home-h2">Connect <span class="home-dot">.</span>
             </h2>
@@ -104,7 +104,7 @@
 .home-dot{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: white;
+    color: #2081e2cc !important;
     font-family: "system-ui";
     font-weight: bold;
     font-size: 5rem;
@@ -112,8 +112,6 @@
     text-align: left;
     box-sizing: inherit;
     margin: 0;
-    background: linear-gradient(91.93deg, #F48A6C 0%, #FD1D5D 100%);
-    -webkit-text-fill-color: transparent;
 }
 .home-h2{
       -webkit-font-smoothing: antialiased;
@@ -148,22 +146,22 @@
     margin-right: 32px;
 }
 .creators-home{
-      -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    color: white;
-    font-family: "system-ui";
+    color: #fff;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.00938em;
+    letter-spacing: .00938em;
     font-size: 1rem;
     box-sizing: inherit;
+    font-family: "system-ui";
     max-height: 100%;
     vertical-align: middle;
     position: absolute;
     top: 0;
     z-index: 1;
-    left: 0;
-    max-width: 100%;
+    left: -120px;
+    max-width: 170%;
     width: auto;
 }
 .home-slide{
@@ -193,8 +191,8 @@
     box-sizing: border-box;
     margin-right: auto;
     display: block;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 1150px;
 }
 .home-slide-2{
@@ -244,7 +242,8 @@
     width: 600px;
     position: absolute;
     z-index: 0;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(251, 49, 96, 0.4) 3.65%, rgba(30, 30, 30, 0) 100%);
+    
+    background: radial-gradient(50% 50% at 50% 50%,rgb(30 126 221 / 31%) 3.65%,rgba(30,30,30,0) 100%);
 }
 
 @media only screen and (max-width: 800px) {
@@ -256,10 +255,10 @@
 font-size: 1.125rem  !important;
 }
 .home-h2{
-  font-size: 2rem !important;
+  font-size: 4rem !important;
 }
 .home-dot{
-  font-size: 3rem  !important;
+  font-size: 5rem  !important;
 }
 
 }
