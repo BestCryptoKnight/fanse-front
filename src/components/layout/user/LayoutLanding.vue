@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div v-if="window.location.href == 'https://fanse.co/welcome'">
+    <div v-if="$router.currentRoute.path == 'https://fanse.co/welcome'">
     <h2>
       LOVE
     </h2>
