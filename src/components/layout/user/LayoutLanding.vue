@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-     <div class="box-become" v-if="!this.$store.state.currentUser.isCreator">
+     <div class="box-become" >
         <div class="inner-box"><p class="p-inner">
           <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into <br> Paid followers</p>
           <div style="flex: 1 1 0%;">
@@ -221,7 +221,7 @@
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 .inner-box{
   width: 100%;
