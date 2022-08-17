@@ -191,8 +191,8 @@
     box-sizing: border-box;
     margin-right: auto;
     display: block;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: 1150px;
 }
 .home-slide-2{
@@ -248,6 +248,9 @@
  .home-slide-2
 {
   display: block !important;
+}
+.home-slide{
+  margin-top: 15px;
 }
 .home-h3{
 font-size: 1.125rem  !important;

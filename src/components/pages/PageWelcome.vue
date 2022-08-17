@@ -86,6 +86,10 @@
 	backdrop-filter: blur(20px);
 	margin: 0 auto;
 }
+.form-control{
+    background-color: #ffffff1a !important;
+    border: 1px solid #ced4da40 !important;
+}
 
 </style>
 <script>
