@@ -249,6 +249,9 @@
 {
   display: block !important;
 }
+.home-slide{
+  margin-top: 15px;
+}
 .home-h3{
 font-size: 1.125rem  !important;
 }
