@@ -220,7 +220,7 @@
     background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
     border-radius: 8px;
     margin-bottom: 8px;
-    padding: 10px;
+    padding: 20px;
     margin-top: 50px;
 }
 .inner-box{
