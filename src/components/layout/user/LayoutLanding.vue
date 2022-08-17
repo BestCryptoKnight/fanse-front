@@ -21,11 +21,11 @@
         <div class="home-slide-2">
           <img src="https://www.ybhltd.com/fanse/fansecreators.png" alt="Creators Avatars" class="creators-home">
           <div class="home-text">
-            <h2 class="home-h2">Connect <span class="home-dot">.</span>
-            </h2>
-            <h2 class="home-h2">Create <span class="home-dot">.</span>
+            <h2 class="home-h2">Creators <span class="home-dot">.</span>
             </h2>
             <h2 class="home-h2">Earn <span class="home-dot">.</span>
+            </h2>
+            <h2 class="home-h2">Freedom <span class="home-dot">!</span>
             </h2>
             <div class="home-describe">
               <h3 class="home-h3">A social subscription platform for all creators to connect with their fans.</h3>
@@ -37,6 +37,13 @@
         </div>
       </div>
     </div>
+     <div class="box-become" v-if="!this.$store.state.currentUser.isCreator">
+        <div class="inner-box"><p class="p-inner">
+          <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into <br> Paid followers</p>
+          <div style="flex: 1 1 0%;">
+            <a class="a-box" tabindex="0" href="/payouts">Become a creator</a></div>
+        </div>
+      </div>
         
     </div>
     <app-footer />
@@ -210,6 +217,91 @@
     -webkit-box-pack: start;
     justify-content: flex-start;
 }
+.box-become{
+  background: linear-gradient(95.92deg, rgb(28 115 203) 0%, rgb(29 111 194) 20.05%, rgb(61 133 205) 100%);
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 4px 10px;
+    margin-bottom: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.inner-box{
+  width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    text-align: -webkit-center !important;
+
+        
+}
+.p-inner{
+  flex: 1 1 0%;
+    margin: 10px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: rgb(255, 255, 255);
+    text-align: initial;
+}
+.span-box{
+  margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: inherit;
+    font-weight: bold;
+}
+.a-box{
+    border: none;
+    margin: 8px 0px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    min-width: 64px;
+    width: 90%;
+    box-shadow: none;
+    border-radius: 25px;
+    text-transform: initial;
+    white-space: nowrap;
+    letter-spacing: 0.025em;
+    font-weight: 700;
+    transition: color 0.01s ease 0s;
+    height: 48px;
+    font-size: 1rem;
+    padding: 6px 24px;
+    background: #fff;
+    color: #2196f3;
+}
+@media (max-width:720px){
+.p-inner{
+text-align: -webkit-center !important;
+}
+.inner-box{
+display: inherit;
+}
+  
+}
 
 @media only screen and (max-width: 800px) {
  .home-slide-2
@@ -225,9 +317,13 @@ font-size: 1.125rem  !important;
 .home-h2{
   font-size: 4rem !important;
   line-height: 0.927 !important;
+  text-align: center;
 }
 .home-dot{
-  font-size: 5rem  !important;
+  font-size: 3rem  !important;
+}
+.home-describe{
+  text-align: center;
 }
 
 }
