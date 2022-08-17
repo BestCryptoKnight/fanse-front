@@ -242,7 +242,7 @@
 	width: 600px;
 	position: absolute;
 	z-index: 0;
-	background: radial-gradient(50% 50% at 50% 50%,rgb(30 126 221 / 31%) 3.65%,rgba(30,30,30,0) 100%);
+	background: radial-gradient(50% 50% at 50% 50%, rgba(30, 126, 221, 0.4) 3.65%, rgba(30, 30, 30, 0) 100%)
 }
 @media only screen and (max-width: 800px) {
  .home-slide-2
