@@ -42,87 +42,27 @@
             <a class="a-box" tabindex="0" href="/payouts">Become a creator</a></div>
         </div>
       </div>
-      
-<div class="our-faq-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-
-                        <div class="faq-title text-center pb-3">
-                            <h2>FAQ</h2>
-                        </div>
-                    </div>
-      <div class="col-lg-6">
-        <div class="accordion" id="accordion">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="accordion" id="accordion2">
-          <div class="card">
-            <div class="card-header" id="heading4">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion2">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="heading5">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion2">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" id="heading6">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6"> Frequently Asked Questions ? </button>
-              </h5>
-            </div>
-            <div id="collapse6" class="collapse show" aria-labelledby="heading6" data-parent="#accordion2">
-              <div class="card-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, numquam quis perferendis beatae? Alias reprehenderit ut voluptatem mollitia sit aut eum ratione laudantium soluta ipsam adipisci, molestias delectus iure. Recusandae? </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="preguntas-frecuentes-contenedor serif">
+            <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
+            <h1 class="preguntas-frecuentes-encabezado">Preguntas Frecuentes</h1>
+                <ul class="preguntas">
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
+                    <label for="pregunta-n1" class="pregunta">Accordion Heading 1</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
+                  </li>
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
+                    <label for="pregunta-n2" class="pregunta">Accordion Heading 2</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                  </li>
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
+                    <label for="pregunta-n3" class="pregunta">Accordion Heading 3</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                  </li>
+                </ul> 
+            </div>      
       </div>
     </div>
     </div>
@@ -131,88 +71,180 @@
 </template>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
-.our-faq-wrapper {
-  float: left;
-  width: 100%;
-  padding: 89px 0 60px;
-  background:#f5f5f5;
+body {
+  margin: 0;
 }
 
-.our-faq-wrapper {
-    padding: 90px 0 60px;
-  background:#fff;  
+.preguntas-frecuentes {
+  background: #dbe0e8;
+	position: relative;
+	width: 100%;
+	z-index: 89;
+	}
+
+.preguntas-frecuentes-contenedor {
+  margin: 0 auto;
+	padding: 4rem 1.25rem 6rem;
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	max-width: 106.25rem;
 }
-.accordion .card {
-  border: none;
-  margin-bottom: 30px;
+
+.preguntas-frecuentes-encabezado-linea-roja {
+  border-bottom: 2px #d60510 solid;
+	margin: 15px auto 21px;
+	width: 40px;
 }
-.our-faq-wrapper .btn-link {
-  display: block;
-  width: 100%;
-  text-align: left;
-  position: relative;
-  background: #242c42;
-  color: #fff;
-  border-radius: 0;
-  padding: 7px 15px 12px;
-  font-size: 16px;
+
+.preguntas-frecuentes-encabezado {
+  font-size: 1.21rem;
+  text-align: center;
+}
+
+.preguntas {
+  padding-top: 3.21rem;
+  margin: 0 auto;
+  list-style: none outside;
+}
+
+.pregunta-input {
+  clip: rect(0 0 0 0);
+  margin: -1;
   overflow: hidden;
-  border: none;
-  font-weight:600;  
-}
-.our-faq-wrapper .btn-link:hover, .our-faq-wrapper .btn-link:focus {
-  text-decoration: none;
-}
-.our-faq-wrapper .btn-link:after {
   position: absolute;
-  content: '\f068';
-  right: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-family: fontawesome;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
 }
-.our-faq-wrapper .btn-link.collapsed:after {
-  content: '\f067';
-}
-.our-faq-wrapper .btn-link:before {
-  position: absolute;
-  content: '';
-  background: #86bc42;
-  -webkit-transform: skew(-35deg);
-  transform: skew(-35deg);
-  height: 100%;
-  width: 50%;
-  left: 90%;
-  top: 0;
-}
-.card-header {
-  padding: 0;
-  background: transparent;
-  border-bottom: none;
-}
-.card-body {
+
+.pregunta {
+  background: #fff;
+	border-bottom: 1px solid #eee;
+	border-radius: 8px;
+  cursor: pointer;
+  display: block;
+	font-size: 1.1875rem;
+	letter-spacing: -.0225rem;
+	line-height: 1.36842;
+	margin-bottom: 16px;
+	padding: 20px 10px;
   position: relative;
+	transition: all 0.35s ease;
 }
-.card-body:after {
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background: #242c42;
+
+.pregunta:hover {
+  background: #d60510;
+	color: #fff;
+	cursor: pointer;
 }
-.card-body:before {
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 50%;
-  left: 0;
-  bottom: 0;
-  background: #86bc42;
-  z-index: 1;
+
+.pregunta::before {
+  color: #d60510;
+  content: "\276f";
+	font-size: 18px;
+	float: left;
+	line-height: 30px;
+	margin: 0 15px 0 5px;
+	transition: all 0.15s ease;
 }
+
+.pregunta:hover::before {
+  color: #fff;
+  opacity: 0.55;
+  transform: rotate(90deg);
+}
+
+.pregunta-input:checked ~ .pregunta {
+  background: #011627;
+	color: #fff;
+}
+
+.pregunta-input:checked ~ .pregunta::before {
+  transform: rotate(-90deg);
+}
+
+.pregunta-input:checked ~ .pregunta::after {
+  content: "\2715";
+	float: right;
+	font-size: 11px;
+	line-height: 30px;
+}
+
+.pregunta-input:checked ~ .pregunta:hover {
+  background: #d60510;
+	color: #fff;
+}
+
+.pregunta-input:checked ~ .pregunta:hover::before {
+  opacity: 1;
+}
+
+.pregunta-input:checked ~ .respuesta {
+  max-height: 1000px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  transition: max-height 1s ease-in, margin .3s ease-in, padding .3s ease-in;
+}
+
+.respuesta {
+  background: #fff;
+  border-radius: 11px;
+  line-height: 1.8em;
+  margin-bottom: 25px;
+  margin-top: -17px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.respuesta p {
+  margin: 0;
+  padding: 25px 25px;
+}
+
+.respuesta-enlace-dotted {
+  border-bottom: 1px dotted #000;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (min-width: 400px) {
+  .preguntas-frecuentes-encabezado {
+    font-size: 1.59rem;
+  }
+}
+	
+@media (min-width: 768px) {
+  .preguntas-frecuentes-encabezado {
+    font-size: 1.7rem;
+  }
+  .preguntas {
+    padding-top: 5.21rem;
+  }
+  .pregunta {
+    font-size: 1.3125rem;
+    letter-spacing: -.01875rem;
+    line-height: 1.33333;
+    padding: 20px;
+  }
+  .respuesta p {
+    font-size: 1.21rem;
+    letter-spacing: 0.021rem;
+    line-height: 2.1;
+    padding: 25px 50px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .preguntas-frecuentes-encabezado {
+    font-size: 2.35rem;
+  }
+}
+
 .promo {
   background: $primary;
   color: $white;
