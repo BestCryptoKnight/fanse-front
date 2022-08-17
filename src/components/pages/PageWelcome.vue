@@ -1,9 +1,6 @@
 <template>
-  <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Aug 17 2022 10:03:23 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="62fcbcca9172e45f7082c583" data-wf-site="62fcbcc99172e493d082c57f">
-<head>
-  <meta charset="utf-8">
+<div data-scroll-time="1.5">
+    <meta charset="utf-8">
   <title>Yaniv&#x27;s Awesome Site</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -30,8 +27,6 @@ fbq('track', 'PageView');
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=400353564720457&ev=PageView&noscript=1"></noscript>
   <!--  End Facebook Pixel Code  -->
   <meta name="facebook-domain-verification" content="vvhlsl4x5p9chv6cbabn0jsnm4pxyt">
-</head>
-<body data-scroll-time="1.5">
   <div data-w-id="42d0e2d9-7422-6b8a-e006-eec239b01bc2" class="section hero wf-section">
     <div class="container">
       <div class="hero_wrap">
@@ -348,6 +343,5 @@ fbq('track', 'PageView');
 -webkit-appearance: none;
 }
 </style>
-</body>
-</html>
+</div>
 </template>
