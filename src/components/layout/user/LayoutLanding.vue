@@ -36,15 +36,14 @@
           </div>
         </div>
       </div>
-    </div>
-     <div class="box-become" >
+      <div class="box-become" >
         <div class="inner-box"><p class="p-inner">
           <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into <br> Paid followers</p>
           <div style="flex: 1 1 0%;">
             <a class="a-box" tabindex="0" href="/payouts">Become a creator</a></div>
         </div>
       </div>
-        
+    </div>
     </div>
     <app-footer />
   </div>
