@@ -87,12 +87,12 @@ body {
 	padding: 4rem 1.25rem 6rem;
 	position: relative;
 	overflow: hidden;
-	width: 80%;
+	width: 92%;
 	max-width: 106.25rem;
 }
 
 .preguntas-frecuentes-encabezado-linea-roja {
-  border-bottom: 2px #d60510 solid;
+  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
 	margin: 15px auto 21px;
 	width: 40px;
 }
@@ -104,7 +104,6 @@ body {
 
 .preguntas {
   padding-top: 3.21rem;
-  margin: 0 auto;
   list-style: none outside;
 }
 
@@ -119,8 +118,8 @@ body {
 }
 
 .pregunta {
-  background: #fff;
-	border-bottom: 1px solid #eee;
+  background-color: #ffffff0f;
+	border: 1px solid #ced4da26;
 	border-radius: 8px;
   cursor: pointer;
   display: block;
@@ -134,13 +133,13 @@ body {
 }
 
 .pregunta:hover {
-  background: #d60510;
+  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
 	color: #fff;
 	cursor: pointer;
 }
 
 .pregunta::before {
-  color: #d60510;
+  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
   content: "\276f";
 	font-size: 18px;
 	float: left;
@@ -172,7 +171,7 @@ body {
 }
 
 .pregunta-input:checked ~ .pregunta:hover {
-  background: #d60510;
+  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
 	color: #fff;
 }
 
@@ -188,7 +187,7 @@ body {
 }
 
 .respuesta {
-  background: #fff;
+  background: #36353500;
   border-radius: 11px;
   line-height: 1.8em;
   margin-bottom: 25px;
