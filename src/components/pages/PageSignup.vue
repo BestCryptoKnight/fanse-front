@@ -1,6 +1,6 @@
 <template>
   <b-form @submit.prevent="submitForm">
-    <div style="text-align: center;margin-top:20px">
+    <div style="text-align: center;">
 <svg width="200px" height="132px" viewBox="0 0 903 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Group 4</title>
     <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

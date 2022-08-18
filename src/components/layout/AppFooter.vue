@@ -11,10 +11,8 @@
     <div class="row" style="padding-bottom: 7px;">
     <ul style="margin-bottom: 7px;display: -webkit-inline-box;text-align: -webkit-center; display: contents;">
     <li><a href="#">Contact us</a></li>
-    <li><a href="#">Our Services</a></li>
     <li><a href="#">Privacy Policy</a></li>
     <li><a href="#">Terms & Conditions</a></li>
-    <li><a href="#">Career</a></li>
     </ul>
     </div>
 
