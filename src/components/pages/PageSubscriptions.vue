@@ -122,6 +122,7 @@ export default {
             else {valid.push(subs[i]);}
           }
           this.subs = valid;
+          this.$router.go()
         },
         (errors) => {
           console.log(errors);
