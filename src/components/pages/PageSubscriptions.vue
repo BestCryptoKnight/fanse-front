@@ -110,18 +110,16 @@ export default {
         (data) => {
           let subs = [...this.subs];
           let sub = data.status ? new Subscription(data.subscription) : null;
-          let valid = [];
           for (let i in subs) {
             if (subs[i].id == subscription.id) {
               if (sub) {
                 subs[i] = sub;
-              } else {
-                continue;
+                break;
               }
             }
-            else {valid.push(subs[i]);}
           }
-          this.subs = valid;
+          this.subs = subs;
+          this.$router.go()
         },
         (errors) => {
           console.log(errors);
