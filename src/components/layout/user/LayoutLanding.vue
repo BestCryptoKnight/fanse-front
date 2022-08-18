@@ -42,7 +42,7 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
+                        <div class="home-h3">"Sign up now to earn 85% of everything you sell on Fanse! (Get Started)"</div>
                     </div>
                 </div>
             </div>
@@ -211,7 +211,6 @@ body {
 }
 
 .pregunta:hover {
-  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
 	color: #fff;
 	cursor: pointer;
 }
