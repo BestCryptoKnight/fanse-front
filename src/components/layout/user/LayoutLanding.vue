@@ -336,6 +336,19 @@ a {
     line-height: 1;
     font-weight: bold;
 }
+.home-h4{
+      -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: inherit;
+    margin: 0;
+    font-family: "system-ui";
+    font-size: 1.625rem;
+    letter-spacing: 0.00735em;
+    text-align: left;
+    color: 000;
+    line-height: 1;
+    font-weight: bold;
+}
 .home-describe{
       -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -544,7 +557,7 @@ a {
 }
 @media (max-width:720px){
   .home-h4{
-font-size: 1.625rem  !important;
+font-size: 1.425rem  !important;
 text-align: center;
 }
 .phone-margin{
