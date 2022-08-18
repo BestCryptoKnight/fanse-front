@@ -42,8 +42,9 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="home-h3">"Sign up now to earn 85% of everything you sell on Fanse! (Get Started)"</div>
+                        <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse! (Get Started)"</div>
                     </div>
+                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/payouts" class="a-box">Become a creator</a></div>
                 </div>
             </div>
         </aside>
@@ -191,7 +192,6 @@ body {
 }
 
 .pregunta::before {
-  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
   content: "\276f";
 	font-size: 18px;
 	float: left;
@@ -537,12 +537,19 @@ a {
     color: #2196f3;
 }
 .icon-feature{
-  font-size: 4rem;
+  font-size: 3rem;
   background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width:720px){
+  .home-h4{
+font-size: 1.625rem  !important;
+text-align: center;
+}
+.phone-margin{
+    margin-bottom: 15px;
+  }
 .p-inner{
 text-align: -webkit-center !important;
 }
