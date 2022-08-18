@@ -28,7 +28,6 @@
       justify-content: center;
       font-size: 10px;
       color: #bbb7b7;">
-    FANSE Copyright © 2021 Fanse - All rights reserved 
 <svg width="170px" height="20px" viewBox="0 0 1101 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="
     margin-left: 5px;
     margin-top: 2px;
