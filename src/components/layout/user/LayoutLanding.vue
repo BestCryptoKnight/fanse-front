@@ -38,7 +38,7 @@
           
       </div>
     </div>
-     <aside class="text-center bg-gradient-primary-to-secondary">
+     <aside class="text-center bg-gradient-primary-to-secondary" style="background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));color: white;padding-top: 5rem;padding-bottom: 5rem;">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
@@ -47,8 +47,8 @@
                 </div>
             </div>
         </aside>
-        <section id="features">
-            <div class="container px-5">
+        <section id="features" style="margin-top: 100px;color:white;">
+            <div class="container px-5" style="    max-width: 1240px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
                         <div class="container-fluid px-5">
@@ -92,31 +92,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-0 none">
                         <!-- Features section device mockup-->
-                        <div class="features-device-mockup">
-                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop class="gradient-start-color" offset="0%"></stop>
-                                        <stop class="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="50"></circle></svg
-                            ><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg
-                            ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
-                            <div class="device-wrapper">
-                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                                    <div class="screen bg-black">
-                                        <!-- PUT CONTENTS HERE:-->
-                                        <!-- * * This can be a video, image, or just about anything else.-->
-                                        <!-- * * Set the max width of your media to 100% and the height to-->
-                                        <!-- * * 100% like the demo example below.-->
-                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div  class="features-device-mockup"><img src="https://ybhltd.com/fanse/mockup.png" alt="Girl in a jacket" width="500" height="500"></div>
                     </div>
                 </div>
             </div>
@@ -165,11 +141,11 @@ body {
 	position: relative;
 	overflow: hidden;
 	width: 70%;
+  color: white;
 	max-width: 106.25rem;
 }
 
 .preguntas-frecuentes-encabezado-linea-roja {
-  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
 	margin: 15px auto 21px;
 	width: 40px;
 }
@@ -559,6 +535,12 @@ a {
     padding: 6px 24px;
     background: #fff;
     color: #2196f3;
+}
+.icon-feature{
+  font-size: 4rem;
+  background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width:720px){
 .p-inner{
