@@ -44,12 +44,12 @@
                     <div class="col-xl-8">
                         <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse! (Get Started)"</div>
                     </div>
-                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/payouts" class="a-box">Become a creator</a></div>
+                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Sign Up</a></div>
                 </div>
             </div>
         </aside>
         <section id="features" style="margin-top: 100px;color:white;">
-            <div class="container px-5" style="    max-width: 1240px;">
+            <div class="container px-5" style="max-width: 1150px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
                         <div class="container-fluid px-5">
@@ -58,7 +58,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Device Mockups</h3>
+                                        <h4 class="font-alt">Device Mockups</h4>
                                         <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Flexible Use</h3>
+                                        <h4 class="font-alt">Flexible Use</h4>
                                         <p class="text-muted mb-0">Put an image, video, animation, or anything else in the screen!</p>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Free to Use</h3>
+                                        <h4 class="font-alt">Free to Use</h4>
                                         <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Open Source</h3>
+                                        <h4 class="font-alt">Open Source</h4>
                                         <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it commercially!</p>
                                     </div>
                                 </div>
