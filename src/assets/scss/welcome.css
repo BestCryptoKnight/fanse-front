@@ -82,7 +82,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: white;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -525,7 +525,11 @@ progress {
     font-size: 4rem;
   }
 }
-
+.btn-primary{
+  color: #fff;
+    background-color: #2081e2;
+    border-color: #2081e2;
+}
 .display-4 {
   font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
