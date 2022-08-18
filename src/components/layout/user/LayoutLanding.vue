@@ -57,17 +57,17 @@
                                 <div class="col-md-6 mb-5">
                                     <!-- Feature item-->
                                     <div class="text-center">
-                                        <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                                        <i class="bi bi-cash-coin icon-feature text-gradient d-block mb-3"></i>
                                         <h4 class="font-alt">Device Mockups</h4>
-                                        <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                        <p class="text-muted mb-0">Max tip limit set to $1000 on Fanse!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
                                     <!-- Feature item-->
                                     <div class="text-center">
-                                        <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
+                                        <i class="bi bi-megaphone icon-feature text-gradient d-block mb-3"></i>
                                         <h4 class="font-alt">Flexible Use</h4>
-                                        <p class="text-muted mb-0">Put an image, video, animation, or anything else in the screen!</p>
+                                        <p class="text-muted mb-0">Fanse Legend Creators are getting social media Promotions FOR FREE!</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,9 +75,9 @@
                                 <div class="col-md-6 mb-5 mb-md-0">
                                     <!-- Feature item-->
                                     <div class="text-center">
-                                        <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
+                                        <i class="bi bi-envelope-open-heart icon-feature text-gradient d-block mb-3"></i>
                                         <h4 class="font-alt">Free to Use</h4>
-                                        <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
+                                        <p class="text-muted mb-0">Maximize your earnings with Mass DM's & PPV!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -85,7 +85,8 @@
                                     <div class="text-center">
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
                                         <h4 class="font-alt">Open Source</h4>
-                                        <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it commercially!</p>
+                                        <p class="text-muted mb-0">Join NOW and earn 85% for a lifetime!</p>
+                                        <div  style="flex: 1 1 0%;"><a style="width:90%" tabindex="0" href="/signup" class="a-box">Sign Up</a></div>
                                     </div>
                                 </div>
                             </div>
