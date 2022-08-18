@@ -35,34 +35,7 @@
         <router-view name="login"></router-view>
           </div>
         </div>
-         <div class="box-become" >
-        <div class="inner-box"><p class="p-inner">
-          <span class="span-box" style="">Welcome to Fanse 👋</span><br>Start Converting your Fans into <br> Paid followers</p>
-          <div style="flex: 1 1 0%;">
-            <a class="a-box" tabindex="0" href="/payouts">Become a creator</a></div>
-        </div>
-      </div>
-          <div class="preguntas-frecuentes-contenedor serif">
-            <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
-            <h1 class="preguntas-frecuentes-encabezado">Preguntas Frecuentes</h1>
-                <div class="preguntas">
-                  <li>
-                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
-                    <label for="pregunta-n1" class="pregunta">Accordion Heading 1</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
-                  </li>
-                  <li>
-                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
-                    <label for="pregunta-n2" class="pregunta">Accordion Heading 2</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
-                  </li>
-                  <li>
-                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
-                    <label for="pregunta-n3" class="pregunta">Accordion Heading 3</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
-                  </li>
-                </div> 
-            </div>      
+          
       </div>
     </div>
      <aside class="text-center bg-gradient-primary-to-secondary">
@@ -117,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 order-lg-0">
+                    <div class="col-lg-4 order-lg-0 none">
                         <!-- Features section device mockup-->
                         <div class="features-device-mockup">
                             <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -148,6 +121,27 @@
                 </div>
             </div>
         </section>
+        <div class="preguntas-frecuentes-contenedor serif">
+            <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
+            <h1 class="preguntas-frecuentes-encabezado">Preguntas Frecuentes</h1>
+                <div class="preguntas">
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
+                    <label for="pregunta-n1" class="pregunta">Accordion Heading 1</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
+                  </li>
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
+                    <label for="pregunta-n2" class="pregunta">Accordion Heading 2</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                  </li>
+                  <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
+                    <label for="pregunta-n3" class="pregunta">Accordion Heading 3</label>
+                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                  </li>
+                </div> 
+            </div>      
     </div>
     <app-footer />
   </div>
@@ -162,7 +156,7 @@ body {
 .preguntas-frecuentes {
   background: #dbe0e8;
 	position: relative;
-	width: 100%;
+	width: 70%;
 	z-index: 89;
 	}
 
@@ -171,7 +165,7 @@ body {
 	padding: 4rem 1.25rem 6rem;
 	position: relative;
 	overflow: hidden;
-	width: 100%;
+	width: 70%;
 	max-width: 106.25rem;
 }
 
@@ -571,6 +565,18 @@ a {
 @media (max-width:720px){
 .p-inner{
 text-align: -webkit-center !important;
+}
+.preguntas-frecuentes{
+  width: 95%;
+}
+.icon-feature{
+  font-size: 2rem;
+}
+.preguntas-frecuentes-contenedor{
+  width: 95%;
+}
+.none{
+  display: none;
 }
 .inner-box{
 display: inherit;
