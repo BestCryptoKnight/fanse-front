@@ -45,15 +45,16 @@
                     <div class="col-xl-8">
                         <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse!"</div>
                     </div>
-                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Get Started !</a></div>
+                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Get Started</a></div>
                 </div>
             </div>
         </aside>
-        <section id="features" style="margin-top: 100px;color:white;">
-            <div class="container px-5" style="margin-top: 50px;">
+        <section id="features" style="margin-top: 50px;color:white;">
+            <div class="container px-5">
+              <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
+
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                      <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
                         <div class="container-fluid px-5">
                             <div class="row gx-5" style="margin-left:-35px;margin-right:-35px;">
                                 <div class="col-md-6 mb-5">
@@ -94,13 +95,119 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 order-lg-0 none" style="margin-top:100px">
+                    <div class="col-lg-4 order-lg-0 none" style="margin-top:50px">
                         <!-- Features section device mockup-->
                         <div  class="features-device-mockup"><img style="margin-left:-50px" src="https://ybhltd.com/fanse/mockup.png" alt="Girl in a jacket" width="500" height="500"></div>
                     </div>
                 </div>
             </div>
         </section>
+        <div style="text-align: center;background-color: #f2f2f2;padding: 30px;margin-top: 20px;margin-bottom: 20px;">
+        <h2 data-v-0c95d942="" class="home-h5" style="color: rgb(33, 129, 226);text-align: center;font-size: 3.2rem;">How to Get Started</h2>
+      <img data-v-0c95d942="" src="https://ybhltd.com/fanse/moc-how.png
+      " alt="Girl in a jacket" width="348" height="196">  
+      <div class="" style="
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    /* max-width: 500px; */
+">
+
+<h3 data-v-0c95d942="" class="home-h3" style="
+    text-align: center;
+    color: #707a85;
+    font-size: 1.75rem;
+">1. Create your Fanse account
+
+</h3><div style="
+    text-align: -webkit-center;
+">
+    <h3 class="home-h3" style="
+    text-align: center;
+    color: #676767c4;
+    font-size: 20px;
+    margin-top: 25px;
+    max-width: 465px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+    white-space: pre-wrap;
+     color: #8A96A3;">Joining Fanse is free and easy to set up with instant verification for creators!
+There is no contract for you or your subscribers.
+</h3>
+</div>
+
+</div>
+<div class="" style="
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    /* max-width: 500px; */
+">
+
+<h3 data-v-0c95d942="" class="home-h3" style="
+    text-align: center;
+    color: #707a85;
+    font-size: 1.75rem;
+">2. Set your subscription rate
+</h3><div style="
+    text-align: -webkit-center;
+">
+    <h3 class="home-h3" style="
+    text-align: center;
+    color: #676767c4;
+    font-size: 20px;
+    margin-top: 25px;
+    max-width: 465px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+    white-space: pre-wrap;
+     color: #8A96A3;">Your subscription can be free or paid.
+Free subscription allow your fans to access your content without paywall and gives you the option to earn from creating content by using features like tips, paid DM’s, pay-per-view posts and more!
+Paid subscription will require your fans to pay a monthly fee / any kind of payment bundle you set before viewing your content.
+</h3>
+</div>
+
+</div>
+<div class="" style="
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    /* max-width: 500px; */
+">
+
+<h3 data-v-0c95d942="" class="home-h3" style="
+    text-align: center;
+    color: #707a85;
+    font-size: 1.75rem;
+">3. Create content &amp; promote your Fanse
+
+</h3><div style="
+    text-align: -webkit-center;
+">
+    <h3 class="home-h3" style="
+    text-align: center;
+    color: #676767c4;
+    font-size: 20px;
+    margin-top: 25px;
+    max-width: 465px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    font-size: calc((1.2 - 1) * 1.2vw + 1rem);
+    white-space: pre-wrap;
+     color: #8A96A3;">Now you finally can start sharing content on your Fanse profile &amp; promote your Fanse link on your other social media streams to start earn and share exclusive content with your fans!
+</h3>
+</div>
+
+</div>
+      </div>
         <div class="preguntas-frecuentes-contenedor serif" style="color:black !important;">
             <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
             <h1 class="preguntas-frecuentes-encabezado">FAQ</h1>
