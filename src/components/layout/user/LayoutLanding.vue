@@ -48,8 +48,10 @@
                 </div>
             </div>
         </aside>
+        <div style="background-color: white;color:black !important;">
         <section id="features" style="margin-top: 100px;color:white;">
-            <div class="container px-5" >
+          <h2 class="home-h2" style="color:#4084cd; text-aligin:center;">Why join Fanse ?</h2>
+            <div class="container px-5" style="margin-top: 50px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
                         <div class="container-fluid px-5">
@@ -92,14 +94,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 order-lg-0 none">
+                    <div class="col-lg-4 order-lg-0 none" style="margin-top:100px">
                         <!-- Features section device mockup-->
                         <div  class="features-device-mockup"><img style="margin-left:-50px" src="https://ybhltd.com/fanse/mockup.png" alt="Girl in a jacket" width="500" height="500"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="preguntas-frecuentes-contenedor serif">
+        <div class="preguntas-frecuentes-contenedor serif" style="color:black !important;">
             <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
             <h1 class="preguntas-frecuentes-encabezado">FAQ</h1>
                 <div class="preguntas">
@@ -124,7 +126,8 @@
                     <div class="respuesta"><p>We wanted to make sure that we offer you the safest and most securest platform possible. Sensitive information like your name and address are stored on separate secure servers and fully encrypted. Financial data is powered by stripe, certified PCI Service Provider Level 1. This is the most stringent level of certification available in the payments industry. Start Converting your Fans into Paid followers! (Get Started)</p></div>
                   </li>
                 </div> 
-            </div>      
+            </div>    
+      </div>  
     </div>
     <app-footer />
   </div>
@@ -171,8 +174,8 @@ body {
   height: 1px;
 }
 .pregunta {
-  background-color: #ffffff0f;
-	border: 1px solid #ced4da26;
+  background-color: #0000000f;
+	border: 1px solid #00000026;
 	border-radius: 8px;
   cursor: pointer;
   display: block;
@@ -185,7 +188,7 @@ body {
 	transition: all 0.35s ease;
 }
 .pregunta:hover {
-	color: #fff;
+	color: black;
 	cursor: pointer;
 }
 .pregunta::before {
@@ -197,13 +200,13 @@ body {
 	transition: all 0.15s ease;
 }
 .pregunta:hover::before {
-  color: #fff;
+  color: black;
   opacity: 0.55;
   transform: rotate(90deg);
 }
 .pregunta-input:checked ~ .pregunta {
   background: #011627;
-	color: #fff;
+	color: black;
 }
 .pregunta-input:checked ~ .pregunta::before {
   transform: rotate(-90deg);
@@ -216,7 +219,7 @@ body {
 }
 .pregunta-input:checked ~ .pregunta:hover {
   background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
-	color: #fff;
+	color: black;
 }
 .pregunta-input:checked ~ .pregunta:hover::before {
   opacity: 1;
