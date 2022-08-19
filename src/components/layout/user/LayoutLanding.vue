@@ -211,8 +211,7 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
 </div>
       </div>
         <div class="preguntas-frecuentes-contenedor serif" style="color:black !important;">
-            <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
-              <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">FAQ</h2>
+              <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;">FAQ</h2>
                 <div class="preguntas">
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
@@ -328,7 +327,7 @@ body {
 	line-height: 30px;
 }
 .pregunta-input:checked ~ .pregunta:hover {
-  background: linear-gradient(95.92deg, rgba(28, 115, 203, 0.9 ) 0%, rgba(29, 111, 194, 0.9) 20.05%, rgba(61, 133, 205, 0.9) 100%);
+  background: #f2f2f2;
 	color: black;
 }
 .pregunta-input:checked ~ .pregunta:hover::before {
