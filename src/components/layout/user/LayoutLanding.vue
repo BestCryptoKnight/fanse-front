@@ -39,13 +39,13 @@
       </div>
     </div>
         <div style="background-color: white;color:black !important;">
-          <aside class="text-center bg-gradient-primary-to-secondary" style="background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));color: white;padding-top: 5rem;padding-bottom: 5rem;">
+          <aside class="text-center bg-gradient-primary-to-secondary" style="background: #2181e2;color: white;padding-top: 4rem;padding-bottom: 4rem;">
             <div class="container px-5" style="max-width: 1150px;" >
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse! (Get Started)"</div>
+                        <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse!"</div>
                     </div>
-                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Sign Up</a></div>
+                    <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Get Started !</a></div>
                 </div>
             </div>
         </aside>
@@ -53,7 +53,7 @@
             <div class="container px-5" style="margin-top: 50px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                      <h2 class="home-h5" style="color: #1967b5;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
+                      <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
                         <div class="container-fluid px-5">
                             <div class="row gx-5" style="margin-left:-35px;margin-right:-35px;">
                                 <div class="col-md-6 mb-5">
