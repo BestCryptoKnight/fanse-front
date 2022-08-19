@@ -119,8 +119,8 @@
                     <div class="respuesta"><p>Fanse Legend Creator plan is an exclusive promotional program for the top unknown influencers. Maximize your potential through paid ads on the entire social media platform! (FOR FREE!)</p></div>
                   </li>
                    <li>
-                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
-                    <label for="pregunta-n3" class="pregunta">What is the Safety & Security level of Fanse?</label>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n4" />
+                    <label for="pregunta-n4" class="pregunta">What is the Safety & Security level of Fanse?</label>
                     <div class="respuesta"><p>We wanted to make sure that we offer you the safest and most securest platform possible. Sensitive information like your name and address are stored on separate secure servers and fully encrypted. Financial data is powered by stripe, certified PCI Service Provider Level 1. This is the most stringent level of certification available in the payments industry. Start Converting your Fans into Paid followers! (Get Started)</p></div>
                   </li>
                 </div> 
