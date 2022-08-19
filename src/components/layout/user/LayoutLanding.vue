@@ -58,7 +58,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi bi-cash-coin icon-feature text-gradient d-block mb-3"></i>
-                                        <h4 class="font-alt">Device Mockups</h4>
+                                        <h4 class="font-alt">High Tips</h4>
                                         <p class="text-muted mb-0">Max tip limit set to $1000 on Fanse!</p>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi bi-megaphone icon-feature text-gradient d-block mb-3"></i>
-                                        <h4 class="font-alt">Flexible Use</h4>
+                                        <h4 class="font-alt">Free Promotions</h4>
                                         <p class="text-muted mb-0">Fanse Legend Creators are getting social media Promotions FOR FREE!</p>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi bi-envelope-open-heart icon-feature text-gradient d-block mb-3"></i>
-                                        <h4 class="font-alt">Free to Use</h4>
+                                        <h4 class="font-alt">Monetize Features</h4>
                                         <p class="text-muted mb-0">Maximize your earnings with Mass DM's & PPV!</p>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
-                                        <h4 class="font-alt">Open Source</h4>
+                                        <h4 class="font-alt">Earn More</h4>
                                         <p class="text-muted mb-0">Join NOW and earn 85% for a lifetime!</p>
                                         <a tabindex="0" href="/signup" class="a-box" style="width: 90%;padding: 5px;height: 40px;color: black;margin-top: 10px;">Sign Up</a>
                                     </div>
@@ -101,22 +101,27 @@
         </section>
         <div class="preguntas-frecuentes-contenedor serif">
             <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
-            <h1 class="preguntas-frecuentes-encabezado">Preguntas Frecuentes</h1>
+            <h1 class="preguntas-frecuentes-encabezado">FAQ</h1>
                 <div class="preguntas">
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
-                    <label for="pregunta-n1" class="pregunta">Accordion Heading 1</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
+                    <label for="pregunta-n1" class="pregunta">Who can become a Fanse Creator?</label>
+                    <div class="respuesta"><p>Fanse is a place for all types of content creators! influencer, adult creator, athlete, artist, and much more! Fanse gives you the Freedom to create & earn without limitations! <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
                   </li>
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
-                    <label for="pregunta-n2" class="pregunta">Accordion Heading 2</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                    <label for="pregunta-n2" class="pregunta">How much can I earn?</label>
+                    <div class="respuesta"><p>With Fanse your earnings are unlimited! Fanse give you built-in monetization features to maximize your earnings.Content Creators on Fanse are taking home 85% of their earnings!Lower than anywhere else!</p></div>
                   </li>
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
-                    <label for="pregunta-n3" class="pregunta">Accordion Heading 3</label>
-                    <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex consequuntur architecto maxime, saepe repudiandae quidem quisquam aliquam cumque possimus inventore, deserunt nostrum, explicabo modi voluptatibus sed, labore quaerat. Accusamus, officiis.</p></div>
+                    <label for="pregunta-n3" class="pregunta">What is Fanse legend Creator?</label>
+                    <div class="respuesta"><p>Fanse Legend Creator plan is an exclusive promotional program for the top unknown influencers. Maximize your potential through paid ads on the entire social media platform! (FOR FREE!)</p></div>
+                  </li>
+                   <li>
+                    <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
+                    <label for="pregunta-n3" class="pregunta">What is the Safety & Security level of Fanse?</label>
+                    <div class="respuesta"><p>We wanted to make sure that we offer you the safest and most securest platform possible. Sensitive information like your name and address are stored on separate secure servers and fully encrypted. Financial data is powered by stripe, certified PCI Service Provider Level 1. This is the most stringent level of certification available in the payments industry. Start Converting your Fans into Paid followers! (Get Started)</p></div>
                   </li>
                 </div> 
             </div>      
@@ -553,7 +558,6 @@ a {
 .icon-feature{
   font-size: 3rem;
   background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width:720px){
