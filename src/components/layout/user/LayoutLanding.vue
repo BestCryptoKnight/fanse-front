@@ -216,22 +216,22 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
                     <label for="pregunta-n1" class="pregunta">Who can become a Fanse Creator?</label>
-                    <div class="respuesta"><p>Fanse is a place for all types of content creators! influencer, adult creator, athlete, artist, and much more! Fanse gives you the Freedom to create & earn without limitations! <a href="/" class="respuesta-enlace-dotted">Accusamus, officiis.</a></p></div>
+                    <div class="respuesta"><p>Fanse is a place for all types of content creators! influencer, adult creator, athlete, artist, and much more! Fanse gives you the Freedom to create & earn without limitations!</p></div>
                   </li>
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
                     <label for="pregunta-n2" class="pregunta">How much can I earn?</label>
-                    <div class="respuesta"><p>With Fanse your earnings are unlimited! Fanse give you built-in monetization features to maximize your earnings.Content Creators on Fanse are taking home 85% of their earnings!Lower than anywhere else!</p></div>
+                    <div class="respuesta"><p>With Fanse your earnings are unlimited! Fanse give you built-in monetization features to maximize your earnings. Content Creators on Fanse are taking home 85% of their earnings! Lower than anywhere else!</p></div>
                   </li>
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />
                     <label for="pregunta-n3" class="pregunta">What is Fanse legend Creator?</label>
-                    <div class="respuesta"><p>Fanse Legend Creator plan is an exclusive promotional program for the top unknown influencers. Maximize your potential through paid ads on the entire social media platform! (FOR FREE!)</p></div>
+                    <div class="respuesta"><p>Fanse Legend Creator plan is an exclusive promotional program for the top unknown influencers.<br> Maximize your potential through paid ads on the entire social media platform! (FOR FREE!)</p></div>
                   </li>
                    <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n4" />
                     <label for="pregunta-n4" class="pregunta">What is the Safety & Security level of Fanse?</label>
-                    <div class="respuesta"><p>We wanted to make sure that we offer you the safest and most securest platform possible. Sensitive information like your name and address are stored on separate secure servers and fully encrypted. Financial data is powered by stripe, certified PCI Service Provider Level 1. This is the most stringent level of certification available in the payments industry. Start Converting your Fans into Paid followers! (Get Started)</p></div>
+                    <div class="respuesta"><p>We wanted to make sure that we offer you the safest and most securest platform possible. Sensitive information like your name and address are stored on separate secure servers and fully encrypted. <br> Financial data is powered by stripe, certified PCI Service Provider Level <br> 1. This is the most stringent level of certification available in the payments industry. <a tabindex="0" href="/signup" class="a-box" style="width: 90%;padding: 5px;height: 40px;color: white;margin-top: 10px;background-color: black;">Sign Up</a></p></div>
                   </li>
                 </div> 
             </div>    
