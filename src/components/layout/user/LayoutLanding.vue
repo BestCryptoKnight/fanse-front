@@ -38,7 +38,8 @@
           
       </div>
     </div>
-     <aside class="text-center bg-gradient-primary-to-secondary" style="background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));color: white;padding-top: 5rem;padding-bottom: 5rem;">
+        <div style="background-color: white;color:black !important;">
+          <aside class="text-center bg-gradient-primary-to-secondary" style="background: linear-gradient(95.92deg,rgba(28,115,203,.9),rgba(29,111,194,.9) 20.05%,rgba(61,133,205,.9));color: white;padding-top: 5rem;padding-bottom: 5rem;">
             <div class="container px-5" style="max-width: 1150px;" >
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
@@ -48,14 +49,13 @@
                 </div>
             </div>
         </aside>
-        <div style="background-color: white;color:black !important;">
         <section id="features" style="margin-top: 100px;color:white;">
             <div class="container px-5" style="margin-top: 50px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                      <h2 data-v-1e7c8258="" class="home-h5" style="color: #1967b5;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
+                      <h2 class="home-h5" style="color: #1967b5;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
                         <div class="container-fluid px-5">
-                            <div class="row gx-5">
+                            <div class="row gx-5" style="margin-left:-35px;margin-right:-35px;">
                                 <div class="col-md-6 mb-5">
                                     <!-- Feature item-->
                                     <div class="text-center">
@@ -177,9 +177,8 @@ body {
   height: 1px;
 }
 .pregunta {
-  background-color: #0000000f;
-	border: 1px solid #00000026;
-	border-radius: 8px;
+  background-color: #0000000d;
+  border-radius: 8px;
   cursor: pointer;
   display: block;
 	font-size: 1.1875rem;
@@ -208,7 +207,6 @@ body {
   transform: rotate(90deg);
 }
 .pregunta-input:checked ~ .pregunta {
-  background: #011627;
 	color: black;
 }
 .pregunta-input:checked ~ .pregunta::before {
@@ -557,6 +555,10 @@ a {
 @media (max-width:720px){
   .home-h4{
 font-size: 1.425rem  !important;
+text-align: center;
+}
+.home-h5{
+font-size: 2.3rem  !important;
 text-align: center;
 }
 .phone-margin{
