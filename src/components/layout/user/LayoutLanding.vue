@@ -43,7 +43,7 @@
             <div class="container px-5" style="max-width: 1150px;" >
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="home-h4 phone-margin">"Sign up now to earn 85% of everything you sell on Fanse!"</div>
+                        <div class="home-h4 phone-margin">Sign up now to earn 85% of everything you sell on Fanse!</div>
                     </div>
                     <div  style="flex: 1 1 0%;"><a style="width:70%" tabindex="0" href="/signup" class="a-box">Get Started</a></div>
                 </div>
@@ -110,7 +110,7 @@
     margin-top: 40px;
     text-align: center;
     width: 100%;
-    /* max-width: 500px; */
+        margin-bottom: 70px;
 ">
 
 <h3 data-v-0c95d942="" class="home-h3" style="
@@ -144,13 +144,14 @@ There is no contract for you or your subscribers.
     margin-top: 40px;
     text-align: center;
     width: 100%;
-    /* max-width: 500px; */
+        margin-bottom: 70px;
 ">
 
 <h3 data-v-0c95d942="" class="home-h3" style="
     text-align: center;
     color: #707a85;
     font-size: 1.75rem;
+    
 ">2. Set your subscription rate
 </h3><div style="
     text-align: -webkit-center;
@@ -178,8 +179,7 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
     margin-top: 40px;
     text-align: center;
     width: 100%;
-    /* max-width: 500px; */
-">
+    margin-bottom: 70px;">
 
 <h3 data-v-0c95d942="" class="home-h3" style="
     text-align: center;
@@ -203,6 +203,8 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
     font-size: calc((1.2 - 1) * 1.2vw + 1rem);
     white-space: pre-wrap;
      color: #8A96A3;">Now you finally can start sharing content on your Fanse profile &amp; promote your Fanse link on your other social media streams to start earn and share exclusive content with your fans!
+<a tabindex="0" href="/signup" class="a-box" style="width: 90%;padding: 5px;height: 60px;color: white;margin-top: 10px;background-color: #207ddb;margin-top: 30px;">Sign Up</a>
+
 </h3>
 </div>
 
@@ -210,7 +212,7 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
       </div>
         <div class="preguntas-frecuentes-contenedor serif" style="color:black !important;">
             <div class="preguntas-frecuentes-encabezado-linea-roja"></div>
-            <h1 class="preguntas-frecuentes-encabezado">FAQ</h1>
+              <h2 class="home-h5" style="color: #2181e2;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">FAQ</h2>
                 <div class="preguntas">
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n1" />
