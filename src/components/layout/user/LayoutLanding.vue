@@ -50,10 +50,10 @@
         </aside>
         <div style="background-color: white;color:black !important;">
         <section id="features" style="margin-top: 100px;color:white;">
-          <h2 class="home-h2" style="color:#4084cd; text-aligin:center;">Why join Fanse ?</h2>
             <div class="container px-5" style="margin-top: 50px;">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                      <h2 data-v-1e7c8258="" class="home-h5" style="color: #1967b5;text-align: center;font-size: 3.2rem;margin-bottom: 50px;margin-top: 50px;">Why join Fanse ?</h2>
                         <div class="container-fluid px-5">
                             <div class="row gx-5">
                                 <div class="col-md-6 mb-5">
@@ -88,7 +88,7 @@
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
                                         <h4 class="font-alt">Earn More</h4>
                                         <p class="text-muted mb-0">Join NOW and earn 85% for a lifetime!</p>
-                                        <a tabindex="0" href="/signup" class="a-box" style="width: 90%;padding: 5px;height: 40px;color: black;margin-top: 10px;">Sign Up</a>
+                                        <a tabindex="0" href="/signup" class="a-box" style="width: 90%;padding: 5px;height: 40px;color: white;margin-top: 10px;background-color: black;">Sign Up</a>
                                     </div>
                                 </div>
                             </div>
@@ -136,6 +136,9 @@
 @import "~@/assets/scss/_variables.scss";
 body {
   margin: 0;
+}
+.font-alt{
+  color: #000 !important;
 }
 .preguntas-frecuentes {
   background: #dbe0e8;
@@ -369,6 +372,18 @@ a {
     font-family: "system-ui";
     font-weight: bold;
     font-size: 5rem;
+    letter-spacing: -0.01562em;
+    text-align: left;
+}
+.home-h5{
+      -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: inherit;
+    margin: 0;
+    color: white;
+    font-family: "system-ui";
+    font-weight: bold;
+    font-size: 3.5rem;
     letter-spacing: -0.01562em;
     text-align: left;
 }
