@@ -221,7 +221,7 @@ Paid subscription will require your fans to pay a monthly fee / any kind of paym
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n2" />
                     <label for="pregunta-n2" class="pregunta">How much can I earn?</label>
-                    <div class="respuesta"><p>With Fanse your earnings are unlimited! Fanse give you built-in monetization features to maximize your earnings. Content Creators on Fanse are taking home 85% of their earnings! Lower than anywhere else!</p></div>
+                    <div class="respuesta"><p>With Fanse your earnings are unlimited! Fanse give you built-in monetization features to maximize your earnings. Content Creators on Fanse are taking home 85% of their earnings! Higher than anywhere else!</p></div>
                   </li>
                   <li>
                     <input class="pregunta-input" type="checkbox" name="pregunta-frecuente" id="pregunta-n3" />

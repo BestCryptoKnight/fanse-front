@@ -55,7 +55,7 @@
         </div>
       <div v-if="isTip" class="m-3">
           
-        <div class="d-flex" style="margin-top: 10px;">
+        <div class="d-flex" style="margin-top: 10px;margin-bottom:20px">
           <b-avatar
             :src="item.user.avatar"
             :text="item.user.initials"

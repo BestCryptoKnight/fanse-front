@@ -90,7 +90,7 @@
                 controlsList="nodownload"
                 :poster="item.screenshot"
               >
-                <source :src="item.url" type="video/webm" />
+                <source :src="item.url" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -114,7 +114,7 @@
             controlsList="nodownload"
             :poster="post.media[0].screenshot"
           >
-            <source :src="post.media[0].url" type="video/webm" />
+            <source :src="post.media[0].url" type="video/mp4" />
           </video>
         </div>
       </div>
