@@ -33,7 +33,7 @@
                 margin-top: 10px;
                 margin-left: 0px;
                 margin-bottom: 10px;
-            "><d class="" style="color: #2081E2;">💕</d> You take home <strong>85%</strong> of your earnings! <strong>Lower than anywhere else!</strong>
+            "><d class="" style="color: #2081E2;">💕</d> You take home <strong>85%</strong> of your earnings! <strong>Higher than anywhere else!</strong>
             </p>
             <p class="bollets-home" style="
                 margin-left: 0px;
