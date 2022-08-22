@@ -24,7 +24,7 @@
     "register-service-worker": "^1.7.1",
     "swiper": "^6.8.4",
     "v-mask": "^2.3.0",
-    "video.js": "^6.13.0",
+    "video.js": "^7.11.4",
     "videojs-contrib-hls.js": "^3.2.0",
     "vue-video-player": "^5.0.2",
     "vue": "^2.7.8",
