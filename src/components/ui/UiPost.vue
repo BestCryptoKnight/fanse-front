@@ -88,7 +88,6 @@
                 preload="metadata"
                 playsinline
                 controlsList="nodownload"
-                :poster="item.screenshot"
               >
                 <source :src="item.url" type="video/mp4" />
               </video>
@@ -112,7 +111,6 @@
             preload="metadata"
             playsinline
             controlsList="nodownload"
-            :poster="post.media[0].screenshot"
           >
             <source :src="post.media[0].url" type="video/mp4" />
           </video>
