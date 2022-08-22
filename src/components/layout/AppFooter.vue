@@ -2,10 +2,10 @@
   <footer>
     <div class="footer  border-top" >
     <div class="row">
-    <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-facebook"></i></a>
-    <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-instagram"></i></a>
-    <a href="#" style="padding-bottom: 10px;" ><i style="font-size: 20px;" class="bi bi-youtube"></i></a>
-    <a href="#" style="padding-bottom: 10px;padding-right: 0px;" ><i style="font-size: 20px;" class="bi bi-twitter"></i></a>
+    <!-- <a href="#" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-facebook"></i></a> -->
+    <a href="https://instagram.com/byfanse/" style="padding-bottom: 10px;"><i style="font-size: 20px;" class="bi bi-instagram"></i></a>
+    <!-- <a href="#" style="padding-bottom: 10px;" ><i style="font-size: 20px;" class="bi bi-youtube"></i></a> -->
+    <a href="https://twitter.com/byfanse" style="padding-bottom: 10px;padding-right: 0px;" ><i style="font-size: 20px;" class="bi bi-twitter"></i></a>
     </div>
 
     <div class="row" style="padding-bottom: 7px;">
