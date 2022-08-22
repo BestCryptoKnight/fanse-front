@@ -48,6 +48,7 @@ export default {
                   preload='metadata' 
                   playsinline 
                   controlsList='nodownload' 
+                  poster="${item.screenshot}">
                     <source src="${item.url}" type="video/mp4" />
                   </video>
               </div>`,
