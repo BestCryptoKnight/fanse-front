@@ -49,7 +49,7 @@ export default {
                   playsinline 
                   controlsList='nodownload' 
                   poster="${item.screenshot}">
-                    <source src="${item.url}" type="video/webm" />
+                    <source src="${item.url}" type="video/mp4" />
                   </video>
               </div>`,
           });
