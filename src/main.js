@@ -8,9 +8,6 @@ import VueClipboard from 'vue-clipboard2'
 import VueMask from 'v-mask'
 import VueAnalytics from 'vue-analytics';
 import Misc from './plugins/Misc'
-import AudioVisual from 'vue-audio-visual'
-
-
 
 import "@/assets/scss/_theming.scss";
 import i18n from './i18n'
@@ -24,8 +21,6 @@ const router = new VueRouter({
 Vue.use(VueAnalytics, {
   id: 'UA-93505512-25'
 });
-
-Vue.use(AudioVisual)
 
 Vue.use(Vuex)
 import stores from './components/helpers/Store';
