@@ -79,18 +79,12 @@
             additional-content-css="font-size:16px;margin-bottom: 7px;"
             additional-content-expanded-css="font-size:16px;"
             additional-anchor-css="font-size: 12px;"
-            audio.crossOrigin = "anonymous"
             @click="change"
           />
         <div v-if="user.location" class="text-muted small"><i class="bi bi-geo-alt-fill"></i> 
           {{ user.location }} <b-link  v-if="user.website" target="_blank" :href="user.website"> &nbsp;&middot;&nbsp; <i class="bi bi-link-45deg"></i> 
           {{user.website}}</b-link>
         </div>
-        <av-line
-          :line-width="2"
-          line-color="lime"
-          audio-src="https://assets.mixkit.co/sfx/preview/mixkit-game-show-suspense-waiting-667.mp3"
-        ></av-line>
         <div style="display:flex; overflow: scroll;">
         <b-link v-if="user.instagram" :href="user.instagram" target="_blank" style="margin-right:7px;">
             <svg width="90" height="50" viewBox="0 0 179 60" fill="none" xmlns="http://www.w3.org/2000/svg">
