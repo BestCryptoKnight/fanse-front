@@ -93,4 +93,10 @@ export default class Post {
     return !this.price && true;
   }
 
+  get postParsed() {
+    const regex = /@([0-9a-z|\-|_]+)/ig;
+    return this.message.replace(/[\u00A0-\u9999<>&]/g, function (i) {
+        return '&#' + i.charCodeAt(0) + ';';
+    }).replace(regex, "<a href='" + process.env.VUE_APP_APP_URL + "/$1'>$&</a>");
+}
 }
