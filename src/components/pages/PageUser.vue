@@ -79,6 +79,7 @@
             additional-content-css="font-size:16px;margin-bottom: 7px;"
             additional-content-expanded-css="font-size:16px;"
             additional-anchor-css="font-size: 12px;"
+            audio.crossOrigin = "anonymous"
             @click="change"
           />
         <div v-if="user.location" class="text-muted small"><i class="bi bi-geo-alt-fill"></i> 
