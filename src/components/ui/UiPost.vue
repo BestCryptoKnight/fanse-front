@@ -63,7 +63,7 @@
       <b-card-footer>{{ $tc("general.x-votes", [totalVotes]) }}</b-card-footer>
     </b-card>
     <div class="px-3 pb-3 w-100 overflow-hidden nl2br wrap">
-      <span class="nl2br" v-html="post.message.postParsed" />
+      <span class="nl2br" v-html="post.postParsed" />
     </div>
     <div class="media" v-if="(post.media.length > 0 && hasAccess)">
       <div ref="swiper" class="swiper w-100" v-if="post.media.length > 1">
