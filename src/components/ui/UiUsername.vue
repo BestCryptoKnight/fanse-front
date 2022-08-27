@@ -3,7 +3,17 @@
     <span :class="bold ? 'font-weight-bold' : ''" class="username">{{
       user.name
     }}</span>
-    <i class="bi-patch-check-fill ml-1" style="color: #2081E2;font-size: 13px;margin-top: 3px;" v-if="user.isCreator && user.id !='205' "></i>
+    <i class="bi-patch-check-fill ml-1" style="color: #2081E2;font-size: 13px;margin-top: 3px;" v-if="user.isCreator"></i>
+    
+    <span class="text-muted small-username ml-1" v-if="full">{{
+      "@" + user.username
+    }}</span>
+  </b-link>
+  <div v-else class="d-flex align-items-center">
+    <span :class="bold ? 'font-weight-bold' : ''" class="">{{
+      user.name
+    }}</span>
+    <i class="bi-patch-check-fill ml-1" style="color: #2081E2;font-size: 13px;margin-top: 3px;" v-if="user.isCreator && user.id !='205'"></i>
     <svg v-if="user.id =='205' " width="80" height="40" viewBox="0 0 231 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-1">
 <rect x="0.5" y="0.5" width="230" height="59" rx="14.5" fill="#2082E1"></rect>
 <g clip-path="url(#clip0_105_795)" filter="url(#filter0_i_105_795)">
@@ -29,15 +39,6 @@
 </clipPath>
 </defs>
     </svg>
-    <span class="text-muted small-username ml-1" v-if="full">{{
-      "@" + user.username
-    }}</span>
-  </b-link>
-  <div v-else class="d-flex align-items-center">
-    <span :class="bold ? 'font-weight-bold' : ''" class="">{{
-      user.name
-    }}</span>
-    <i class="bi-patch-check-fill ml-1" style="color: #2081E2;font-size: 13px;margin-top: 3px;" v-if="user.isCreator"></i>
     <span class="text-muted small-username ml-1" v-if="full">{{
       "@" + user.username
     }}</span>
