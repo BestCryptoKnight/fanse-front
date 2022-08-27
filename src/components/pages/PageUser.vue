@@ -12,7 +12,7 @@
             <i class="bi-arrow-left" />
           </b-link>
           <h6 class="p-0 my-3 mx-2 flex-grow-1 overflow-hidden">
-            <ui-username :user="user" :asLink="false" :bold="false" />
+            <ui-username :user="user" :asLink="true" :bold="false" />
             <div class="d-flex align-items-center small">
           <span style="opacity: 0.5;" v-if="!user.online_status">Last seen {{user.time_difference}} {{user.hms}} ago</span>
           <span v-else style="opacity: 0.5;">Available now</span>
