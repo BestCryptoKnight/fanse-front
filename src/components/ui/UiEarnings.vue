@@ -92,7 +92,10 @@ export default {
           try {
             let payments = [...this.payments];
             for (let obj of data.data) {
-              payments.push(new Payment(obj));
+              if (obj.status == 1)
+              {
+                payments.push(new Payment(obj));
+              }
             }
             this.payments = payments;
             this.hasMore = data.next_page_url != null;
