@@ -18,7 +18,7 @@
         <b-col cols="12" class="overflow-hidden" v-if="this.$store.state.token">
           <ui-username :user="currentUser" />
           <div class="small text-secondary username">
-            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; @{{fans}}
+            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; {{fans}} Fans
           </div>
         </b-col>
       </b-row>
@@ -82,6 +82,7 @@ export default {
   data: function () {
     return {
       lists: [],
+      fans: 0,
     };
   },
   components: { UiUsername },
@@ -89,7 +90,6 @@ export default {
     currentUser() {
       return this.$store.state.currentUser;
     },
-    fans: 0,
   },
   mounted() {
     this.loadLists();
@@ -117,7 +117,7 @@ export default {
           for (let d of data.lists) {
             const l = new List(d, this);
             if (l.listeesCount > 0 && l.id == 1) {
-              fans = l.listees_count;
+              this.fans = l.listees_count;
             }
           }
         },
