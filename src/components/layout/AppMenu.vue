@@ -109,8 +109,7 @@ export default {
       this.$router.replace("/");
       //location = process.env.VUE_APP_APP_URL;
     },
-  },
-  loadLists() {
+    loadLists() {
       this.$get(
         "/lists/message",
         (data) => {
@@ -124,5 +123,7 @@ export default {
         () => {}
       );
     },
+  },
+  
 };
 </script>
