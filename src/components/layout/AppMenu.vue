@@ -18,7 +18,7 @@
         <b-col cols="12" class="overflow-hidden" v-if="this.$store.state.token">
           <ui-username :user="currentUser" />
           <div class="small text-secondary username">
-            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; {{fans}} Fans
+            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; @{{this.fans}} Fans
           </div>
         </b-col>
       </b-row>
