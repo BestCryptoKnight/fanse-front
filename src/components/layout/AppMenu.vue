@@ -82,7 +82,6 @@ export default {
   data: function () {
     return {
       lists: [],
-      fans: 0,
     };
   },
   components: { UiUsername },
@@ -90,6 +89,7 @@ export default {
     currentUser() {
       return this.$store.state.currentUser;
     },
+    fans: 0,
   },
   mounted() {
     this.loadLists();
