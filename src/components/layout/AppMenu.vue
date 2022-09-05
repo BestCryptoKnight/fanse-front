@@ -18,7 +18,7 @@
         <b-col cols="12" class="overflow-hidden" v-if="this.$store.state.token">
           <ui-username :user="currentUser" />
           <div class="small text-secondary username">
-            @{{ currentUser.username }}
+            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; {{fans}}
           </div>
         </b-col>
       </b-row>
@@ -76,13 +76,23 @@
 }
 </style>
 <script>
+import List from "../models/List";
 import UiUsername from "../ui/UiUsername.vue";
 export default {
+  data: function () {
+    return {
+      lists: [],
+      fans: 0,
+    };
+  },
   components: { UiUsername },
   computed: {
     currentUser() {
       return this.$store.state.currentUser;
     },
+  },
+  mounted() {
+    this.loadLists();
   },
   methods: {
     logOut() {
@@ -100,5 +110,19 @@ export default {
       //location = process.env.VUE_APP_APP_URL;
     },
   },
+  loadLists() {
+      this.$get(
+        "/lists/message",
+        (data) => {
+          for (let d of data.lists) {
+            const l = new List(d, this);
+            if (l.listeesCount > 0 && l.id == 1) {
+              fans = l.listees_count;
+            }
+          }
+        },
+        () => {}
+      );
+    },
 };
 </script>
