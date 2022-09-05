@@ -18,7 +18,7 @@
         <b-col cols="12" class="overflow-hidden" v-if="this.$store.state.token">
           <ui-username :user="currentUser" />
           <div class="small text-secondary username">
-            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; @{{this.fans}} Fans
+            @{{ currentUser.username }}  &nbsp;&middot;&nbsp;&nbsp; {{this.fans}} Fans
           </div>
         </b-col>
       </b-row>
@@ -116,7 +116,7 @@ export default {
           for (let d of data.lists) {
             const l = new List(d, this);
             if (l.listeesCount > 0 && l.id == 1) {
-              this.fans = l.listees_count;
+              this.fans = l.listeesCount;
             }
           }
         },
