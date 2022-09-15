@@ -26,9 +26,9 @@
     "v-mask": "^2.3.0",
     "video.js": "^7.11.4",
     "videojs-contrib-hls.js": "^3.2.0",
-    "vue-video-player": "^5.0.2",
     "vue": "^2.7.8",
     "vue-analytics": "^5.22.1",
+    "vue-audio-visual": "^2.5.0",
     "vue-axios": "^3.4.1",
     "vue-chartjs": "^3.5.1",
     "vue-clipboard2": "^0.3.3",
@@ -37,6 +37,7 @@
     "vue-recaptcha-v3": "^1.9.0",
     "vue-router": "^3.5.2",
     "vue-social-auth": "^1.4.9",
+    "vue-video-player": "^5.0.2",
     "vue2-dropzone": "^3.6.0",
     "vuex": "^3.6.2"
   },
