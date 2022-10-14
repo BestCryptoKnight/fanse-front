@@ -16,6 +16,7 @@ export default class User {
   cover = null;
   role = User.ROLE_USER;
   bio = null;
+  audio_bio = null;
   location = null;
   website = null;
   instagram = null;
@@ -37,6 +38,7 @@ export default class User {
     this.cover = data.cover;
     this.role = data.role;
     this.bio = data.bio ? data.bio : null;
+    this.audio_bio = data.audio_bio ? data.audio_bio : null;
     this.location = data.location ? data.location : null;
     this.website = data.website ? data.website : null;
     this.instagram = data.instagram ? data.instagram : null;

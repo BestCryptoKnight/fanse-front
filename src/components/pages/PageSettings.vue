@@ -72,6 +72,13 @@
             :errors="errors"
             :label="$t('general.bio')"
           />
+          <ui-form-bio-audio-input
+            name="audio_bio"
+            v-model="user.audio_bio"
+            @changeAudio="changeAudio"
+            :errors="errors"
+            :label="'Bio Voice'"
+          />
           <ui-form-input
             type="text"
             name="location"
@@ -195,6 +202,7 @@
 import User from "../models/User";
 import UiFormInput from "../ui/UiFormInput.vue";
 import UiFormTextarea from "../ui/UiFormTextarea.vue";
+import UiFormBioAudioInput from "../ui/UiFormBioAudioInput.vue";
 export default {
   data: function () {
     return {
@@ -206,6 +214,7 @@ export default {
   components: {
     UiFormInput,
     UiFormTextarea,
+    UiFormBioAudioInput
   },
   mounted() {
     this.loadUser();
@@ -222,6 +231,9 @@ export default {
         }
       );
     },
+    changeAudio(value) {
+      this.user.audio_bio = value;
+    },
     saveSettings() {
       this.errors = {};
       this.$post(
@@ -230,6 +242,7 @@ export default {
           username: this.user.username,
           name: this.user.name,
           bio: this.user.bio,
+          audio_bio: this.user.audio_bio,
           location: this.user.location,
           website: this.user.website,
           instagram: this.user.instagram,

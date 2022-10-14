@@ -8,6 +8,8 @@ import VueClipboard from 'vue-clipboard2'
 import VueMask from 'v-mask'
 import VueAnalytics from 'vue-analytics';
 import Misc from './plugins/Misc'
+import './plugins/WaveSurfer'
+import './plugins/AudioRecorder'
 
 import "@/assets/scss/_theming.scss";
 import i18n from './i18n'

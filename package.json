@@ -9,6 +9,7 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
+    "@codekraft-studio/vue-record": "0.0.3",
     "@stripe/stripe-js": "^1.25.0",
     "@vue/composition-api": "^1.7.0",
     "axios": "^0.22.0",
@@ -38,6 +39,7 @@
     "vue-router": "^3.5.2",
     "vue-social-auth": "^1.4.9",
     "vue-video-player": "^5.0.2",
+    "vue-wave-surfer": "^1.0.1",
     "vue2-dropzone": "^3.6.0",
     "vuex": "^3.6.2"
   },
