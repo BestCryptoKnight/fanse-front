@@ -20,7 +20,7 @@
     </div>
     <div class="rounded-circle text-right position-relative" style="width: 70px; top: -10px">
       <b-avatar :src="user.avatar" :text="user.initials" :to="user.url" size="50px" />
-      <i class="bi bi-mic-fill mic-icon"></i>
+      <i style="color: #03afee;" class="bi bi-mic-fill mic-icon"></i>
     </div>
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
         waveColor: '#C6C7C8',
         progressColor: "#00AFF0",
         barWidth: 4,
-        height: 50,
+        height: 40,
         responsive: true,
         hideScrollbar: true,
         barRadius: 4
@@ -113,8 +113,8 @@ export default {
     },
     secondToMin(second) {
       let parsedSec = Math.round(second)
-      var minutes = Math.floor(parsedSec / 60);
-      var seconds = parsedSec - minutes * 60;
+      var minutes = Math.floor(parsedSec / 60).toString().padStart(2, '0');
+      var seconds = (parsedSec - minutes * 60).toString().padStart(2, '0');
       return `${minutes}:${seconds} `
     },
 

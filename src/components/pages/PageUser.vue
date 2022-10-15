@@ -434,7 +434,7 @@
 .bio-audio-con {
   align-items: center;
   border-width: 1px;
-  padding: 10px;
+  padding-left: 10px;
   background: white;
   box-shadow: 0px 5px 14px 1px #f0f0f0;
   border-top-right-radius: 10px;
