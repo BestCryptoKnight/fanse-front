@@ -54,12 +54,12 @@ export default {
         waveColor: '#C6C7C8',
         progressColor: "#00AFF0",
         barWidth: 4,
-        height: 100,
+        height: 50,
         responsive: true,
         hideScrollbar: true,
         barRadius: 4
       },
-      audioFile: `${process.env.VUE_APP_MEDIA_URL + this.$props.audio_bio}`,
+      audioFile: "/img/sample.mp3",
       audioGenFile: this.$props.audio_bio,
       audioProps: {
         duration: 0,

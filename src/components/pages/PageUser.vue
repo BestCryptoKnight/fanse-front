@@ -75,7 +75,9 @@
               class="bi bi-link-45deg"></i>
             {{user.website}}</b-link>
         </div>
-        <ui-audio-play v-model="user.audio_bio" :user="user" :audio_bio="user.audio_bio" />
+        <div v-if="user.audio_bio">
+          <ui-audio-play v-model="user.audio_bio" :user="user" :audio_bio="user.audio_bio" />
+        </div>
         <div style="display:flex; overflow: scroll;">
           <b-link v-if="user.instagram" :href="user.instagram" target="_blank" style="margin-right:7px;">
             <svg width="90" height="50" viewBox="0 0 179 60" fill="none" xmlns="http://www.w3.org/2000/svg">
