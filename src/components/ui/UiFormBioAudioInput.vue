@@ -37,12 +37,12 @@
         <div v-on:click="onSaveClicked()" class="flex-column d-flex py-3 align-items-center"
           style="cursor: pointer; margin-right: 10px;">
           <div style="font-size: 40px; height: 50px;" class="bi bi-check-circle text-success"></div>
-          <div style="font-weight: bold;"> Save </div>
+          <div style="font-weight: bold;"> Ok </div>
         </div>
         <div v-on:click="onDeleteClicked()" class="flex-column d-flex py-3 align-items-center"
           style="cursor: pointer; margin-left: 10px;">
           <div style="font-size: 40px; height: 50px;" class="bi bi-x-circle text-danger"></div>
-          <div style="font-weight: bold;"> Delete </div>
+          <div style="font-weight: bold;"> Cancel </div>
         </div>
       </div>
   
