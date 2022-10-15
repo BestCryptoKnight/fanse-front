@@ -143,9 +143,24 @@
       },
   
       onDeleteClicked() {
-        this.isStreamed = false;
-        this.isSaved = false;
-        this.audioFile = "";
+        if(this.$props.value)
+        {
+          const formData = new FormData();
+          formData.append('fileName', this.$props.value);
+          const config = {
+            headers: {
+              'content-type': 'multipart/form-data',
+            }
+          }
+          axios.post(`${process.env.VUE_APP_API_URL}/v1/audio/delete`,
+            formData, config
+          ).then(({_}) => { // eslint-disable-line no-unused-vars
+            this.isStreamed = false;
+            this.isSaved = false;
+            this.audioFile = "";
+            this.$emit("changeAudio", null);
+          });
+        }
       },
       onSaveClicked() {
         const formData = new FormData();
