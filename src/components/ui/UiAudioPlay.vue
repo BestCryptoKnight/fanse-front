@@ -7,8 +7,10 @@
           <i v-else-if="isAudioLoaded&&!audioProps.isPlaying" class="bi-play-fill" style="font-size: 2rem" />
         </b-link>
         <div style="flex: 1">
-          <vue-wave-surfer :src="this.audioFileRoot + this.audio_bio" :options="audioOptions" ref="prosurf" @hook:mounted="audioComponentMounted">
-          </vue-wave-surfer>
+          <div v-if="isReady">
+            <vue-wave-surfer :key="key" :src="audioFile" :options="audioOptions" ref="prosurf" @hook:mounted="audioComponentMounted">
+            </vue-wave-surfer>
+          </div>
         </div>
       </div>
       <div class="pl-5 d-flex justify-content-between small" style="color: #959697">
@@ -57,7 +59,8 @@ export default {
         hideScrollbar: true,
         barRadius: 4
       },
-      audioFileRoot: process.env.VUE_APP_MEDIA_URL,
+      audioFile: `${process.env.VUE_APP_MEDIA_URL + this.$props.audio_bio}`,
+      audioGenFile: this.$props.audio_bio,
       audioProps: {
         duration: 0,
         currentTime: 0,
@@ -66,15 +69,18 @@ export default {
       isAudioLoaded: false,
       getCurrentTimeInterval: 0,
       key: 0,
-      isStreamed: false,
-      isSaved: false,
+      isReady: false,
     }
   },
-
   mounted() {
-
+      setTimeout(() => {
+        const audio_url = this.$props.value;
+        if (audio_url!=="" && audio_url!==null && audio_url!==undefined) {
+          this.isReady = true;
+          this.audioFile = process.env.VUE_APP_MEDIA_URL + audio_url;
+        }
+      }, 1000)
   },
-
   methods: {
     startPause() {
       if (this.$refs.prosurf.waveSurfer) {
@@ -92,6 +98,7 @@ export default {
       }
     },
     audioComponentMounted() {
+      this.audioFile = process.env.VUE_APP_MEDIA_URL + this.audio_bio;
       this.isAudioLoaded = true;
       this.getAudioProps();
       setTimeout(() => {
