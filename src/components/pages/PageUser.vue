@@ -527,7 +527,7 @@ export default {
         hideScrollbar: true,
         barRadius: 4
       },
-      audioFile: "/img/sample.mp3",
+      audioFile: "https://d1r1kdez04i1xw.cloudfront.net/bio_voice/1665788983.mp3",
       audioProps: {
         duration: 0,
         currentTime: 0,

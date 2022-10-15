@@ -99,7 +99,7 @@
           hideScrollbar: true,
           barRadius: 4
         },
-        audioFile: `${process.env.VUE_APP_API_URL + this.$props.value}`,
+        audioFile: `${process.env.VUE_APP_MEDIA_URL + this.$props.value}`,
         audioGenFile: this.$props.value,
         audioProps: {
           duration: 0,
@@ -128,7 +128,7 @@
       console.log(this.$props.value);
       if (audio_url!=="" && audio_url!==null) {
         this.isSaved = true;
-        this.audioFile = process.env.VUE_APP_API_URL + audio_url;
+        this.audioFile = process.env.VUE_APP_MEDIA_URL + audio_url;
       }
     },
     methods: {
@@ -158,7 +158,7 @@
         axios.post(`${process.env.VUE_APP_API_URL}/v1/audio/save`,
           formData, config
         ).then(({data}) => {
-          this.audioFile = process.env.VUE_APP_API_URL + data.audio;
+          this.audioFile = process.env.VUE_APP_MEDIA_URL + data.audio;
           this.$emit("changeAudio", data.audio);
         });
         this.isStreamed = false;
