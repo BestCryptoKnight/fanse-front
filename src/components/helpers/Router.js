@@ -35,196 +35,199 @@ import PageSubscriptionsAdmin from '../pages/admin/PageSubscriptions';
 import PagePaymentsAdmin from '../pages/admin/PagePayments';
 import PagePayoutsAdmin from '../pages/admin/PagePayouts';
 import PagePostsAdmin from '../pages/admin/PagePosts';
+import PageArchive from '../pages/PageArchive.vue'
 import Store from './Store';
 
 export default [
-    {
-        path: "/admin",
-        component: LayoutAdmin,
-        children: [
-            {
-                path: '/admin',
-                components: {
-                    default: PageDashboardAdmin,
-                    login: PageLoginAdmin
-                }
-            },
-            {
-                path: '/admin/users/:type?',
-                component: PageUsersAdmin
-            },
-            {
-                path: '/admin/users/edit/:id',
-                component: PageUsersEditAdmin
-            },
-            {
-                path: '/admin/subscriptions/:type?',
-                component: PageSubscriptionsAdmin
-            },
-            {
-                path: '/admin/payments/:type?',
-                component: PagePaymentsAdmin
-            },
-            {
-                path: '/admin/payouts/:type?',
-                component: PagePayoutsAdmin
-            },
-            {
-                path: '/admin/posts',
-                component: PagePostsAdmin
-            },
-        ]
-    },
-    {
-        path: '/',
-        component: LayoutUser,
-        children: [
-            {
-                path: '/payments/:attach?',
-                component: PagePayments,
-            },
-            {
-                path: '/payouts',
-                component: PagePayouts,
-            },
-            {
-                path: '/notifications',
-                component: PageNotifications,
-                name: 'notifications',
-            },
-            {
-                path: '/subscriptions',
-                component: PageSubscriptions,
-                name: 'subscriptions',
-            },
-            {
-                path: '/payment/failure',
-                component: PagePaymentFailure
-            },
-            {
-                path: '/payment/success/:gateway',
-                component: PagePaymentSuccess
-            },
-            {
-                path: '/messages/:id',
-                component: PageMessages,
-                name: 'messages',
-            },
-            {
-                path: '/messages',
-                component: PageMessages,
-                name: 'messages',
-            },
-            {
-                path: '/lists',
-                component: PageLists
-            },
-            {
-                path: '/lists/:id',
-                component: PageList,
-                name: 'list'
-            },
-            {
-                path: '/bookmarks',
-                component: PageBookmarks
-            },
-            {
-                path: '/forgot',
-                components: {
-                    default: PageForgot,
-                    login: PageForgot
-                }
-            },
-            {
-                path: '/password-reset',
-                components: {
-                    default: PagePasswordReset,
-                    login: PagePasswordReset
-                }
-            },
-            {
-                path: '/signup',
-                components: {
-                    default: PageSignup,
-                    login: PageSignup
-                }
-            },
-            {
-                path: '/settings/price',
-                component: PagePrice
-            },
-            {
-                path: '/settings/email',
-                component: PageEmail
-            },
-            {
-                path: '/settings/password',
-                component: PagePassword
-            },
-            {
-                path: '/settings',
-                component: PageSettings
-            },
-            {
-                path: '/posts/create',
-                component: PageNewPost
-            },
-            {
-                path: '/posts/edit/:id',
-                component: PageNewPost
-            },
-            {
-                path: '/search',
-                components: {
-                    default: PageSearch,
-                    side: AppSide
-                },
-                name: 'search'
-            },
-            {
-                path: '/:id/:username',
-                component: PagePost,
-                
-            },
-            {
-                path: '/',
-                components: {
-                    default: PageHome,
-                    login: PageLogin,
-                    side: AppSide
-                }
-            },
-            {
-                path: '/welcome',
-                components: {
-                    default: PageHome,
-                    login: PageWelcome,
-                    side: AppSide
-                }
-            },
-            {
-                path: '/auth/:provider/callback',
-                component: {
-                  template: '<div class="auth-component"></div>'
-                }
-            },
-
-        ]
-    },
-    {
-        path: '/:username',
-        get component() {
-            if (Store.state.token==null) {
-                return LayoutNoneUser
-            } else {
-                return LayoutUser
-            }
+  {
+    path: '/admin',
+    component: LayoutAdmin,
+    children: [
+      {
+        path: '/admin',
+        components: {
+          default: PageDashboardAdmin,
+          login: PageLoginAdmin,
         },
-        children: [
-            {
-                path: '/:username',
-                component: PageUser
-            },
-        ]
+      },
+      {
+        path: '/admin/users/:type?',
+        component: PageUsersAdmin,
+      },
+      {
+        path: '/admin/users/edit/:id',
+        component: PageUsersEditAdmin,
+      },
+      {
+        path: '/admin/subscriptions/:type?',
+        component: PageSubscriptionsAdmin,
+      },
+      {
+        path: '/admin/payments/:type?',
+        component: PagePaymentsAdmin,
+      },
+      {
+        path: '/admin/payouts/:type?',
+        component: PagePayoutsAdmin,
+      },
+      {
+        path: '/admin/posts',
+        component: PagePostsAdmin,
+      },
+    ],
+  },
+  {
+    path: '/',
+    component: LayoutUser,
+    children: [
+      {
+        path: '/payments/:attach?',
+        component: PagePayments,
+      },
+      {
+        path: '/payouts',
+        component: PagePayouts,
+      },
+      {
+        path: '/notifications',
+        component: PageNotifications,
+        name: 'notifications',
+      },
+      {
+        path: '/subscriptions',
+        component: PageSubscriptions,
+        name: 'subscriptions',
+      },
+      {
+        path: '/payment/failure',
+        component: PagePaymentFailure,
+      },
+      {
+        path: '/payment/success/:gateway',
+        component: PagePaymentSuccess,
+      },
+      {
+        path: '/messages/:id',
+        component: PageMessages,
+        name: 'messages',
+      },
+      {
+        path: '/messages',
+        component: PageMessages,
+        name: 'messages',
+      },
+      {
+        path: '/lists',
+        component: PageLists,
+      },
+      {
+        path: '/lists/:id',
+        component: PageList,
+        name: 'list',
+      },
+      {
+        path: '/bookmarks',
+        component: PageBookmarks,
+      },
+      {
+        path: '/archive',
+        component: PageArchive,
+      },
+      {
+        path: '/forgot',
+        components: {
+          default: PageForgot,
+          login: PageForgot,
+        },
+      },
+      {
+        path: '/password-reset',
+        components: {
+          default: PagePasswordReset,
+          login: PagePasswordReset,
+        },
+      },
+      {
+        path: '/signup',
+        components: {
+          default: PageSignup,
+          login: PageSignup,
+        },
+      },
+      {
+        path: '/settings/price',
+        component: PagePrice,
+      },
+      {
+        path: '/settings/email',
+        component: PageEmail,
+      },
+      {
+        path: '/settings/password',
+        component: PagePassword,
+      },
+      {
+        path: '/settings',
+        component: PageSettings,
+      },
+      {
+        path: '/posts/create',
+        component: PageNewPost,
+      },
+      {
+        path: '/posts/edit/:id',
+        component: PageNewPost,
+      },
+      {
+        path: '/search',
+        components: {
+          default: PageSearch,
+          side: AppSide,
+        },
+        name: 'search',
+      },
+      {
+        path: '/:id/:username',
+        component: PagePost,
+      },
+      {
+        path: '/',
+        components: {
+          default: PageHome,
+          login: PageLogin,
+          side: AppSide,
+        },
+      },
+      {
+        path: '/welcome',
+        components: {
+          default: PageHome,
+          login: PageWelcome,
+          side: AppSide,
+        },
+      },
+      {
+        path: '/auth/:provider/callback',
+        component: {
+          template: '<div class="auth-component"></div>',
+        },
+      },
+    ],
+  },
+  {
+    path: '/:username',
+    get component() {
+      if (Store.state.token == null) {
+        return LayoutNoneUser
+      } else {
+        return LayoutUser
+      }
     },
-];
+    children: [
+      {
+        path: '/:username',
+        component: PageUser,
+      },
+    ],
+  },
+]

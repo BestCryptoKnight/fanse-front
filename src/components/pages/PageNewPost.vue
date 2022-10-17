@@ -151,6 +151,9 @@
           <b-link @click="mediaDropzoneClick" class="mx-2 ml-3">
             <i class="bi-image" />
           </b-link>
+          <b-link @click="mediaDropzoneClick" class="mx-2 ml-3">
+            <i class="bi-folder" />
+          </b-link>
           <b-link @click="pollAdd" class="mx-2">
             <i class="bi-bar-chart" />
           </b-link>
