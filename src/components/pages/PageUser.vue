@@ -432,15 +432,18 @@
 }
 
 .bio-audio-con {
-  align-items: center;
-  border-width: 1px;
-  padding-left: 10px;
-  background: white;
-  box-shadow: 0px 5px 14px 1px #f0f0f0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  position: relative;
+      align-items: center;
+    border-width: 1px;
+    padding-left: 10px;
+    padding-top: 13px;
+    background: white;
+    box-shadow: 0px 5px 14px 1px #f0f0f0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    height: 65px;
+    margin-top: 15px;
 
   /* &:before {
     content: ' ';
@@ -464,6 +467,15 @@
   right: 33px;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: white;
+}
+
+.mic {
+    position: absolute;
+    top: 24px;
+    right: 33px;
+    z-index: 999;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
 }
 
 wave::after {
