@@ -77,6 +77,9 @@
           <b-link @click="mediaDropzoneClick" class="mx-2">
             <i class="bi-image" />
           </b-link>
+          <b-link @click="mediaDropzoneClick" class="mx-2">
+            <i class="bi-folder" />
+          </b-link>
           <b-link
             v-b-modal.modalPrice
             class="mx-2"

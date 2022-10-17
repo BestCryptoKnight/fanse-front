@@ -27,6 +27,9 @@
       <b-nav-item :to="currentUser.url" exact v-if="this.$store.state.token">
         <i class="bi-person" /> {{ $t("general.my-profile") }}
       </b-nav-item>
+      <b-nav-item to="/archive">
+        <i class="bi-folder" /> {{ $t("general.archive") }}
+      </b-nav-item>
       <b-nav-item to="/bookmarks">
         <i class="bi-bookmark" /> {{ $t("general.bookmarks") }}
       </b-nav-item>
