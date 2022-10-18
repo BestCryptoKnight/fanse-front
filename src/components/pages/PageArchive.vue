@@ -11,7 +11,7 @@
     <b-button class="mr-2" variant="outline-primary">Photos</b-button>
     <b-button class="mr-2" variant="outline-primary">Videos</b-button>
 
-    <ui-archive v-model="archives" />
+    <ui-archive :archives="allArchives" />
    <UIUploadInput/>
   </div>
 </template>
@@ -26,11 +26,32 @@ export default {
     return {
       archives: [],
       page: 1,
+      index: 0,
       hasMore: true,
     }
   },
   mounted() {
     this.loadArchives();
+  },
+  computed: {
+    allArchives() {
+      let rows = [];
+      let current_row = [];
+      let index = 0;
+      for (let archive of this.archives)
+      {
+        if(index % 3 == 0)
+        {
+          rows.push(...current_row);
+          current_row = [];
+        }
+        current_row.push(archive);
+        index++;
+      }
+      rows.push(...current_row);
+      console.log(rows);
+      return rows;
+    }
   },
   methods: {
     loadArchives() {
@@ -38,7 +59,8 @@ export default {
         "/media?page=" + this.page,
         (data) => {
           let archives = [...this.archives];
-            for (let obj of data.data) {
+            for (let obj of data.media.data) {
+              index++;
               let archive = new Media(obj)
               if(archive.type !== Media.TYPE_AUDIO)
               {

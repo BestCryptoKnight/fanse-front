@@ -1,8 +1,14 @@
 <template>
     <div class="archives">
-      <b-row v-for="(archive, index) in archives" :key="index">
-        <b-col>
-          <b-img v-if="archive.type == 0" thumbnail fluid :src="archive.url"></b-img>
+      <b-row v-for="(row, key) in archives" :key="key">
+        <b-col v-for="(archive, k) in row">
+          <b-img v-if="archive.type == 0"
+          width="170"
+          height="100"
+          thumbnail fluid
+          :src="archive.url"
+          >
+          </b-img>
 
           <video v-if="archive.type == 1"
           :poster="archive.screenshot"
@@ -26,4 +32,17 @@
     components: {},
   };
   </script>
-  
+
+
+  <div
+  class="swiper-slide d-block"
+  v-for="(item, key) in chunkedArr"
+  :key="key"
+>
+  <ui-suggestion
+    :user="user"
+    v-for="(user, k) in item"
+    :key="k"
+    class="mb-2"
+  />
+</div>
