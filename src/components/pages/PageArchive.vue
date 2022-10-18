@@ -11,7 +11,6 @@
     <b-button class="mr-2" variant="outline-primary">Photos</b-button>
     <b-button class="mr-2" variant="outline-primary">Videos</b-button>
 
-
     <ui-archive v-model="archives" />
    <UIUploadInput/>
   </div>
@@ -26,6 +25,7 @@ export default {
   data() {
     return {
       archives: [],
+      page: 1,
       hasMore: true,
     }
   },
@@ -35,7 +35,7 @@ export default {
   methods: {
     loadArchives() {
       this.$get(
-        "/media",
+        "/media?page=" + this.page,
         (data) => {
           let archives = [...this.archives];
             for (let obj of data.data) {
@@ -52,6 +52,12 @@ export default {
           console.log(errors);
         }
       );
+    },
+    loadMore() {
+      if (this.hasMore) {
+        this.page = this.page + 1;
+        this.loadPosts();
+      }
     },
   }
 }
