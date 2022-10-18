@@ -1,12 +1,11 @@
 <template>
     <div class="archives">
       <b-row v-for="(row, key) in archives" :key="key">
-        <b-col v-for="(archive, k) in row">
+        <b-col v-for="(archive, k) in row" :key="k">
           <b-img v-if="archive.type == 0"
           width="170"
           height="100"
           thumbnail fluid
-          :key="k"
           :src="archive.url"
           >
           </b-img>
@@ -16,7 +15,6 @@
           width="170"
           height="100"
           controls
-          :key="k"
           >
             <source
               :src="archive.url"
