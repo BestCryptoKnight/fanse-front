@@ -7,11 +7,11 @@
       </div>
     </div>
 
-    <b-button class="mr-2" variant="outline-primary">All</b-button>
-    <b-button class="mr-2" variant="outline-primary">Photos</b-button>
-    <b-button class="mr-2" variant="outline-primary">Videos</b-button>
+    <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
+    <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
+    <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
 
-    <ui-archive :archives="allArchives" />
+    <ui-archive :archives="archive_rows" />
    <UIUploadInput/>
   </div>
 </template>
@@ -25,59 +25,71 @@ export default {
   data() {
     return {
       archives: [],
+      archive_rows: [],
       page: 1,
-      index: 0,
       hasMore: true,
     }
   },
   mounted() {
     this.loadArchives();
-  },
-  computed: {
-    allArchives() {
-      let rows = [];
-      let current_row = [];
-      let index = 0;
-      for (let archive of this.archives)
-      {
-        if(index % 3 == 0)
-        {
-          rows.push(...current_row);
-          current_row = [];
-        }
-        current_row.push(archive);
-        index++;
-      }
-      rows.push(...current_row);
-      console.log(rows);
-      return rows;
-    }
+    window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
+    updateScroll() {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      if (
+        document.body.offsetHeight &&
+        scrollPosition &&
+        document.body.offsetHeight - scrollPosition <= 1000 &&
+        !this.isLoading &&
+        this.hasMore
+      ) {
+        this.loadMore();
+      }
+    },
     loadArchives() {
       this.$get(
         "/media?page=" + this.page,
         (data) => {
           let archives = [...this.archives];
-            for (let obj of data.media.data) {
-              let archive = new Media(obj)
-              if(archive.type !== Media.TYPE_AUDIO)
-              {
-                archives.push(new Media(obj));
-              }
+          for (let obj of data.media.data) {
+            let archive = new Media(obj)
+            if(archive.type !== Media.TYPE_AUDIO && !archive.url.includes("/tmp/"))
+            {
+              archives.push(new Media(obj));
             }
-            this.archives = archives;
-            this.hasMore = data.next_page_url != null;
+          }
+          this.archives = archives;
+          this.hasMore = data.media.next_page_url != null;
+          this.buildArchives("all");
         },
         (errors) => {
           console.log(errors);
         }
       );
     },
+    buildArchives(media_type) {
+      this.archive_rows = [];
+      let current_row = [];
+      let index = 0;
+      for (let archive of this.archives)
+      {
+        if(media_type == "videos" && archive.type !== Media.TYPE_VIDEO) continue;
+        if(media_type == "photos" && archive.type !== Media.TYPE_IMAGE) continue;
+
+        if(index % 3 == 0 && index != 0)
+        {
+          this.archive_rows.push([...current_row]);
+          current_row = [];
+        }
+        current_row.push(archive);
+        index++;
+      }
+    },
     loadMore() {
       if (this.hasMore) {
         this.page = this.page + 1;
-        this.loadPosts();
+        this.loadArchives();
       }
     },
   }
