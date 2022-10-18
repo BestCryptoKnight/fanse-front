@@ -60,7 +60,6 @@ export default {
         (data) => {
           let archives = [...this.archives];
             for (let obj of data.media.data) {
-              index++;
               let archive = new Media(obj)
               if(archive.type !== Media.TYPE_AUDIO)
               {
