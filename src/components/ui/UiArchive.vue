@@ -6,6 +6,7 @@
           width="170"
           height="100"
           thumbnail fluid
+          :key="k"
           :src="archive.url"
           >
           </b-img>
@@ -15,6 +16,7 @@
           width="170"
           height="100"
           controls
+          :key="k"
           >
             <source
               :src="archive.url"
@@ -32,17 +34,3 @@
     components: {},
   };
   </script>
-
-
-  <div
-  class="swiper-slide d-block"
-  v-for="(item, key) in chunkedArr"
-  :key="key"
->
-  <ui-suggestion
-    :user="user"
-    v-for="(user, k) in item"
-    :key="k"
-    class="mb-2"
-  />
-</div>
