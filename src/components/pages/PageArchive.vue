@@ -1,10 +1,15 @@
 <template>
   <div>
-    <b-breadcrumb :items="items" class="mt-2"></b-breadcrumb>
+    <div class="row border-bottom sticky-top page-header bg-white mb-4">
+      <div class="d-flex align-items-center w-100 mx-3">
+        <a href="#" target="_self" class=""><i class="bi-arrow-left"></i></a>
+        <h5 class="text-uppercase p-0 my-3 mx-2 flex-grow-1">Archive</h5>
+      </div>
+    </div>
 
     <b-button class="mr-2" variant="outline-primary">All</b-button>
-    <b-button class="mr-2" variant="success">Pictures</b-button>
-    <b-button class="mr-2" variant="danger">Videos</b-button>
+    <b-button class="mr-2" variant="outline-primary">Photos</b-button>
+    <b-button class="mr-2" variant="outline-primary">Videos</b-button>
 
     <div>
       <b-container fluid class="p-4">
@@ -80,14 +85,14 @@
         </b-row>
       </b-container>
     </div>
-   <UIUploadInput/>
+    <UIUploadInput />
   </div>
 </template>
 
 <script>
-import UIUploadInput from '../ui/UiUploadInput.vue' ;
+import UIUploadInput from '../ui/UiUploadInput.vue'
 export default {
-components: { UIUploadInput },
+  components: { UIUploadInput },
   data() {
     return {
       items: [
