@@ -11,97 +11,48 @@
     <b-button class="mr-2" variant="outline-primary">Photos</b-button>
     <b-button class="mr-2" variant="outline-primary">Videos</b-button>
 
-    <div>
-      <b-container fluid class="p-4">
-        <b-row>
-          <b-col>
-            <b-img
-              thumbnail
-              fluid
-              src="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              alt="Image 1"
-            ></b-img>
-          </b-col>
-          <b-col>
-            <b-img
-              thumbnail
-              fluid
-              src="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              alt="Image 2"
-            ></b-img>
-          </b-col>
-          <b-col>
-            <b-img
-              thumbnail
-              fluid
-              src="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              alt="Image 3"
-            ></b-img>
-          </b-col>
-        </b-row>
-      </b-container>
 
-      <b-container fluid class="p-4">
-        <b-row>
-          <b-col>
-            <video
-              poster="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              width="170"
-              height="100"
-              controls
-            >
-              <source
-                src="http://techslides.com/demos/sample-videos/small.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </b-col>
-          <b-col>
-            <video
-              poster="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              width="170"
-              height="100"
-              controls
-            >
-              <source
-                src="http://techslides.com/demos/sample-videos/small.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </b-col>
-          <b-col>
-            <video
-              poster="http://images.fineartamerica.com/images-medium-large/starry-night-alex-ruiz.jpg"
-              width="170"
-              height="100"
-              controls
-            >
-              <source
-                src="http://techslides.com/demos/sample-videos/small.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-    <UIUploadInput />
+    <ui-archive v-model="archives" />
+   <UIUploadInput/>
   </div>
 </template>
 
 <script>
+import Media from '../models/Media';
 import UIUploadInput from '../ui/UiUploadInput.vue'
+import UiArchive from "../ui/UiArchive.vue";
 export default {
-  components: { UIUploadInput },
+  components: { UIUploadInput, UiArchive },
   data() {
     return {
-      items: [
-        {
-          text: 'Archive',
-          href: '#',
-        },
-      ],
+      archives: [],
+      hasMore: true,
     }
   },
+  mounted() {
+    this.loadArchives();
+  },
+  methods: {
+    loadArchives() {
+      this.$get(
+        "/media",
+        (data) => {
+          let archives = [...this.archives];
+            for (let obj of data.data) {
+              let archive = new Media(obj)
+              if(archive.type !== Media.TYPE_AUDIO)
+              {
+                archives.push(new Media(obj));
+              }
+            }
+            this.archives = archives;
+            this.hasMore = data.next_page_url != null;
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+  }
 }
 </script>
