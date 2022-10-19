@@ -160,6 +160,8 @@
             this.audioFile = "";
             this.$emit("changeAudio", null);
           });
+        } else {
+          this.isStreamed = false;
         }
       },
       onSaveClicked() {
