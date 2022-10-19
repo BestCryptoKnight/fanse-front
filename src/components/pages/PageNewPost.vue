@@ -405,7 +405,12 @@ export default {
           screenshot: m.scr ? m.scr.id : null,
         });
       }
-
+      for (let archive of this.selectedArchives) {
+        media.push({
+          id: archive.id,
+          screenshot: archive.scr ? archive.scr.id : null,
+        });
+      }
       this.errors = {};
       let fields = {
         message: this.message,
@@ -441,7 +446,7 @@ export default {
               toaster: "b-toaster-bottom-left",
             });
           } else {
-            this.$router.replace("/");
+            this.$router.replace("/").catch(()=>{});
           }
         },
         (errors) => {
