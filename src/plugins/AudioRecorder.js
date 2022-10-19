@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import VueRecord from '@codekraft-studio/vue-record'
+import VueRecord from '@devcrazygit/vue-record'
 
 Vue.use(VueRecord)
