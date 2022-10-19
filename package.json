@@ -9,7 +9,7 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
-    "@codekraft-studio/vue-record": "0.0.3",
+    "@fanse-work/vue-record": "https://github.com/fanse-work/bio-voice-vue-record-fix#fix/safari",
     "@stripe/stripe-js": "^1.25.0",
     "@vue/composition-api": "^1.7.0",
     "axios": "^0.22.0",
