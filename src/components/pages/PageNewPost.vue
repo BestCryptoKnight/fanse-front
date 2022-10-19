@@ -77,7 +77,9 @@
             @close="priceRemove()"
             class="mr-2"
           />
+          
         </div>
+        <ui-archive v-if="selectedArchives.length > 0" :archives="selectedArchives"></ui-archive>
         <b-form-textarea
           max-rows="8"
           class="px-3 py-0 my-3"
@@ -86,6 +88,7 @@
           :placeholder="$t('general.add-description')"
           :state="Object.keys(errors).length > 0 ? false : null"
         />
+       
         <div class="invalid-feedback px-3 py-2" id="errors">
           <div v-for="(value, key) in errors" :key="key">
             <div v-for="(error, k) in value" :key="k">
@@ -145,13 +148,54 @@
             />
           </b-input-group>
         </b-modal>
+        <b-modal
+        id="modalArchive"
+        centered
+        ok-only
+        @ok="addSelectArchives()"
+        @cancel="deleteSelectArchives()"
+        
+        :title="$t('general.archive')"
+        >
+        <div>
+          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
+          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
+          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
+
+          <div class="archives">
+            <b-row v-for="(row, key) in archive_rows" :key="key">
+              <b-col v-for="(archive, k) in row" :key="k">
+                <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 0" @click.prevent="addArchive(archive)">
+                  <b-img
+                    width="170"
+                    height="100"
+                    thumbnail fluid
+                    :src="archive.url"
+                  >
+                  </b-img>
+                </div>
+                <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 1" @click.prevent="addArchive(archive)">
+                  <video 
+                  :poster="archive.screenshot"
+                  width="170"
+                  height="100"
+                  controls
+                  >
+                  
+                  </video>
+              </div>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+        </b-modal>
       </b-row>
       <b-row class="border-bottom py-2">
         <div class="d-flex align-items-center">
           <b-link @click="mediaDropzoneClick" class="mx-2 ml-3">
             <i class="bi-image" />
           </b-link>
-          <b-link @click="mediaDropzoneClick" class="mx-2 ml-3">
+          <b-link v-b-modal.modalArchive class="mx-2">
             <i class="bi-folder" />
           </b-link>
           <b-link @click="pollAdd" class="mx-2">
@@ -181,6 +225,9 @@ textarea:focus {
   border: none;
   box-shadow: none;
 }
+.item-border {
+  border:#2081E2 2px solid;
+}
 .btn-primary{
       padding: 8px 18px !important;
     height: 40px !important;
@@ -193,12 +240,15 @@ dayjs.extend(localizedFormat);
 
 import UiPostOptionInfo from "../ui/UiPostOptionInfo";
 import UiMediaUploader from "../ui/UiMediaUploader.vue";
+import UiArchive from '../ui/UiArchiveSelect.vue';
 import Media from "../models/Media";
 
 export default {
   components: {
     UiPostOptionInfo,
     UiMediaUploader,
+    UiArchive,
+
   },
   data: function () {
     return {
@@ -217,6 +267,12 @@ export default {
       scheduleDate: null,
       scheduleTime: null,
       price: null,
+      archives: [],
+      archive_rows: [],
+      page: 1,
+      hasMore: true,
+      selectArchives: [],
+      selectedArchives: [],
     };
   },
   computed: {
@@ -228,6 +284,8 @@ export default {
     if (this.postId) {
       this.loadPost();
     }
+    this.loadArchives();
+    window.addEventListener("scroll", this.updateScroll);
   },
   watch: {
     postId: function (newV, oldV) {
@@ -390,6 +448,88 @@ export default {
           this.errors = errors;
         }
       );
+    },
+    updateScroll() {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      if (
+        document.body.offsetHeight &&
+        scrollPosition &&
+        document.body.offsetHeight - scrollPosition <= 1000 &&
+        !this.isLoading &&
+        this.hasMore
+      ) {
+        this.loadMore();
+      }
+    },
+    loadArchives() {
+      this.$get(
+        "/media?page=" + this.page,
+        (data) => {
+          let archives = [...this.archives];
+          for (let obj of data.media.data) {
+            let archive = new Media(obj)
+            if(archive.type !== Media.TYPE_AUDIO && !archive.url.includes("/tmp/"))
+            {
+              archives.push(new Media(obj));
+            }
+          }
+          this.archives = archives;
+          this.hasMore = data.media.next_page_url != null;
+          this.buildArchives("all");
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+    buildArchives(media_type) {
+      this.archive_rows = [];
+      let current_row = [];
+      let index = 0;
+      for (let archive of this.archives)
+      {
+        if(media_type == "videos" && archive.type !== Media.TYPE_VIDEO) continue;
+        if(media_type == "photos" && archive.type !== Media.TYPE_IMAGE) continue;
+
+        if(index % 3 == 0 && index != 0)
+        {
+          this.archive_rows.push([...current_row]);
+          current_row = [];
+        }
+        current_row.push(archive);
+        index++;
+      }
+    },
+    loadMore() {
+      if (this.hasMore) {
+        this.page = this.page + 1;
+        this.loadArchives();
+      }
+    },
+    isExist(item) {
+      if (this.selectArchives.indexOf(item) < 0) return false;
+      return true;
+    },
+    addArchive(item){
+      if (this.selectArchives.indexOf(item) < 0)
+      {
+        this.selectArchives.push(item);
+      }
+      else {
+        this.selectArchives.splice(this.selectArchives.indexOf(item),1);
+      }
+    },
+    addSelectArchives(){
+      if (this.selectArchives != null){
+        for (let archive of this.selectArchives){
+          this.selectedArchives.push(archive);
+        }
+      }
+      console.log(this.selectArchives);
+      this.selectArchives = [];
+    },
+    deleteSelectArchives(){
+      this.selectArchives = [];
     },
   },
 };
