@@ -133,7 +133,6 @@
     },
     methods: {
       onResult(data) {
-        console.log({ data })
         this.isStreamed = true;
         this.audioFile = window.URL.createObjectURL(data);
         this.audioGenFile = new File([data], "audio.mp3", { type: 'mp3' });
