@@ -26,6 +26,12 @@
       </b-row>
     </div>
   </template>
+  <style lang="scss" scoped>
+  .archives {
+    overflow-y: scroll;
+    max-height: 400px;
+  }
+  </style>
   <script>
   export default {
     props: ["archives"],
