@@ -26,6 +26,12 @@
       </div>
     </div>
   </template>
+  <style lang="scss" scoped>
+  .archives {
+    overflow-y: scroll;
+    max-height: 500px;
+  }
+  </style>
   <script>
   export default {
     props: ["archives"],

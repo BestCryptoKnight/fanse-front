@@ -29,7 +29,7 @@
   <style lang="scss" scoped>
   .archives {
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 600px;
   }
   </style>
   <script>
