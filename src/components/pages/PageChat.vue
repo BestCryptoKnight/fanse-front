@@ -166,6 +166,12 @@
     </b-col>
   </b-row>
 </template>
+<style lang="scss" scoped>
+.archives {
+  overflow-y: scroll;
+  max-height: 600px;
+}
+</style>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
 textarea.form-control {
