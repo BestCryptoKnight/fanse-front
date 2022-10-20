@@ -77,7 +77,7 @@
           <b-link @click="mediaDropzoneClick" class="mx-2">
             <i class="bi-image" />
           </b-link>
-          <b-link v-b-modal.modalArchive class="mx-2">
+          <b-link v-if="currentUser.isCreator" v-b-modal.modalArchive class="mx-2">
             <i class="bi-folder" />
           </b-link>
           <b-link

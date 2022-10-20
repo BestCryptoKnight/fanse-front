@@ -195,7 +195,7 @@
           <b-link @click="mediaDropzoneClick" class="mx-2 ml-3">
             <i class="bi-image" />
           </b-link>
-          <b-link v-b-modal.modalArchive class="mx-2">
+          <b-link v-if="currentUser.isCreator" v-b-modal.modalArchive class="mx-2">
             <i class="bi-folder" />
           </b-link>
           <b-link @click="pollAdd" class="mx-2">
@@ -284,6 +284,9 @@ export default {
   computed: {
     postId() {
       return this.$route.params.id;
+    },
+    currentUser() {
+      return this.$store.state.currentUser;
     },
   },
   mounted() {
