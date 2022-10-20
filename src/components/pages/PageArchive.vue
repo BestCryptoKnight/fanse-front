@@ -17,10 +17,9 @@
 
 <script>
 import Media from '../models/Media';
-import UIUploadInput from '../ui/UiUploadInput.vue'
 import UiArchive from "../ui/UiArchive.vue";
 export default {
-  components: { UIUploadInput, UiArchive },
+  components: { UiArchive },
   data() {
     return {
       archives: [],
