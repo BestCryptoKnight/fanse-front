@@ -181,6 +181,7 @@
                   height="100"
                   controls
                   >
+                  
                   </video>
               </div>
               </b-col>

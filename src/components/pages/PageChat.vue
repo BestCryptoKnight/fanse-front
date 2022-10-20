@@ -52,7 +52,7 @@
       </b-row>
       <b-row class="border-top" v-if="party && party.isSubscribed || currentUser.isCreator">
         <ui-media-uploader v-model="media" ref="uploader" />
-
+        <ui-archive v-if="selectedArchives.length > 0" :archives="selectedArchives"></ui-archive>
         <b-form-textarea
           max-rows="4"
           class="px-3 py-0 my-3"
@@ -77,7 +77,7 @@
           <b-link @click="mediaDropzoneClick" class="mx-2">
             <i class="bi-image" />
           </b-link>
-          <b-link @click="mediaDropzoneClick" class="mx-2">
+          <b-link v-b-modal.modalArchive class="mx-2">
             <i class="bi-folder" />
           </b-link>
           <b-link
@@ -116,6 +116,46 @@
             />
           </b-input-group>
         </b-modal>
+        <b-modal
+          id="modalArchive"
+          centered
+          ok-only
+          @ok="addSelectArchives()"
+          @cancel="deleteSelectArchives()"
+          
+          :title="$t('general.archive')"
+        >
+          <div>
+            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
+            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
+            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
+
+            <div class="archives">
+              <b-row v-for="(row, key) in archive_rows" :key="key">
+                <b-col v-for="(archive, k) in row" :key="k">
+                  <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 0" @click.prevent="addArchive(archive)">
+                    <b-img
+                      width="170"
+                      height="100"
+                      thumbnail fluid
+                      :src="archive.url"
+                    >
+                    </b-img>
+                  </div>
+                  <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 1" @click.prevent="addArchive(archive)">
+                    <video 
+                    :poster="archive.screenshot"
+                    width="170"
+                    height="100"
+                    controls
+                    >
+                    </video>
+                </div>
+                </b-col>
+              </b-row>
+            </div>
+          </div>
+        </b-modal>
       </b-row>
       <b-row class="border-top" v-else >
        <p class="px-3 py-3 my-3">
@@ -131,6 +171,9 @@
 textarea.form-control {
   border: none;
   scroll-behavior: smooth;
+}
+.item-border {
+  border:#2081E2 2px solid;
 }
 textarea.form-control:focus {
   border: none;
@@ -179,6 +222,7 @@ textarea.form-control:focus {
     min-height: calc(var(--vh, 1vh) * 100 - (#{$spacer} * 4));
     max-height: calc(var(--vh, 1vh) * 100 - (#{$spacer} * 4));
   }
+  
 }
 </style>
 <script>
@@ -186,9 +230,12 @@ import Message from "../models/Message";
 import UiMessage from "../ui/UiMessage.vue";
 import UiMediaUploader from "../ui/UiMediaUploader.vue";
 import UiPostOptionInfo from "../ui/UiPostOptionInfo.vue";
+import UiArchive from "../ui/UiArchiveSelect.vue";
 import User from "../models/User";
 import UiUsername from "../ui/UiUsername.vue";
 import Payment from "../models/Payment";
+import Media from "../models/Media";
+
 export default {
   props: {
     value: Array,
@@ -206,6 +253,12 @@ export default {
       hasMore: false,
       isLoading: false,
       addedManually: 0,
+      archives: [],
+      archive_rows: [],
+      archivepage: 1,
+      archivehasMore: true,
+      selectArchives: [],
+      selectedArchives: [],
     };
   },
   computed: {
@@ -235,12 +288,15 @@ export default {
   mounted() {
     this.init();
     this.$refs.conversation.addEventListener("scroll", this.updateScroll);
+    this.loadArchives();
+    window.addEventListener("scroll", this.updateArchiveScroll);
   },
   components: {
     UiMessage,
     UiMediaUploader,
     UiPostOptionInfo,
     UiUsername,
+    UiArchive,
   },
   methods: {
     init() {
@@ -416,6 +472,88 @@ export default {
         type: Payment.TYPE_TIP,
         user: this.party,
       });
+    },
+    updateArchiveScroll() {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      if (
+        document.body.offsetHeight &&
+        scrollPosition &&
+        document.body.offsetHeight - scrollPosition <= 1000 &&
+        !this.isLoading &&
+        this.archivehasMore
+      ) {
+        this.loadArchiveMore();
+      }
+    },
+    loadArchives() {
+      this.$get(
+        "/media?page=" + this.archivepage,
+        (data) => {
+          let archives = [...this.archives];
+          for (let obj of data.media.data) {
+            let archive = new Media(obj)
+            if(archive.type !== Media.TYPE_AUDIO && !archive.url.includes("/tmp/"))
+            {
+              archives.push(new Media(obj));
+            }
+          }
+          this.archives = archives;
+          this.archivehasMore = data.media.next_page_url != null;
+          this.buildArchives("all");
+        },
+        (errors) => {
+          console.log(errors);
+        }
+      );
+    },
+    buildArchives(media_type) {
+      this.archive_rows = [];
+      let current_row = [];
+      let index = 0;
+      for (let archive of this.archives)
+      {
+        if(media_type == "videos" && archive.type !== Media.TYPE_VIDEO) continue;
+        if(media_type == "photos" && archive.type !== Media.TYPE_IMAGE) continue;
+
+        if(index % 3 == 0 && index != 0)
+        {
+          this.archive_rows.push([...current_row]);
+          current_row = [];
+        }
+        current_row.push(archive);
+        index++;
+      }
+    },
+    loadArchiveMore() {
+      if (this.archivehasMore) {
+        this.archivepage = this.archivepage + 1;
+        this.loadArchives();
+      }
+    },
+    isExist(item) {
+      if (this.selectArchives.indexOf(item) < 0) return false;
+      return true;
+    },
+    addArchive(item){
+      if (this.selectArchives.indexOf(item) < 0)
+      {
+        this.selectArchives.push(item);
+      }
+      else {
+        this.selectArchives.splice(this.selectArchives.indexOf(item),1);
+      }
+    },
+    addSelectArchives(){
+      if (this.selectArchives != null){
+        for (let archive of this.selectArchives){
+          this.selectedArchives.push(archive);
+        }
+      }
+      console.log(this.selectArchives);
+      this.selectArchives = [];
+    },
+    deleteSelectArchives(){
+      this.selectArchives = [];
     },
   },
 };
