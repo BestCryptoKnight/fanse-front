@@ -12,7 +12,6 @@
     <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
 
     <ui-archive :archives="archive_rows" />
-   <UIUploadInput/>
   </div>
 </template>
 
