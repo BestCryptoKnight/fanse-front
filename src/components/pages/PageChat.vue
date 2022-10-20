@@ -305,6 +305,7 @@ export default {
       this.errors = {};
       this.message = "";
       this.media = [];
+      this.archives = [];
       this.party = null;
       let chats = [...this.chats];
       for (let c of chats) {
@@ -439,7 +440,12 @@ export default {
           screenshot: m.scr ? m.scr.id : null,
         });
       }
-
+      for (let archive of this.selectedArchives) {
+        media.push({
+          id: archive.id,
+          screenshot: archive.scr ? archive.scr.id : null,
+        });
+      }
       this.errors = {};
       let fields = {
         message: this.message,
@@ -458,6 +464,7 @@ export default {
           let message = new Message(data);
           this.addMessage(message);
           this.$refs.uploader.clean();
+          this.selectedArchives = [];
           this.message = "";
           this.media = [];
           this.price = null;
