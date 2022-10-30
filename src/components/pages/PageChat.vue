@@ -132,8 +132,8 @@
 
             <div class="archives">
               <b-row v-for="(row, key) in archive_rows" :key="key">
-                <b-col v-for="(archive, k) in row" :key="k" style="background-color: #d2d7db61;padding: 10px;text-align: center;border-radius: 10px;margin: 10px;" :class="isExist(archive) ? 'item-border' : ''">
-                  <div  v-if="archive.type == 0" @click.prevent="addArchive(archive)">
+                <b-col v-for="(archive, k) in row" :key="k" style="background-color: #d2d7db61;padding: 10px;text-align: center;border-radius: 10px;margin: 10px;" :class="isExist(archive) ? 'item-border' : ''" @click.prevent="addArchive(archive)"> 
+                  <div  v-if="archive.type == 0">
                     <b-img
                       width="100%"
                       height="100%"
@@ -142,7 +142,7 @@
                     >
                     </b-img>
                   </div>
-                  <div v-if="archive.type == 1" @click.prevent="addArchive(archive)">
+                  <div v-if="archive.type == 1" >
                     <video 
                     :poster="archive.screenshot"
                     width="100%"
@@ -170,7 +170,7 @@
 .archives {
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 600px;
+  max-height: 500px;
   padding: 10px;
 }
 </style>
