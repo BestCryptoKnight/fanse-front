@@ -35,13 +35,13 @@
       </div>
       
       <div v-if="isStreamed" class="d-flex py-3 justify-content-center" style="width: 100%;">
-        <div v-on:click="onSaveClicked()" class="flex-column d-flex py-3 align-items-center"
-          style="cursor: pointer; margin-right: 10px;">
+        <div v-on:click="onSaveClicked()" class="flex-column d-flex align-items-center"
+          style="cursor: pointer; margin-right: 10px; width: 100%;">
           
           <div style="font-size: 15px;background-color: #2081e2;color: white;padding: 5px;width: 100%;margin-right: auto;border-radius: 10px;margin-left: auto;text-align: center;"> Save </div>
         </div>
-        <div v-on:click="onDeleteClicked()" class="flex-column d-flex py-3 align-items-center"
-          style="cursor: pointer; margin-left: 10px;">
+        <div v-on:click="onDeleteClicked()" class="flex-column d-flex align-items-center"
+          style="cursor: pointer; margin-left: 10px; width: 100%;">
           <div style="font-size: 15px;background-color: #b8b8b8;color: white;padding: 5px;width: 100%;margin-right: auto;border-radius: 10px;margin-left: auto;text-align: center;"> Cancel </div>
         </div>
       </div>
