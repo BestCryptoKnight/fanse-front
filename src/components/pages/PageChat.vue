@@ -126,9 +126,9 @@
           :title="$t('general.archive')"
         >
           <div>
-            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
-            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
-            <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
+            <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
+            <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
+            <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
 
             <div class="archives">
               <b-row v-for="(row, key) in archive_rows" :key="key">
@@ -142,7 +142,7 @@
                     >
                     </b-img>
                   </div>
-                  <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 1" @click.prevent="addArchive(archive)">
+                  <div v-if="archive.type == 1" @click.prevent="addArchive(archive)">
                     <video 
                     :poster="archive.screenshot"
                     width="100%"
@@ -169,7 +169,9 @@
 <style lang="scss" scoped>
 .archives {
   overflow-y: scroll;
+  overflow-x: hidden;
   max-height: 600px;
+  padding: 10px;
 }
 </style>
 <style scoped lang="scss">
