@@ -1,7 +1,7 @@
 <template>
     <div class="archives">
       <b-row v-for="(row, key) in archives" :key="key">
-        <b-col v-for="(archive, k) in row" :key="k">
+        <b-col v-for="(archive, k) in row" :key="k" style="background-color: #d2d7db61;padding: 10px;text-align: center;border-radius: 10px;margin: 10px;">
           <b-img v-if="archive.type == 0"
           width="170"
           height="100"
