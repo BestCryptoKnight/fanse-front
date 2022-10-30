@@ -4,6 +4,7 @@
       lg="5"
       md="12"
       class="chats border-right"
+      style="overflow-x: hidden;"
       :class="showChatId != null || isComposing ? 'd-none d-lg-block' : ''"
     >
       <div>
