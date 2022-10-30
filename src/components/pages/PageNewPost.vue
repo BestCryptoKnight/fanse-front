@@ -158,27 +158,27 @@
         :title="$t('general.archive')"
         >
         <div>
-          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
-          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
-          <b-button class="mr-2" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
+          <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('all')">All</b-button>
+          <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('photos')">Photos</b-button>
+          <b-button class="mr-2" style="margin-bottom:15px" variant="outline-primary" @click.prevent="buildArchives('videos')">Videos</b-button>
 
           <div class="archives">
             <b-row v-for="(row, key) in archive_rows" :key="key">
-              <b-col v-for="(archive, k) in row" :key="k">
-                <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 0" @click.prevent="addArchive(archive)">
+              <b-col v-for="(archive, k) in row" :key="k" style="background-color: #d2d7db61;padding: 10px;text-align: center;border-radius: 10px;margin: 10px;" :class="isExist(archive) ? 'item-border' : ''" @click.prevent="addArchive(archive)">
+                <div v-if="archive.type == 0" >
                   <b-img
-                    width="170"
-                    height="100"
+                    width="100%"
+                    height="100%"
                     thumbnail fluid
                     :src="archive.url"
                   >
                   </b-img>
                 </div>
-                <div :class="isExist(archive) ? 'item-border' : ''" v-if="archive.type == 1" @click.prevent="addArchive(archive)">
+                <div v-if="archive.type == 1">
                   <video 
                   :poster="archive.screenshot"
-                  width="170"
-                  height="100"
+                  width="100%"
+                  height="100%"
                   controls
                   >
                   
