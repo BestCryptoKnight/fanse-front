@@ -218,7 +218,9 @@
 <style lang="scss" scoped>
 .archives {
   overflow-y: scroll;
-  max-height: 600px;
+  overflow-x: hidden;
+  max-height: 400px;
+  padding: 10px;
 }
 </style>
 <style scoped lang="scss">
