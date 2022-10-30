@@ -366,7 +366,6 @@
 .profile {
   .page-header {
     top: -56px;
-    margin-bottom: -56px;
     transition: top 0.2s;
     color: white;
 

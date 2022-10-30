@@ -10,12 +10,12 @@
           <div>Recording mode: <strong>{{ recMode.toUpperCase() }}</strong></div>
         </b-form-checkbox>
       </div> -->
-      <div class="d-flex py-3 align-items-center" style="">
+      <div class="d-flex align-items-center" style="background-color: #f5f6fa;padding: 5px;border-radius: 10px;">
         <VueRecordAudio v-if="!isStreamed" :mode="recMode" @stream="onStream" @result="onResult" />
         <div v-if="isStreamed || isSaved" class="px-3">
           <b-link @click.prevent="startPause">
-            <i v-if="isAudioLoaded&&audioProps.isPlaying" class="bi-pause-fill" style="font-size: 3rem" />
-            <i v-else-if="isAudioLoaded&&!audioProps.isPlaying" class="bi-play-fill" style="font-size: 3rem" />
+            <i v-if="isAudioLoaded&&audioProps.isPlaying" class="bi-pause-fill" style="font-size: 2rem;" />
+            <i v-else-if="isAudioLoaded&&!audioProps.isPlaying" class="bi-play-fill" style="font-size: 2rem;" />
           </b-link>
         </div>
         <div v-if="isStreamed || isSaved" class=""
@@ -56,14 +56,20 @@
   <style lang="scss">
   .vue-audio-recorder {
     background-color: #00AFF0 !important;
+    width: 36px !important;
+    height: 36px !important;
   }
   
   .vue-audio-recorder:hover {
     background-color: #00AFF0 !important;
+    width: 36px !important;
+    height: 36px !important;
   }
   
   .vue-audio-recorder.active {
     background-color: #ef5350 !important;
+     width: 36px !important;
+    height: 36px !important;
   }
   </style>
   <script>
@@ -94,7 +100,7 @@
           waveColor: '#C6C7C8',
           progressColor: "#00AFF0",
           barWidth: 4,
-          height: 100,
+          height: 45,
           responsive: true,
           hideScrollbar: true,
           barRadius: 4
