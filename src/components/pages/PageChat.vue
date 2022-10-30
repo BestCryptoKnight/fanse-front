@@ -170,7 +170,7 @@
 .archives {
   overflow-y: scroll;
   overflow-x: hidden;
-  max-height: 500px;
+  max-height: 400px;
   padding: 10px;
 }
 </style>
