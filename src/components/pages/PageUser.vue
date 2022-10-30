@@ -366,7 +366,6 @@
 .profile {
   .page-header {
     top: -56px;
-    margin-bottom: -56px;
     transition: top 0.2s;
     color: white;
 
@@ -432,18 +431,23 @@
 }
 
 .bio-audio-con {
-      align-items: center;
+    align-items: center;
     border-width: 1px;
     padding-left: 10px;
-    padding-top: 13px;
-    background: white;
-    box-shadow: 0px 5px 14px 1px #f0f0f0;
+    background: #f5f6fa;
+    border-style: inset;
+    border-color: #00000014;
+    border-width: 1px;
+    box-shadow: -1px 1px 20px 1px #f0f0f078;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     position: relative;
-    height: 65px;
+    height: 45px;
     margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
 
   /* &:before {
     content: ' ';

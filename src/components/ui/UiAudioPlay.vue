@@ -6,12 +6,12 @@
           <i
             v-if="isAudioLoaded && audioProps.isPlaying"
             class="bi-pause-fill"
-            style="font-size: 2rem"
+            style="font-size: 1.8rem;"
           />
           <i
             v-else-if="isAudioLoaded && !audioProps.isPlaying"
             class="bi-play-fill"
-            style="font-size: 2rem"
+            style="font-size: 1.8rem;"
           />
         </b-link>
         <div style="flex: 1">
@@ -27,24 +27,24 @@
           </div>
         </div>
       </div>
-      <div
+      <!-- <div
         class="pl-5 d-flex justify-content-between small mt10"
         style="color: #959697"
       >
         <p>{{ secondToMin(audioProps.currentTime) }}</p>
         <p>{{ secondToMin(audioProps.duration) }}</p>
-      </div>
+      </div> -->
     </div>
     <div
       class="rounded-circle text-right position-relative"
-      style="width: 70px; top: -10px; padding-right: 10px;"
+      style="width: 30px;height: 30px;margin-right: 5px;"
     >
-      <i style="color: #03afee" class="bi bi-mic-fill mic-icon"></i>
+      <!-- <i style="color: #03afee" class="bi bi-mic-fill mic-icon"></i> -->
       <b-avatar
         :src="user.avatar"
         :text="user.initials"
         :to="user.url"
-        size="50px"
+        size="30px"
       />
     </div>
   </div>
@@ -96,7 +96,7 @@ export default {
         cursorWidth: 0,
         barGap: 3,
         barWidth: 4,
-        height: 40,
+        height: 43,
         responsive: true,
         hideScrollbar: true,
         barRadius: 4,

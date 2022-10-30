@@ -1,7 +1,7 @@
 <template>
     <div class="archives">
-      <div v-for="(archive, key) in archives" :key="key">
-          <div v-if="archive != null">
+      <div v-for="(archive, key) in archives" :key="key" >
+          <div v-if="archive != null" >
             <b-img v-if="archive.type == 0"
               width="170"
               height="100"
