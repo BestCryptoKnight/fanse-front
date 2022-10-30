@@ -19,30 +19,31 @@
           </b-link>
         </div>
         <div v-if="isStreamed || isSaved" class=""
-          style="flex: 1;background: white; box-shadow: 0px 5px 14px 1px #f0f0f0;">
+          style="flex: 1;">
           <vue-wave-surfer :key="key" :src="audioFile" :options="audioOptions" ref="surf"
             @hook:mounted="audioComponentMounted">
           </vue-wave-surfer>
         </div>
-      </div>
-      <div v-on:click="onDeleteClicked()" v-if="isSaved" style="font-size: 33px;
-        height: 50px;
-        width: 50px;
+        <div v-on:click="onDeleteClicked()" v-if="isSaved" style="
+        height: 40px;
+        font-size: 30px;
+        width: 40px;
         text-align: center;
-        border: 1px solid;
         border-radius: 50%;
         margin-left: 6px;
         cursor: pointer;" class="bi bi-trash"></div>
+      </div>
+      
       <div v-if="isStreamed" class="d-flex py-3 justify-content-center" style="width: 100%;">
         <div v-on:click="onSaveClicked()" class="flex-column d-flex py-3 align-items-center"
           style="cursor: pointer; margin-right: 10px;">
-          <div style="font-size: 40px; height: 50px;" class="bi bi-check-circle text-success"></div>
-          <div style="font-weight: bold;"> Ok </div>
+          <div style="font-size: 30px; height: 40px;" class="bi bi-check-circle text-success"></div>
+          <div style="font-weight: bold;    font-size: 15px;"> Ok </div>
         </div>
         <div v-on:click="onDeleteClicked()" class="flex-column d-flex py-3 align-items-center"
           style="cursor: pointer; margin-left: 10px;">
-          <div style="font-size: 40px; height: 50px;" class="bi bi-x-circle text-danger"></div>
-          <div style="font-weight: bold;"> Cancel </div>
+          <div style="font-size: 30px; height: 40px;" class="bi bi-x-circle text-danger"></div>
+          <div style="font-weight: bold;    font-size: 15px;"> Cancel </div>
         </div>
       </div>
   
@@ -56,20 +57,20 @@
   <style lang="scss">
   .vue-audio-recorder {
     background-color: #00AFF0 !important;
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
   
   .vue-audio-recorder:hover {
     background-color: #00AFF0 !important;
-    width: 36px !important;
-    height: 36px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
   
   .vue-audio-recorder.active {
     background-color: #ef5350 !important;
-     width: 36px !important;
-    height: 36px !important;
+     width: 40px !important;
+    height: 40px !important;
   }
   </style>
   <script>
