@@ -152,6 +152,7 @@
           id="modalArchive"
           centered
           ok-only
+          scrollable
           @ok="addSelectArchives()"
           @cancel="deleteSelectArchives()"
           @hide="deleteSelectArchives()"
@@ -193,12 +194,6 @@
   </b-row>
 </template>
 <style lang="scss" scoped>
-.archives {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 400px;
-  padding: 10px;
-}
 .item-border {
   border:#2081E2 2px solid;
 }

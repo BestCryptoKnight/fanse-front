@@ -119,6 +119,7 @@
         <b-modal
           id="modalArchive"
           centered
+          scrollable
           ok-only
           @ok="addSelectArchives()"
           @cancel="deleteSelectArchives()"
@@ -166,14 +167,6 @@
     </b-col>
   </b-row>
 </template>
-<style lang="scss" scoped>
-.archives {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 400px;
-  padding: 10px;
-}
-</style>
 <style scoped lang="scss">
 @import "~@/assets/scss/_variables.scss";
 textarea.form-control {
