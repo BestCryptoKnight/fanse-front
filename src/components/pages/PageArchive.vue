@@ -2,7 +2,9 @@
   <div>
     <div class="row border-bottom sticky-top page-header bg-white mb-4">
       <div class="d-flex align-items-center w-100 mx-3">
-        <a href="#" target="_self" class=""><i class="bi-arrow-left"></i></a>
+        <b-link @click="$router.go(-1)">
+          <i class="bi-arrow-left" />
+        </b-link>
         <h5 class="text-uppercase p-0 my-3 mx-2 flex-grow-1">Archive</h5>
       </div>
     </div>
