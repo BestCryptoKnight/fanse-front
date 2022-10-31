@@ -154,7 +154,7 @@
         ok-only
         @ok="addSelectArchives()"
         @cancel="deleteSelectArchives()"
-        
+        @hide="deleteSelectArchives()"
         :title="$t('general.archive')"
         >
         <div>
