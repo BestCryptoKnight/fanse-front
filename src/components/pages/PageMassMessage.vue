@@ -182,6 +182,10 @@
                     height="100%"
                     controls
                     >
+                      <source
+                        :src="archive.url"
+                        type="video/mp4"
+                      />
                     </video>
                 </div>
                 </b-col>
